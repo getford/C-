@@ -46,25 +46,24 @@ namespace WindowsFormsApplication1
 
         public void textBox1_TextChanged(object sender, EventArgs e)       // поле вывода пароля
         {
-            TextBox tb = sender as TextBox;
             int N;
             N = (int)numericUpDown1.Value;
 
             if (N >= 4 && N < 6)
             {
-                tb.BackColor = Color.Red;
+                textBox1.BackColor = Color.Red;
             }
             if (N >= 6 && N < 8)
             {
-                tb.BackColor = Color.Orange;
+                textBox1.BackColor = Color.Orange;
             }
             if (N >= 8 && N < 10)
             {
-                tb.BackColor = Color.Olive;
+                textBox1.BackColor = Color.Olive;
             }
             if(N >= 10 && N <= 16)
             {
-                tb.BackColor = Color.Green;
+                textBox1.BackColor = Color.Green;
             }
 
         }
