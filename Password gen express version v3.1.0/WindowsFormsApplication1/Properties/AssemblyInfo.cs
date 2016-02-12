@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("PassWord generation experess version")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Password generator experess version")]
+[assembly: AssemblyDescription("Password generator")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("getford inc.")]
-[assembly: AssemblyProduct("PassWord generation express version")]
-[assembly: AssemblyCopyright("Copyright © getford inc. 2016")]
+[assembly: AssemblyProduct("Password generator express version")]
+[assembly: AssemblyCopyright("Copyright © Vladimir <getford> Zhigalo inc. 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
