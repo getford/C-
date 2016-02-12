@@ -295,6 +295,8 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+            textBox1.Text = ("Здесь будет ваш пароль!");
+            textBox1.BackColor = Color.White;
         }
 
         private void button3_Click(object sender, EventArgs e)
