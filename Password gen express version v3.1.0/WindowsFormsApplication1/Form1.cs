@@ -31,12 +31,12 @@ namespace WindowsFormsApplication1
         }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Версия приложения: v3.1.0");
+            MessageBox.Show("Версия приложения: v3.2.0");
         }   // версия приложенния
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры");
+                "История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,6 +46,26 @@ namespace WindowsFormsApplication1
 
         public void textBox1_TextChanged(object sender, EventArgs e)       // поле вывода пароля
         {
+            TextBox tb = sender as TextBox;
+            int N;
+            N = (int)numericUpDown1.Value;
+
+            if (N >= 4 && N < 6)
+            {
+                tb.BackColor = Color.Red;
+            }
+            if (N >= 6 && N < 8)
+            {
+                tb.BackColor = Color.Orange;
+            }
+            if (N >= 8 && N < 10)
+            {
+                tb.BackColor = Color.Olive;
+            }
+            if(N >= 10 && N <= 16)
+            {
+                tb.BackColor = Color.Green;
+            }
 
         }
 
