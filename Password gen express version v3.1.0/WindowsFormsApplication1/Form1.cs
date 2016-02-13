@@ -31,12 +31,12 @@ namespace WindowsFormsApplication1
         }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Версия приложения: v3.2.0");
+            MessageBox.Show("Версия приложения: v3.3.2");
         }   // версия приложенния
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)");
+                "История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)\nv3.3.2 - Добавлена вохможность выводы сгенерированных паролей в файл");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -102,6 +102,8 @@ namespace WindowsFormsApplication1
                     s = liter_m[rnd.Next(26)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
+
             }
             if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)    // большие
             {
@@ -112,6 +114,7 @@ namespace WindowsFormsApplication1
                     s = liter_b[rnd.Next(26)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)    // кракозябры
             {
@@ -122,6 +125,7 @@ namespace WindowsFormsApplication1
                     s = liter_c[rnd.Next(10)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)    // цифры
             {
@@ -132,6 +136,7 @@ namespace WindowsFormsApplication1
                     s = liter_n[rnd.Next(10)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
 
             if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие большие
@@ -143,6 +148,7 @@ namespace WindowsFormsApplication1
                     s = liter_m_b[rnd.Next(52)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
 
             if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)     // малекние кракозябры
@@ -154,6 +160,7 @@ namespace WindowsFormsApplication1
                     s = liter_m_c[rnd.Next(36)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
 
             if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)     // малекние цифры
@@ -165,6 +172,7 @@ namespace WindowsFormsApplication1
                     s = liter_m_n[rnd.Next(36)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // большие цифры
             {
@@ -175,6 +183,7 @@ namespace WindowsFormsApplication1
                     s = liter_b_n[rnd.Next(36)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // большие кракозябры
             {
@@ -185,6 +194,7 @@ namespace WindowsFormsApplication1
                     s = liter_b_c[rnd.Next(36)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked ==true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // маленькие большие кракозябры
             {
@@ -195,6 +205,7 @@ namespace WindowsFormsApplication1
                     s = liter_m_b_c[rnd.Next(56)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // маленькие большие цифры
             {
@@ -205,6 +216,7 @@ namespace WindowsFormsApplication1
                     s = liter_m_b_n[rnd.Next(56)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // маленькие кракозябры цифры
             {
@@ -215,6 +227,7 @@ namespace WindowsFormsApplication1
                     s = liter_m_c_n[rnd.Next(46)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // кракозябры цифры
             {
@@ -225,6 +238,7 @@ namespace WindowsFormsApplication1
                     s = liter_c_n[rnd.Next(20)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)      // большие кракозябры цифры
             {
@@ -235,6 +249,7 @@ namespace WindowsFormsApplication1
                     s = liter_b_c_n[rnd.Next(46)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
             if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)       // маленькие большие кракозябры цифры 
             {
@@ -245,6 +260,7 @@ namespace WindowsFormsApplication1
                     s = liter_full[rnd.Next(72)];
                     textBox1.Text += (s);
                 }
+                textBox2.Text += textBox1.Text + Environment.NewLine;
             }
 
 
@@ -278,6 +294,9 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(button1, "Нажмите для генерации пароля");       // Всплывающая подсказка
+
+            toolTip2.ToolTipTitle = ("Путь к файлу C:\\ ... .txt");
+            toolTip2.SetToolTip(button4, "Нажмите для сохранения в файл!");
         }
         private void благодарностьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -307,6 +326,7 @@ namespace WindowsFormsApplication1
         {
             this.BackColor = System.Drawing.Color.Gray;
             textBox1.BackColor = Color.Gray;
+            textBox2.BackColor = Color.Gray;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -318,9 +338,44 @@ namespace WindowsFormsApplication1
         {
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             textBox1.BackColor = Color.WhiteSmoke;
+            textBox2.BackColor = Color.WhiteSmoke;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            System.IO.StreamWriter File = new System.IO.StreamWriter(@"C:\password.txt");
+
+            if (button4.Enabled == true)
+            {
+                File.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                File.WriteLine(textBox2.Text);
+                if(File != null)
+                    File.Close();
+                MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\password.txt");
+            }
+        }
+
+        private void toolTip2_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
 
 
-//v3.3.0
+//v3.3.1
