@@ -114,14 +114,16 @@
             // дневнаяToolStripMenuItem
             // 
             this.дневнаяToolStripMenuItem.Name = "дневнаяToolStripMenuItem";
-            this.дневнаяToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.дневнаяToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.дневнаяToolStripMenuItem.Text = "Дневная";
+            this.дневнаяToolStripMenuItem.Click += new System.EventHandler(this.дневнаяToolStripMenuItem_Click);
             // 
             // ночнаяToolStripMenuItem
             // 
             this.ночнаяToolStripMenuItem.Name = "ночнаяToolStripMenuItem";
-            this.ночнаяToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.ночнаяToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ночнаяToolStripMenuItem.Text = "Ночная";
+            this.ночнаяToolStripMenuItem.Click += new System.EventHandler(this.ночнаяToolStripMenuItem_Click);
             // 
             // языкToolStripMenuItem
             // 
@@ -239,6 +241,7 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Состав пароля";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // checkBox4
             // 

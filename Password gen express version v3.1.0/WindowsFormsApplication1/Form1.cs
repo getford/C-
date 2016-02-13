@@ -303,6 +303,21 @@ namespace WindowsFormsApplication1
             Clipboard.SetText(textBox1.Text);
         }
 
+        private void ночнаяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.Gray;
+            textBox1.BackColor = Color.Gray;
+        }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void дневнаяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            textBox1.BackColor = Color.WhiteSmoke;
+        }
     }
 }
