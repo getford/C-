@@ -27,7 +27,22 @@ namespace WindowsFormsApplication1
         }
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            if (textBox2.Text == null) 
+                Close();
+            else
+            {
+                SaveFileDialog save_password = new SaveFileDialog();
+
+                save_password.FileName = Environment.UserName + "_password.txt";
+                if (save_password.ShowDialog() == DialogResult.OK)
+                {
+                    System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
+                    wr.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                    wr.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
+                    wr.Write(textBox2.Text);
+                    wr.Close();
+                }
+            }
         }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -35,8 +50,9 @@ namespace WindowsFormsApplication1
         }   // версия приложенния
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             MessageBox.Show(
-                "История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)\nv3.3.2 - Добавлена возможность выводы сгенерированных паролей в файл\nv3.3.3 - Исправленые мелкие баги");
+                $"История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)\nv3.3.2 - Добавлена возможность выводы сгенерированных паролей в файл\nv3.3.3 - Исправленые мелкие баги");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +77,7 @@ namespace WindowsFormsApplication1
             {
                 textBox1.BackColor = Color.Olive;
             }
-            if(N >= 10 && N <= 16)
+            if(N >= 10 && N <= 29)
             {
                 textBox1.BackColor = Color.Green;
             }
@@ -358,15 +374,17 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            System.IO.StreamWriter File = new System.IO.StreamWriter(@"C:\password.txt");
+
+            System.IO.StreamWriter File = new System.IO.StreamWriter(@"C:\" + Environment.UserName + "_password.txt");
 
             if (button4.Enabled == true)
             {
                 File.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                File.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
                 File.WriteLine(textBox2.Text);
                 if(File != null)
                     File.Close();
-                MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\password.txt");
+                MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\username_password.txt");
             }
         }
 
@@ -374,8 +392,29 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (button5.Enabled == true)
+                textBox2.Clear();
+        }
+
+        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            button4.Enabled = true;
+        }
+
+        private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 
 
-//v3.3.2
+//v3.3.3
