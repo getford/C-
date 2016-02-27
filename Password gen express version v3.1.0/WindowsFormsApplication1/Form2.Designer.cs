@@ -41,7 +41,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(26, 94);
+            this.button1.Location = new System.Drawing.Point(26, 107);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(167, 94);
+            this.button2.Location = new System.Drawing.Point(167, 107);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -62,27 +62,35 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.textBox1.Location = new System.Drawing.Point(26, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
+            this.textBox1.Size = new System.Drawing.Size(216, 21);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox2.Location = new System.Drawing.Point(26, 68);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
+            this.textBox2.Size = new System.Drawing.Size(216, 21);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.WordWrap = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(117, 94);
+            this.button3.Location = new System.Drawing.Point(120, 106);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "T";
+            this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -142,10 +150,10 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

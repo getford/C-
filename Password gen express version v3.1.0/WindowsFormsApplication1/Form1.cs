@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
         }
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == null) 
+            if (textBox2.Text == null)
                 Close();
             else
             {
@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
         }   // версия приложенния
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             MessageBox.Show(
                 $"История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)\nv3.3.2 - Добавлена возможность выводы сгенерированных паролей в файл\nv3.3.3 - Исправленые мелкие баги");
         }
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
             {
                 textBox1.BackColor = Color.Olive;
             }
-            if(N >= 10 && N <= 29)
+            if (N >= 10 && N <= 29)
             {
                 textBox1.BackColor = Color.Green;
             }
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
             int N;
             N = (int)numericUpDown1.Value;
 
-            if(checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
+            if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
             {
                 textBox1.Text = ("Password: ");
 
@@ -212,7 +212,7 @@ namespace WindowsFormsApplication1
                 }
                 textBox2.Text += textBox1.Text + Environment.NewLine;
             }
-            if (checkBox2.Checked ==true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // маленькие большие кракозябры
+            if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // маленькие большие кракозябры
             {
                 textBox1.Text = ("Password: ");
 
@@ -296,8 +296,8 @@ namespace WindowsFormsApplication1
 
         }
         public void checkBox2_CheckedChanged(object sender, EventArgs e)       // выбор маленьких букв
-        { 
- 
+        {
+
         }
         public void checkBox3_CheckedChanged(object sender, EventArgs e)       // выбор кракозябр
         {
@@ -382,7 +382,7 @@ namespace WindowsFormsApplication1
                 File.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
                 File.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
                 File.WriteLine(textBox2.Text);
-                if(File != null)
+                if (File != null)
                     File.Close();
                 MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\username_password.txt");
             }
@@ -413,8 +413,30 @@ namespace WindowsFormsApplication1
         {
             Close();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == null)
+            {
+                MessageBox.Show("Не создано ни одного пароля!");
+            }
+            else
+            {
+                SaveFileDialog save_password = new SaveFileDialog();
+
+                save_password.FileName = Environment.UserName + "_password.txt";
+                if (save_password.ShowDialog() == DialogResult.OK)
+                {
+                    System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
+                    wr.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                    wr.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
+                    wr.Write(textBox2.Text);
+                    wr.Close();
+                }
+            }
+        }
     }
 }
 
 
-//v3.3.3
+//v3.3.4
