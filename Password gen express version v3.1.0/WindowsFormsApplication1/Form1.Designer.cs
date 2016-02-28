@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.цветоваяСхемаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дневнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +65,8 @@
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button6 = new System.Windows.Forms.Button();
+            this.разработчикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,9 +102,18 @@
             this.выходToolStripMenuItem.Text = "Сохранить и выйти";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
+            // выходToolStripMenuItem1
+            // 
+            this.выходToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Image1;
+            this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
+            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.выходToolStripMenuItem1.Text = "Выйти";
+            this.выходToolStripMenuItem1.Click += new System.EventHandler(this.выходToolStripMenuItem1_Click);
+            // 
             // настройкиToolStripMenuItem
             // 
             this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.разработчикToolStripMenuItem,
             this.цветоваяСхемаToolStripMenuItem,
             this.языкToolStripMenuItem});
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
@@ -411,14 +421,6 @@
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
-            // выходToolStripMenuItem1
-            // 
-            this.выходToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Image1;
-            this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
-            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
-            this.выходToolStripMenuItem1.Text = "Выйти";
-            this.выходToolStripMenuItem1.Click += new System.EventHandler(this.выходToolStripMenuItem1_Click);
-            // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -429,6 +431,13 @@
             this.button6.Text = "Save as ";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // разработчикToolStripMenuItem
+            // 
+            this.разработчикToolStripMenuItem.Name = "разработчикToolStripMenuItem";
+            this.разработчикToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.разработчикToolStripMenuItem.Text = "Разработчик";
+            this.разработчикToolStripMenuItem.Click += new System.EventHandler(this.разработчикToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -506,6 +515,7 @@
         public System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolStripMenuItem разработчикToolStripMenuItem;
     }
 }
 

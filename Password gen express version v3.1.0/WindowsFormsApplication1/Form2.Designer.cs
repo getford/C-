@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -36,10 +37,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.appPasswordGenLoginDataSet = new WindowsFormsApplication1.AppPasswordGenLoginDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appPasswordGenLoginDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(26, 107);
             this.button1.Name = "button1";
@@ -51,6 +57,7 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(167, 107);
             this.button2.Name = "button2";
@@ -62,6 +69,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.textBox1.Location = new System.Drawing.Point(26, 28);
             this.textBox1.Name = "textBox1";
@@ -72,7 +80,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBox2.Location = new System.Drawing.Point(26, 68);
@@ -86,6 +94,7 @@
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Location = new System.Drawing.Point(120, 106);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 23);
@@ -96,6 +105,7 @@
             // 
             // button4
             // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button4.Location = new System.Drawing.Point(237, 137);
             this.button4.Name = "button4";
@@ -116,6 +126,16 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Пожалуйста авторизуйтесь!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.appPasswordGenLoginDataSet;
+            this.bindingSource1.Position = 0;
+            // 
+            // appPasswordGenLoginDataSet
+            // 
+            this.appPasswordGenLoginDataSet.DataSetName = "AppPasswordGenLoginDataSet";
+            this.appPasswordGenLoginDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form2
             // 
@@ -141,6 +161,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In ";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appPasswordGenLoginDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +177,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private AppPasswordGenLoginDataSet appPasswordGenLoginDataSet;
     }
 }

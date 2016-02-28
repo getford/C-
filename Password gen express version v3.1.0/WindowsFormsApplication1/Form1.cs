@@ -435,8 +435,15 @@ namespace WindowsFormsApplication1
                 }
             }
         }
+
+        private void разработчикToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2_adm = new Form2();
+            f2_adm.Show();
+
+        }
     }
 }
 
 
-//v3.3.4
+//v3.3.6
