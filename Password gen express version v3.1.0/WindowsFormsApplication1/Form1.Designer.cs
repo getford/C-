@@ -35,6 +35,7 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.разработчикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.цветоваяСхемаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дневнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ночнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +67,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button6 = new System.Windows.Forms.Button();
-            this.разработчикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,6 +120,13 @@
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
+            // 
+            // разработчикToolStripMenuItem
+            // 
+            this.разработчикToolStripMenuItem.Name = "разработчикToolStripMenuItem";
+            this.разработчикToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.разработчикToolStripMenuItem.Text = "Разработчик";
+            this.разработчикToolStripMenuItem.Click += new System.EventHandler(this.разработчикToolStripMenuItem_Click);
             // 
             // цветоваяСхемаToolStripMenuItem
             // 
@@ -383,9 +390,10 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox2.Size = new System.Drawing.Size(288, 183);
             this.textBox2.TabIndex = 11;
+            this.textBox2.Text = "Здесь будут пароли созданные вами";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -431,13 +439,6 @@
             this.button6.Text = "Save as ";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // разработчикToolStripMenuItem
-            // 
-            this.разработчикToolStripMenuItem.Name = "разработчикToolStripMenuItem";
-            this.разработчикToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.разработчикToolStripMenuItem.Text = "Разработчик";
-            this.разработчикToolStripMenuItem.Click += new System.EventHandler(this.разработчикToolStripMenuItem_Click);
             // 
             // Form1
             // 

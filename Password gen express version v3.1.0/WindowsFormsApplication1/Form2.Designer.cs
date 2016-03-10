@@ -38,9 +38,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.appPasswordGenLoginDataSet = new WindowsFormsApplication1.AppPasswordGenLoginDataSet();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appPasswordGenLoginDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -94,18 +94,19 @@
             // 
             // button3
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(120, 106);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button3.Location = new System.Drawing.Point(60, 137);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(29, 23);
+            this.button3.Size = new System.Drawing.Size(150, 20);
             this.button3.TabIndex = 4;
-            this.button3.Text = "X";
+            this.button3.Text = "Проверка соединения с БД";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button4.Location = new System.Drawing.Point(237, 137);
             this.button4.Name = "button4";
@@ -120,7 +121,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(37, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 15);
             this.label1.TabIndex = 7;
@@ -129,20 +130,18 @@
             // 
             // bindingSource1
             // 
-            this.bindingSource1.DataSource = this.appPasswordGenLoginDataSet;
-            this.bindingSource1.Position = 0;
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
-            // appPasswordGenLoginDataSet
+            // bindingSource2
             // 
-            this.appPasswordGenLoginDataSet.DataSetName = "AppPasswordGenLoginDataSet";
-            this.appPasswordGenLoginDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bindingSource2.CurrentChanged += new System.EventHandler(this.bindingSource2_CurrentChanged);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(269, 169);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
@@ -151,6 +150,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -162,7 +162,7 @@
             this.Text = "Log In ";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appPasswordGenLoginDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,6 +178,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private AppPasswordGenLoginDataSet appPasswordGenLoginDataSet;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }

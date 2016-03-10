@@ -11,12 +11,12 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\PassWord Gen Express-version.exe.config
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\PassWord Gen Express-version.exe
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\PassWord Gen Express-version.pdb
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\PassWord Gen Express-version.exe
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\PassWord Gen Express-version.pdb
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SignInForm.resources
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\AppPasswordGenLogin.mdf
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\AppPasswordGenLogin_log.ldf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\PassWord Gen.exe.config
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\DB_app.mdf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\DB_app_log.ldf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\PassWord Gen.exe
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Debug\PassWord Gen.pdb
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\PassWord Gen.exe
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Debug\PassWord Gen.pdb

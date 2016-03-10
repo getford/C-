@@ -10,16 +10,19 @@ using System.Windows.Forms;
 using System.IO;
 using System.CodeDom;
 using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Data.Sql;
-using System.Data.Common;
-using System.Data.Odbc;
-using System.Data.SqlTypes;
+
+//using System.Data.SqlClient;
+//using System.Data.Sql;
+//using System.Data.Common;
+//using System.Data.Odbc;
+//using System.Data.SqlTypes;
 
 namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
+        string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DB_app.mdf;Integrated Security=True";
+
         public Form2()
         {
             InitializeComponent();
@@ -34,14 +37,13 @@ namespace WindowsFormsApplication1
         {
             // проверка, подключена ли бд
 
-            string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AppPasswordGenLogin.mdf;Integrated Security=True";
-            SqlConnection connect = new SqlConnection(connStr);
+            OleDbConnection connectDB = new OleDbConnection(connStr);
 
             try
             {
-                connect.Open();
+                connectDB.Open();
             }
-            catch (SqlException se)
+            catch (OleDbException se)
             {
                 MessageBox.Show("Ошибка подключения к БД", se.Message);
                 return;
@@ -61,11 +63,29 @@ namespace WindowsFormsApplication1
             //    f1_main.Show();
             //    Hide();
             //}
-
-            string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AppPasswordGenLogin.mdf;Integrated Security=True";
-            SqlConnection connect = new SqlConnection(connStr);
-
             
+            
+
+
+            //OleDbConnection conn = new OleDbConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DB_app.mdf;Integrated Security=True");
+            //OleDbCommand com = new OleDbCommand();
+            //OleDbDataAdapter adap = new OleDbDataAdapter();
+            //DataSet ds = new DataSet();
+            //DataTable dt = new DataTable();
+
+            //com.Connection = conn;
+            //com.CommandText = "Select count (*) from login_table";
+            //conn.Open();
+            //adap.SelectCommand = com;
+            //adap.Fill(ds);
+            //dt = ds.Tables[0];
+            //dataGridView1.DataSource = dt;
+
+            //com.CommandText = "Insert into login_table (Login, Password) Values ('" + textBox1.Text + "', '" + textBox2.Text + "');";
+
+
+
+
 
             //SqlCommand sqlcmd = new SqlCommand("Insert into Login" + "(Login) Values (@Login)", connect);
             //SqlParameter sqlparm = new SqlParameter();
@@ -99,6 +119,21 @@ namespace WindowsFormsApplication1
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource2_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
