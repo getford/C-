@@ -45,7 +45,6 @@
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(26, 107);
             this.button1.Name = "button1";
@@ -57,7 +56,6 @@
             // 
             // button2
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(167, 107);
             this.button2.Name = "button2";
@@ -94,11 +92,10 @@
             // 
             // button3
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button3.Location = new System.Drawing.Point(60, 137);
+            this.button3.Location = new System.Drawing.Point(50, 136);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 20);
+            this.button3.Size = new System.Drawing.Size(171, 29);
             this.button3.TabIndex = 4;
             this.button3.Text = "Проверка соединения с БД";
             this.button3.UseVisualStyleBackColor = true;
@@ -106,9 +103,8 @@
             // 
             // button4
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button4.Location = new System.Drawing.Point(237, 137);
+            this.button4.Location = new System.Drawing.Point(234, 137);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(20, 20);
             this.button4.TabIndex = 6;
@@ -142,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(269, 169);
+            this.ClientSize = new System.Drawing.Size(266, 169);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

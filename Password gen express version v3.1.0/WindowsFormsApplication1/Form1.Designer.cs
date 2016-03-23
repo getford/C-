@@ -67,6 +67,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button6 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -386,21 +387,20 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 246);
+            this.textBox2.Location = new System.Drawing.Point(12, 282);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox2.Size = new System.Drawing.Size(288, 183);
             this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "Здесь будут пароли созданные вами";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(120, 435);
+            this.button4.Location = new System.Drawing.Point(120, 471);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 12;
@@ -416,7 +416,7 @@
             // 
             this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(30, 436);
+            this.button5.Location = new System.Drawing.Point(30, 472);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 13;
@@ -432,7 +432,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(212, 435);
+            this.button6.Location = new System.Drawing.Point(212, 471);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 14;
@@ -440,13 +440,23 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(68, 266);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Здесь будут пароли созданные вами";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(620, 488);
+            this.ClientSize = new System.Drawing.Size(620, 515);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -464,7 +474,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "PassWord Gen [getford\'s app] - v3.3.3";
+            this.Text = "PassWord Manager - v4.0.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -517,6 +527,7 @@
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ToolStripMenuItem разработчикToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -1,0 +1,1 @@
+﻿INSERT INTO introduce (user_login) values ('123');
