@@ -13,9 +13,6 @@ using System.Data.OleDb;
 
 using System.Data.SqlClient;
 using System.Data.Sql;
-//using System.Data.Common;
-//using System.Data.Odbc;
-//using System.Data.SqlTypes;
 
 namespace WindowsFormsApplication1
 {
@@ -29,26 +26,6 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)              // проверка соединения button
-        {
-            // проверка, подключена ли бд
-
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\MAIN_DB.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlCommand cmd = new SqlCommand();
-
-            try
-            {
-                cn.Open();
-                MessageBox.Show("Connected ok!");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error", ex.Message);
-                return;
-            }
 
         }
 
@@ -67,16 +44,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)              // sign in
-        {
-            if(button2.Enabled == true)
-            {
-                SignInForm sgn_form = new SignInForm();
-                sgn_form.Show();
-            }
-        }
-
-
         private void textBox1_TextChanged(object sender, EventArgs e)       // login textbox
         {
             
@@ -92,24 +59,18 @@ namespace WindowsFormsApplication1
             System.Environment.Exit(0);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)     // регистрация 
         {
-
+            if (linkLabel2.Enabled == true)
+            {
+                SignInForm sgn_form = new SignInForm();
+                sgn_form.Show();
+            }
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)      // свернуть
         {
-
-        }
-
-        private void bindingSource2_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

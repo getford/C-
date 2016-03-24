@@ -8,21 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using System.Data.OleDb;
-using System.Data.SqlClient;
-
 
 namespace WindowsFormsApplication1
 {
 
     public partial class SignInForm : Form
-    {
-
+    { 
         public SignInForm()
         {
             InitializeComponent();
-
-            DataSet ds = new DataSet();
 
             /*Секреный вопрос 1*/
             comboBox1.Items.Add("Девичья фамилия матери");
@@ -34,6 +28,11 @@ namespace WindowsFormsApplication1
             comboBox2.Items.Add("Любимая книга");
             comboBox2.Items.Add("Любимое блюдо");
             comboBox2.Items.Add("Четыре последние цифры кредитной карты");
+        }
+
+        private void SignInForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -52,6 +51,7 @@ namespace WindowsFormsApplication1
                 textBox5.Clear();
                 textBox6.Clear();
                 textBox7.Clear();
+                textBox8.Clear();
                 comboBox1.ResetText();
                 comboBox2.ResetText();
             }
@@ -72,43 +72,24 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void male_pol_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void female_pol_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)      // кнопка регистрации
         {
-            using (SqlConnection cn = new SqlConnection())
+            string select_cb_1 = comboBox1.SelectedItem.ToString();
+            string select_cb_2 = comboBox2.SelectedItem.ToString();
+
+            if (textBox1.Text != "" && textBox2.Text.ToString() != "" && textBox3.Text.ToString() != "" && textBox8.Text != "" && textBox4.Text != "" && textBox5.Text != "" && select_cb_1 != "" && textBox6.Text != "" && select_cb_2 != "" && textBox7.Text.ToString() != "" )
             {
-                cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\MAIN_DB.mdf;Integrated Security=True;Connect Timeout=30";
-
-                cn.Open();
-                //MessageBox.Show("its ok");
-
-                SqlCommand cmdd = new SqlCommand("insert into introduce values ('" + Convert.ToString(textBox1.Text) + "')", cn);
-                cmdd.ExecuteNonQuery();
-                cn.Close();
-
-                try
-                {
-
-                    
-                }
-                catch(SqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-
-                cn.Close();
+                if (textBox2.Text.ToString() == textBox3.Text.ToString())
+                    SQL_func.Insert(textBox1.Text, textBox2.Text.ToString(), textBox3.Text.ToString(), textBox8.Text, textBox4.Text, textBox5.Text, select_cb_1, textBox6.Text.ToString(), select_cb_2, textBox7.Text.ToString());
+                else
+                    MessageBox.Show("Введенные пароли не совтапают!");
             }
+
         }
 
+        private void SignInForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
