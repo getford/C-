@@ -13,15 +13,16 @@ namespace WindowsFormsApplication1
     {
         static public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
 
-        static public void SELECT(DataGridView _datagridview)
+        static public void select(DataGridView dgv)
         {
             try
             {
                 connect.Open();
-                SqlDataAdapter command_select = new SqlDataAdapter(@"SELECT * FROM [Table]", connect);
+                SqlDataAdapter command_data_adapter = new SqlDataAdapter(@"SELECT user_login, user_password FROM [introduce]", connect);
                 DataTable dt = new DataTable();
-                command_select.Fill(dt);
-                _datagridview.DataSource = dt;
+                command_data_adapter.Fill(dt);
+                dgv.DataSource = dt;
+
             }
             catch (SqlException ex)
             {
@@ -50,7 +51,6 @@ namespace WindowsFormsApplication1
                 commandInsert.Parameters.AddWithValue(@"user_secound_question", _usersecoundqsr);
                 commandInsert.Parameters.AddWithValue(@"user_secound_answer", _usersecoungansw);
                 commandInsert.ExecuteNonQuery();
-
             }
             catch(SqlException ex)
             {

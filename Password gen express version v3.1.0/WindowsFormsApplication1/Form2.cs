@@ -26,20 +26,34 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet1.introduce". При необходимости она может быть перемещена или удалена.
+            this.introduceTableAdapter1.Fill(this.databaseDataSet1.introduce);
+            SQL_func.select(this.dataGridView2);    // password
 
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.introduce". При необходимости она может быть перемещена или удалена.
+            this.introduceTableAdapter.Fill(this.databaseDataSet.introduce);
+            SQL_func.select(this.dataGridView1);    // login
         }
 
         private void button1_Click(object sender, EventArgs e)              // log in
         {
-            //string l = "admin";
-            //string p = "admin";
-            //if (textBox1.Text == l && textBox2.Text == p)
-            //{
-            Form1 f1_main = new Form1();
-            f1_main.Show();
-            Hide();
-            //}
 
+            for(int i = 0; i < dataGridView1.Columns.Count && i < dataGridView2.Columns.Count; i++)    // столбцы
+            {
+                for(int j = 0; j < dataGridView1.Rows.Count && j < dataGridView2.Rows.Count; j++)   // строки
+                {
+                    if(dataGridView1[i, j].Value.ToString() == textBox1.Text.ToString() && dataGridView2[i, j].Value.ToString() == textBox2.Text.ToString())
+                    {
+                            Form1 f1_main = new Form1();
+                            f1_main.Show();
+                            Hide();
+                    }
+                    //if(dataGridView1[i, j].Value.ToString() != textBox1.Text.ToString() && dataGridView2[i, j].Value.ToString() != textBox2.Text.ToString())
+                    //{
+                    //    MessageBox.Show("Error");
+                    //}
+                }
+            }
 
 
         }
@@ -71,6 +85,16 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)      // свернуть
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

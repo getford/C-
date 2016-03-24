@@ -44,10 +44,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.databaseDataSet = new WindowsFormsApplication1.DatabaseDataSet();
+            this.introduceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.introduceTableAdapter = new WindowsFormsApplication1.DatabaseDataSetTableAdapters.introduceTableAdapter();
+            this.userloginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.databaseDataSet1 = new WindowsFormsApplication1.DatabaseDataSet1();
+            this.introduceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.introduceTableAdapter1 = new WindowsFormsApplication1.DatabaseDataSet1TableAdapters.introduceTableAdapter();
+            this.user_password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,6 +78,7 @@
             pictureBox1.Size = new System.Drawing.Size(480, 320);
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
             // 
@@ -139,6 +156,7 @@
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Восстановить пароль";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -201,6 +219,76 @@
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userloginDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.introduceBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 198);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(153, 67);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // introduceBindingSource
+            // 
+            this.introduceBindingSource.DataMember = "introduce";
+            this.introduceBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // introduceTableAdapter
+            // 
+            this.introduceTableAdapter.ClearBeforeFill = true;
+            // 
+            // userloginDataGridViewTextBoxColumn
+            // 
+            this.userloginDataGridViewTextBoxColumn.DataPropertyName = "user_login";
+            this.userloginDataGridViewTextBoxColumn.HeaderText = "user_login";
+            this.userloginDataGridViewTextBoxColumn.Name = "userloginDataGridViewTextBoxColumn";
+            this.userloginDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.user_password});
+            this.dataGridView2.DataSource = this.introduceBindingSource1;
+            this.dataGridView2.Location = new System.Drawing.Point(188, 198);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(150, 67);
+            this.dataGridView2.TabIndex = 19;
+            // 
+            // databaseDataSet1
+            // 
+            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
+            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // introduceBindingSource1
+            // 
+            this.introduceBindingSource1.DataMember = "introduce";
+            this.introduceBindingSource1.DataSource = this.databaseDataSet1;
+            // 
+            // introduceTableAdapter1
+            // 
+            this.introduceTableAdapter1.ClearBeforeFill = true;
+            // 
+            // user_password
+            // 
+            this.user_password.DataPropertyName = "user_password";
+            this.user_password.HeaderText = "user_password";
+            this.user_password.Name = "user_password";
+            this.user_password.ReadOnly = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +308,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(pictureBox1);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
@@ -234,6 +324,12 @@
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +350,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource introduceBindingSource;
+        private DatabaseDataSetTableAdapters.introduceTableAdapter introduceTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userloginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private DatabaseDataSet1 databaseDataSet1;
+        private System.Windows.Forms.BindingSource introduceBindingSource1;
+        private DatabaseDataSet1TableAdapters.introduceTableAdapter introduceTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user_password;
     }
 }
