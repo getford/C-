@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connect.Open();
-                SqlDataAdapter command_data_adapter = new SqlDataAdapter(@"SELECT user_login, user_password FROM [introduce]", connect);
+                SqlDataAdapter command_data_adapter = new SqlDataAdapter(@"SELECT user_login, user_password, user_e_mail FROM [introduce]", connect);
                 DataTable dt = new DataTable();
                 command_data_adapter.Fill(dt);
                 dgv.DataSource = dt;

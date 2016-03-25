@@ -26,36 +26,40 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet1.introduce". При необходимости она может быть перемещена или удалена.
-            this.introduceTableAdapter1.Fill(this.databaseDataSet1.introduce);
-            SQL_func.select(this.dataGridView2);    // password
 
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.introduce". При необходимости она может быть перемещена или удалена.
-            this.introduceTableAdapter.Fill(this.databaseDataSet.introduce);
-            SQL_func.select(this.dataGridView1);    // login
         }
 
         private void button1_Click(object sender, EventArgs e)              // log in
         {
 
-            for(int i = 0; i < dataGridView1.Columns.Count && i < dataGridView2.Columns.Count; i++)    // столбцы
+            SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
+            try
             {
-                for(int j = 0; j < dataGridView1.Rows.Count && j < dataGridView2.Rows.Count; j++)   // строки
+                connect.Open();
+                SqlCommand cmd_select = new SqlCommand("select user_password from introduce where user_login = '" + textBox1.Text.ToString() + "'", connect);
+                SqlDataReader dr = cmd_select.ExecuteReader();
+                while (dr.Read())
                 {
-                    if(dataGridView1[i, j].Value.ToString() == textBox1.Text.ToString() && dataGridView2[i, j].Value.ToString() == textBox2.Text.ToString())
+                    if (textBox2.Text.ToString() == dr.GetString(0))
                     {
-                            Form1 f1_main = new Form1();
-                            f1_main.Show();
-                            Hide();
+                        Form1 f1_main = new Form1();
+                        f1_main.Show();
+                        Hide();
                     }
-                    //if(dataGridView1[i, j].Value.ToString() != textBox1.Text.ToString() && dataGridView2[i, j].Value.ToString() != textBox2.Text.ToString())
-                    //{
-                    //    MessageBox.Show("Error");
-                    //}
+                    else
+                    {
+                        MessageBox.Show("Введен не верный пароль!");
+                    }
                 }
             }
-
-
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)       // login textbox
@@ -89,12 +93,32 @@ namespace WindowsFormsApplication1
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            Form_Restore_Password frm = new Form_Restore_Password();
+            frm.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
+
+            try
+            {
+                connectDB.Open();
+                MessageBox.Show("Соединение установленно!");
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("Соединение с бд НЕ установленно!", ex.Message);
+            }
+            finally
+            {
+                connectDB.Close();
+            }
         }
     }
 }
