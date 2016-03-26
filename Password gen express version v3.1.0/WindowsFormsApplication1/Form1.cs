@@ -440,6 +440,12 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void OnClick(object sender, EventArgs e)
+        {
+            account acc = new account();
+            acc.Show();
+        }
     }
 }
 
