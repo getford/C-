@@ -87,6 +87,7 @@
             this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter);
             // 
             // textBox1
             // 

@@ -83,7 +83,12 @@ namespace WindowsFormsApplication1
             {
                 if (textBox2.Text.ToString() == textBox3.Text.ToString())       // проверка совпадения паролей
                 {
-                    SQL_func.Insert(textBox1.Text, textBox2.Text.ToString(), textBox3.Text.ToString(), textBox8.Text, textBox4.Text, textBox5.Text, select_cb_1, textBox6.Text.ToString(), select_cb_2, textBox7.Text.ToString());
+                    if(textBox2.Text.Contains('!') || textBox2.Text.Contains('@') || textBox2.Text.Contains('#') || textBox2.Text.Contains('$') || textBox2.Text.Contains('%') || textBox2.Text.Contains('&') || textBox2.Text.Contains('*') || textBox2.Text.Contains('(') || textBox2.Text.Contains(')') || textBox2.Text.Contains('[') || textBox2.Text.Contains(']'))
+                        SQL_func.Insert(textBox1.Text, textBox2.Text.ToString(), textBox3.Text.ToString(), textBox8.Text, textBox4.Text, textBox5.Text, select_cb_1, textBox6.Text.ToString(), select_cb_2, textBox7.Text.ToString());
+                    else
+                    {
+                        MessageBox.Show("Пароль должен содержать хотя бы одну кракозябру! ( ! @ # $ % & * ( ) [ ] )");
+                    }
                 }
                 else
                     MessageBox.Show("Введенные пароли не совпадают!");

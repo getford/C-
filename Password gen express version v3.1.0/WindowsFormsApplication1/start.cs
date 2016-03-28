@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
 
         private void start_Load(object sender, EventArgs e)
         {
-            timer.Interval = 3000;
+            timer.Interval = 1500;
             timer.Enabled = true;
         }
 

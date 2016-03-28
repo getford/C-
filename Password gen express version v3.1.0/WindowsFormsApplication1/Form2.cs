@@ -30,25 +30,33 @@ namespace WindowsFormsApplication1
         }
 
         private void button1_Click(object sender, EventArgs e)              // log in
-        {
-
+        { 
             SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
             try
             {
                 connect.Open();
                 SqlCommand cmd_select = new SqlCommand("select user_password from introduce where user_login = '" + textBox1.Text.ToString() + "'", connect);
                 SqlDataReader dr = cmd_select.ExecuteReader();
-                while (dr.Read())
+                if (textBox1.Text.ToString() == "" || textBox2.Text.ToString() == "")
                 {
-                    if (textBox2.Text.ToString() == dr.GetString(0))
+                    MessageBox.Show("Поля заполнены не корректно (возможно вы не ввели логин или пароль!). Пожалуйста, попробуйте снова!");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                }
+                else
+                {
+                    while (dr.Read())
                     {
-                        Form1 f1_main = new Form1();
-                        f1_main.Show();
-                        Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Введен не верный пароль!");
+                        if (textBox2.Text.ToString() == dr.GetString(0))
+                        {
+                            Form1 f1_main = new Form1();
+                            f1_main.Show();
+                            Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Введен не верный пароль!(Логин верный!). Если вы забыли ваш пароль, вы можете воспользоваться формой восстановления пароля!");
+                        }
                     }
                 }
             }
@@ -119,6 +127,11 @@ namespace WindowsFormsApplication1
             {
                 connectDB.Close();
             }
+        }
+
+        private void Enter(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
