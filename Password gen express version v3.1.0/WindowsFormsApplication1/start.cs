@@ -15,10 +15,6 @@ namespace WindowsFormsApplication1
         public start()
         {
             InitializeComponent();
-
-
-
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -39,7 +35,6 @@ namespace WindowsFormsApplication1
             Form2 fm2 = new Form2();
             fm2.Show();
             Hide();
-
 
         }
     }

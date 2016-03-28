@@ -217,7 +217,7 @@
             // main_text
             // 
             this.main_text.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.main_text.Location = new System.Drawing.Point(55, 27);
+            this.main_text.Location = new System.Drawing.Point(12, 27);
             this.main_text.Name = "main_text";
             this.main_text.Size = new System.Drawing.Size(507, 86);
             this.main_text.TabIndex = 1;
@@ -454,7 +454,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(539, 434);
+            this.pictureBox1.Location = new System.Drawing.Point(539, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void label_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

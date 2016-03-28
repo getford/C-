@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Password Gen")]
-[assembly: AssemblyDescription("Password generator & save password in log P.S. First app on C-Sharp")]
+[assembly: AssemblyTitle("Password Manager")]
+[assembly: AssemblyDescription("Password manager & password generator app")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Vladimir getford Zhigalo inc.")]
-[assembly: AssemblyProduct("Password Gen express version")]
+[assembly: AssemblyProduct("Password Manager PRO")]
 [assembly: AssemblyCopyright("Copyright © Vladimir <getford> Zhigalo inc. 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.3.2.0")]
-[assembly: AssemblyFileVersion("3.3.2.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
