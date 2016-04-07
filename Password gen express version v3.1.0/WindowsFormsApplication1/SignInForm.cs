@@ -78,6 +78,9 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)      // кнопка регистрации
         {
+
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
+
             string select_cb_1 = comboBox1.SelectedItem.ToString();
             string select_cb_2 = comboBox2.SelectedItem.ToString();
 
@@ -85,16 +88,24 @@ namespace WindowsFormsApplication1
             {
                 if (textBox2.Text.ToString() == textBox3.Text.ToString())       // проверка совпадения паролей
                 {
-                    if(textBox2.Text.Contains('!') || textBox2.Text.Contains('@') || textBox2.Text.Contains('#') || textBox2.Text.Contains('$') || textBox2.Text.Contains('%') || textBox2.Text.Contains('&') || textBox2.Text.Contains('*') || textBox2.Text.Contains('(') || textBox2.Text.Contains(')') || textBox2.Text.Contains('[') || textBox2.Text.Contains(']'))
-                        SQL_func.Insert(textBox1.Text, textBox2.Text.ToString(), textBox3.Text.ToString(), textBox8.Text, textBox4.Text, textBox5.Text, select_cb_1, textBox6.Text.ToString(), select_cb_2, textBox7.Text.ToString());
-                    else
+                    if (textBox2.Text.Contains('!') || textBox2.Text.Contains('@') || textBox2.Text.Contains('#') || textBox2.Text.Contains('$') || textBox2.Text.Contains('%') || textBox2.Text.Contains('&') || textBox2.Text.Contains('*') || textBox2.Text.Contains('(') || textBox2.Text.Contains(')') || textBox2.Text.Contains('[') || textBox2.Text.Contains(']'))
                     {
-                        MessageBox.Show("Пароль должен содержать хотя бы одну кракозябру! ( ! @ # $ % & * ( ) [ ] )");
+                        SQL_func.Insert(textBox1.Text, textBox2.Text.ToString(), textBox3.Text.ToString(), textBox8.Text, textBox4.Text, textBox5.Text, select_cb_1, textBox6.Text.ToString(), select_cb_2, textBox7.Text.ToString());      
+                        try        // создание таблицы в бд databace_site для хранения логин/пароль для авторизации на сайтах
+                        {
+                            connectDB.Open();
+                            string sql_query = string.Format("CREATE TABLE {0}" + "(Name_site NVARCHAR(30)," + "URL_site NVARCHAR(30)," + "Login_site NVARCHAR(15)," + "Password_site NVARCHAR(50))", textBox1.Text.ToString());
+                            SqlCommand cmd = new SqlCommand(sql_query, connectDB);
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch(SqlException ex) { MessageBox.Show(ex.Message); }
+                        finally { connectDB.Close(); }
                     }
+                    else { MessageBox.Show("Пароль должен содержать хотя бы одну кракозябру! ( ! @ # $ % & * ( ) [ ] )"); }
                 }
-                else
-                    MessageBox.Show("Введенные пароли не совпадают!");
+                else { MessageBox.Show("Введенные пароли не совпадают!"); }
             }
+            else { MessageBox.Show("Ошибка не определена"); }       // подумать над этой ошибкой
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

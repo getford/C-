@@ -168,6 +168,9 @@
     <EmbeddedResource Include="change_password_acc.resx">
       <DependentUpon>change_password_acc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DB_password_form.resx">
+      <DependentUpon>DB_password_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +274,13 @@
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Database_site.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_site_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database_site.mdf</DependentUpon>
     </Content>
     <Content Include="icontexto-inside-newsvine_8960.ico" />
     <Content Include="Image1.png" />
