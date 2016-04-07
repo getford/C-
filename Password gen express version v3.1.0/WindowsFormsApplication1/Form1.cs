@@ -476,6 +476,7 @@ namespace WindowsFormsApplication1
         private void MoveToDBPasswords_Click(object sender, EventArgs e)        // окрывает форму с базой паролей пользователя. Проедоставляет возможность авторизации на ращличных ресурсах
         {
             DB_password_form dbpf = new DB_password_form();
+            dbpf.Owner = this;
             dbpf.Show();
         }
     }

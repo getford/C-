@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     {
         static public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
 
-        static public void select(DataGridView dgv)
+        public static void select(DataGridView dgv)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        static public void Insert(string _userlogin, string _userpassword, string _reuserpassword, string _useremail, string _userfirstname, string _userlastname, string _userfirstqst, string _userfirstansw, string _usersecoundqsr, string _usersecoungansw)
+        public static void Insert(string _userlogin, string _userpassword, string _reuserpassword, string _useremail, string _userfirstname, string _userlastname, string _userfirstqst, string _userfirstansw, string _usersecoundqsr, string _usersecoungansw)
         {
             try
             {

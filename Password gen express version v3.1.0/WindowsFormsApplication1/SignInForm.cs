@@ -97,6 +97,7 @@ namespace WindowsFormsApplication1
                             string sql_query = string.Format("CREATE TABLE {0}" + "(Name_site NVARCHAR(30)," + "URL_site NVARCHAR(30)," + "Login_site NVARCHAR(15)," + "Password_site NVARCHAR(50))", textBox1.Text.ToString());
                             SqlCommand cmd = new SqlCommand(sql_query, connectDB);
                             cmd.ExecuteNonQuery();
+                            MessageBox.Show("Ваша учетная запись успешно создана, теперь вы можете войти в систему используя свой логин и пароль.");
                         }
                         catch(SqlException ex) { MessageBox.Show(ex.Message); }
                         finally { connectDB.Close(); }
