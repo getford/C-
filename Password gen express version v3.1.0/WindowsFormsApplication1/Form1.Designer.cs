@@ -73,6 +73,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.MoveToDBPasswords = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveToDBPasswords)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -512,6 +514,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ваши пароли";
             // 
+            // MoveToDBPasswords
+            // 
+            this.MoveToDBPasswords.Image = ((System.Drawing.Image)(resources.GetObject("MoveToDBPasswords.Image")));
+            this.MoveToDBPasswords.Location = new System.Drawing.Point(77, 360);
+            this.MoveToDBPasswords.Name = "MoveToDBPasswords";
+            this.MoveToDBPasswords.Size = new System.Drawing.Size(110, 109);
+            this.MoveToDBPasswords.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MoveToDBPasswords.TabIndex = 20;
+            this.MoveToDBPasswords.TabStop = false;
+            this.MoveToDBPasswords.Click += new System.EventHandler(this.MoveToDBPasswords_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,6 +532,7 @@
             this.AutoSize = true;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(722, 502);
+            this.Controls.Add(this.MoveToDBPasswords);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.user_login_under_avatar);
@@ -548,6 +562,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveToDBPasswords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,6 +613,7 @@
         public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.PictureBox MoveToDBPasswords;
     }
 }
 

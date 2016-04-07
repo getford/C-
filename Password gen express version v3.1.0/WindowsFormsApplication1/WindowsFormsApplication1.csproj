@@ -123,6 +123,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_password_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_password_form.Designer.cs">
+      <DependentUpon>DB_password_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

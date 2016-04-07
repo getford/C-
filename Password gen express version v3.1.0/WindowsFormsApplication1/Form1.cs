@@ -103,7 +103,6 @@ namespace WindowsFormsApplication1
         public void button1_Click(object sender, EventArgs e)              // кнопка генерации
         {
             char s;
-            int[] num = new int[18];
             char[] liter_full = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
             char[] liter_m = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
             char[] liter_b = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
@@ -295,8 +294,6 @@ namespace WindowsFormsApplication1
                 }
                 textBox2.Text += textBox1.Text + Environment.NewLine;
             }
-
-
         }
 
 
@@ -383,7 +380,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)      // сохранение паролей в файл, файл по умолчанию(диск c:\\)
         {
 
             System.IO.StreamWriter File = new System.IO.StreamWriter(@"C:\" + Environment.UserName + "_password.txt");
@@ -452,7 +449,7 @@ namespace WindowsFormsApplication1
             MessageBox.Show("Vladimir Zhigalo ©. BSTU 2016 FIT SIT(Software Information Technology)");
         }
 
-        private void OnClick(object sender, EventArgs e)
+        private void OnClick(object sender, EventArgs e)        // информация об аккаунте пользователя
         {
             account acc = new account();
             acc.Owner = this;
@@ -464,7 +461,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void track_bar_password_lengh_Scroll(object sender, EventArgs e)
+        private void track_bar_password_lengh_Scroll(object sender, EventArgs e)        // ползунок для выбора длины создаваемого пароля
         {
             track_bar_password_lengh.Minimum = 4;
             track_bar_password_lengh.Maximum = 29;
@@ -474,6 +471,12 @@ namespace WindowsFormsApplication1
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void MoveToDBPasswords_Click(object sender, EventArgs e)        // окрывает форму с базой паролей пользователя. Проедоставляет возможность авторизации на ращличных ресурсах
+        {
+            DB_password_form dbpf = new DB_password_form();
+            dbpf.Show();
         }
     }
 }

@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)              // close button
         {
-            System.Environment.Exit(0);
+            Application.Exit();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)     // регистрация 
@@ -120,9 +120,13 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                MessageBox.Show("Соединение установленно!");
+
+                string sql_query = string.Format("CREATE TABLE {0}" + "(ID INTEGER," + "name CHAR(10))", textBox1.Text.ToString());
+                SqlCommand cmd = new SqlCommand(sql_query, connectDB);
+                cmd.ExecuteNonQuery();
+
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Соединение с бд НЕ установленно!", ex.Message);
             }
