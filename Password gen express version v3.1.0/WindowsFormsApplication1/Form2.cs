@@ -22,11 +22,13 @@ namespace WindowsFormsApplication1
         public Form2()
         {
             InitializeComponent();
+            
+             
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)              // log in
@@ -50,6 +52,7 @@ namespace WindowsFormsApplication1
                         if (textBox2.Text.ToString() == dr.GetString(0))
                         {
                             Form1 f1_main = new Form1();
+                            f1_main.Owner = this;
                             f1_main.Show();
                             Hide();
                         }
@@ -129,9 +132,12 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void Enter(object sender, KeyPressEventArgs e)
+        private void Key_Down(object sender, KeyEventArgs e)  // сюда писать обработку нажатия кнопок
         {
-
+            if(e.KeyCode == Keys.Enter)     // при нажатие на "Enter" будет обрабатываться кнопка "Войти"
+            {
+                button1_Click(sender, e);
+            }
         }
     }
 }

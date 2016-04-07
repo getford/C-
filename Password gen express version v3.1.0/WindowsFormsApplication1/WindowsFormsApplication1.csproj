@@ -92,6 +92,12 @@
     <Compile Include="account.Designer.cs">
       <DependentUpon>account.cs</DependentUpon>
     </Compile>
+    <Compile Include="change_password_acc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="change_password_acc.Designer.cs">
+      <DependentUpon>change_password_acc.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="account.resx">
       <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="change_password_acc.resx">
+      <DependentUpon>change_password_acc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

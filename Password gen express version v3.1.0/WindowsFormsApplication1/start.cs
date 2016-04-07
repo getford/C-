@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
             Form2 fm2 = new Form2();
             fm2.Show();
-            Hide();
+            this.Hide();
 
         }
     }

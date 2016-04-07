@@ -17,6 +17,21 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(button1, "Нажмите для генерации пароля");       // Всплывающая подсказка
+
+            toolTip2.ToolTipTitle = ("Путь к файлу C:\\ ... .txt");
+            toolTip2.SetToolTip(button4, "Нажмите для сохранения в файл!");
+
+            Form2 f2 = this.Owner as Form2;         // указываем родительскую форму из котороый будет получено поле (поле должно быть public)
+            if (f2 != null)
+            {
+                user_login_under_avatar.Text = f2.textBox1.Text.ToString();
+                string st = user_login_under_avatar.Text.ToString();
+            }
+        }
+
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
 
@@ -41,6 +56,7 @@ namespace WindowsFormsApplication1
                     wr.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
                     wr.Write(textBox2.Text);
                     wr.Close();
+                    Application.Exit();
                 }
             }
         }
@@ -63,7 +79,7 @@ namespace WindowsFormsApplication1
         public void textBox1_TextChanged(object sender, EventArgs e)       // поле вывода пароля
         {
             int N;
-            N = (int)numericUpDown1.Value;
+            N = (int)track_bar_password_lengh.Value;
 
             if (N >= 4 && N < 6)
             {
@@ -107,7 +123,8 @@ namespace WindowsFormsApplication1
             Random rnd = new Random();
 
             int N;
-            N = (int)numericUpDown1.Value;
+            N = (int)track_bar_password_lengh.Value;
+
 
             if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
             {
@@ -303,20 +320,14 @@ namespace WindowsFormsApplication1
         {
 
         }
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)       // выбор цифр
         {
 
-        }   // выбор цифр
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(button1, "Нажмите для генерации пароля");       // Всплывающая подсказка
+        }   
 
-            toolTip2.ToolTipTitle = ("Путь к файлу C:\\ ... .txt");
-            toolTip2.SetToolTip(button4, "Нажмите для сохранения в файл!");
-        }
         private void благодарностьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Хотелось бы поблагодарить моего друга fish, \nкоторый оказал помощь с графической составляющей приложения, \nа также за тестирование данного приложения");
+            MessageBox.Show("Хотелось бы поблагодарить моего друга fish, \n за помощь с графической составляющей приложения, \nа также за тестирование данного приложения");
         }
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
@@ -409,12 +420,12 @@ namespace WindowsFormsApplication1
             button4.Enabled = true;
         }
 
-        private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void выходToolStripMenuItem1_Click(object sender, EventArgs e)      // файл -> выход
         {
-            Close();
+            Application.Exit();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)          // сохранить как (сохраняет сганирированные пароли в файл)
         {
             if (textBox2.Text == null)
             {
@@ -438,16 +449,31 @@ namespace WindowsFormsApplication1
 
         private void разработчикToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Vladimir Zhigalo ©. BSTU 2016 FIT SIT(Software Information Technology)");
         }
 
         private void OnClick(object sender, EventArgs e)
         {
             account acc = new account();
+            acc.Owner = this;
             acc.Show();
+        }
+
+        private void user_login_under_avatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void track_bar_password_lengh_Scroll(object sender, EventArgs e)
+        {
+            track_bar_password_lengh.Minimum = 4;
+            track_bar_password_lengh.Maximum = 29;
+            textBox3.Text = track_bar_password_lengh.Value.ToString();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
-
-
-//v3.3.7

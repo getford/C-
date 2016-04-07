@@ -39,6 +39,8 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form2 f2 = new Form2();     // после закрытия формы, обновим форму входа (дабы были доступны новые акк из бд)
+            f2.Refresh();
             this.Close();
         }
 
