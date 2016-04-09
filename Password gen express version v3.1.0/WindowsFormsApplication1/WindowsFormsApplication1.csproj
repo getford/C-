@@ -166,6 +166,9 @@
       <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL_func.cs" />
+    <Compile Include="SQL_query_form_restore_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="start.cs">
       <SubType>Form</SubType>
     </Compile>

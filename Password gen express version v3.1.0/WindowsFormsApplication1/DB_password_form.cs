@@ -67,12 +67,16 @@ namespace WindowsFormsApplication1
                 string sql_query_insert = string.Format("insert into {0} values (@Name_site, @URL_site, @Login_site, @Password_site)", textBox_user_login_now.Text);
 
                 SqlCommand cmd = new SqlCommand(sql_query_insert, connectDB);
-                cmd.Parameters.AddWithValue(@"Name_site", textBox_name_site.Text.ToString());
-                cmd.Parameters.AddWithValue(@"URL_site", textBox_URL_site.Text.ToString());
-                cmd.Parameters.AddWithValue(@"Login_site", textBox_login_site.Text.ToString());
-                cmd.Parameters.AddWithValue(@"Password_site", textBox_password_site.Text.ToString());
-                cmd.ExecuteNonQuery();
-                refresh_data();
+                if (textBox_name_site.Text != "" || textBox_URL_site.Text != "" || textBox_login_site.Text != "" || textBox_password_site.Text != "")
+                {
+                    cmd.Parameters.AddWithValue(@"Name_site", textBox_name_site.Text.ToString());
+                    cmd.Parameters.AddWithValue(@"URL_site", textBox_URL_site.Text.ToString());
+                    cmd.Parameters.AddWithValue(@"Login_site", textBox_login_site.Text.ToString());
+                    cmd.Parameters.AddWithValue(@"Password_site", textBox_password_site.Text.ToString());
+                    cmd.ExecuteNonQuery();
+                    refresh_data();
+                }
+                else { MessageBox.Show("Error. Поля не могут быть пустыми!"); }
             }
             catch(SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
@@ -100,11 +104,17 @@ namespace WindowsFormsApplication1
             //catch(SqlException ex) { MessageBox.Show(ex.Message); }
             //finally { connectDB.Close(); }
 
-            foreach(DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                dataGridView1.Rows.Remove(row);
-                refresh_data();
-            }
+            //foreach(DataGridViewRow row in dataGridView1.SelectedRows)
+            //{
+            //    dataGridView1.Rows.Remove(row);
+            //    refresh_data();
+            //}
+        }
+
+        private void OnClick(object sender, EventArgs e)
+        {
+            account acc = new account();
+            acc.Show();
         }
     }
 }

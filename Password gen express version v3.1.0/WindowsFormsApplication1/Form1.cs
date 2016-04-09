@@ -78,25 +78,7 @@ namespace WindowsFormsApplication1
 
         public void textBox1_TextChanged(object sender, EventArgs e)       // поле вывода пароля
         {
-            int N;
-            N = (int)track_bar_password_lengh.Value;
 
-            if (N >= 4 && N < 6)
-            {
-                textBox1.BackColor = Color.Red;
-            }
-            if (N >= 6 && N < 8)
-            {
-                textBox1.BackColor = Color.Orange;
-            }
-            if (N >= 8 && N < 10)
-            {
-                textBox1.BackColor = Color.Olive;
-            }
-            if (N >= 10 && N <= 29)
-            {
-                textBox1.BackColor = Color.Green;
-            }
 
         }
 
@@ -466,6 +448,26 @@ namespace WindowsFormsApplication1
             track_bar_password_lengh.Minimum = 4;
             track_bar_password_lengh.Maximum = 29;
             textBox3.Text = track_bar_password_lengh.Value.ToString();
+
+            int N;
+            N = (int)track_bar_password_lengh.Value;
+
+            if (N >= 4 && N < 6)
+            {
+                textBox1.BackColor = Color.Red;
+            }
+            if (N >= 6 && N < 8)
+            {
+                textBox1.BackColor = Color.Orange;
+            }
+            if (N >= 8 && N <= 11)
+            {
+                textBox1.BackColor = Color.Olive;
+            }
+            if (N >= 12 && N <= 29)
+            {
+                textBox1.BackColor = Color.Green;
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

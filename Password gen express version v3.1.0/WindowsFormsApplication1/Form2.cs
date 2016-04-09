@@ -120,11 +120,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-
-                string sql_query = string.Format("CREATE TABLE {0}" + "(ID INTEGER," + "name CHAR(10))", textBox1.Text.ToString());
-                SqlCommand cmd = new SqlCommand(sql_query, connectDB);
-                cmd.ExecuteNonQuery();
-
+                MessageBox.Show("OK", "Соединение установленно!");
             }
             catch (SqlException ex)
             {
