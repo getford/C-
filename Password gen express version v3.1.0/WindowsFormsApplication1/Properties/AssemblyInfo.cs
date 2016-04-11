@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Password Manager")]
 [assembly: AssemblyDescription("Password manager & password generator app")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Vladimir getford Zhigalo inc.")]
+[assembly: AssemblyCompany("Vladimir Zhigalo inc.")]
 [assembly: AssemblyProduct("Password Manager PRO")]
-[assembly: AssemblyCopyright("Copyright © Vladimir <getford> Zhigalo inc. 2016")]
+[assembly: AssemblyCopyright("Copyright © Vladimir Zhigalo inc. 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

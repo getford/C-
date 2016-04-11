@@ -28,9 +28,6 @@ namespace WindowsFormsApplication1
             {
                 label_login.Text = f1.user_login_under_avatar.Text.ToString();
             }
-
-            SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("select user_login from [introduce] where user_login = '" +  "'", connect);
         }
 
         private void label_login_Click(object sender, EventArgs e)

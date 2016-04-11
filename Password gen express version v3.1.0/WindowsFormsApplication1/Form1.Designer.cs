@@ -107,7 +107,6 @@
             // 
             // выходToolStripMenuItem
             // 
-            this.выходToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Image1;
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.выходToolStripMenuItem.Text = "Сохранить и выйти";
@@ -115,7 +114,6 @@
             // 
             // выходToolStripMenuItem1
             // 
-            this.выходToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Image1;
             this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
             this.выходToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
             this.выходToolStripMenuItem1.Text = "Выйти";

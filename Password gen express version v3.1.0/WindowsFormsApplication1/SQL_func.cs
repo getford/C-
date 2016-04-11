@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     {
         static public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
 
+        /*запрос для регистрации*/
         public static void select(DataGridView dgv)
         {
             try
