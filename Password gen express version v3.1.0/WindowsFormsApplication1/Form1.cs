@@ -406,7 +406,7 @@ namespace WindowsFormsApplication1
 
         private void button6_Click(object sender, EventArgs e)          // сохранить как (сохраняет сганирированные пароли в файл)
         {
-            if (textBox2.Text == null)
+            if (textBox2.Text == "")
             {
                 MessageBox.Show("Не создано ни одного пароля!");
             }
@@ -418,8 +418,11 @@ namespace WindowsFormsApplication1
                 if (save_password.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
-                    wr.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
-                    wr.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
+                    wr.Write("Data & Time:  " + System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                    wr.Write("User:         " + Environment.UserName + Environment.NewLine);
+                    wr.Write("PC Name:      " + Environment.MachineName + Environment.NewLine);
+                    wr.Write("OS Version:   " + Environment.OSVersion + Environment.NewLine + Environment.NewLine + Environment.NewLine);
+                    wr.Write("          *** Password's ***" + Environment.NewLine);
                     wr.Write(textBox2.Text);
                     wr.Close();
                 }
