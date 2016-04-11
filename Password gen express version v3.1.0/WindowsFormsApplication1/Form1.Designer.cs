@@ -95,6 +95,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(722, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // файлToolStripMenuItem
             // 
@@ -309,6 +310,7 @@
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Location = new System.Drawing.Point(6, 19);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(391, 20);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Здесь будет ваш пароль!";
@@ -393,6 +395,7 @@
             this.textBox2.Location = new System.Drawing.Point(6, 32);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(388, 183);
@@ -510,14 +513,13 @@
             this.groupBox4.Size = new System.Drawing.Size(400, 255);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Ваши пароли";
             // 
             // MoveToDBPasswords
             // 
             this.MoveToDBPasswords.Image = ((System.Drawing.Image)(resources.GetObject("MoveToDBPasswords.Image")));
             this.MoveToDBPasswords.Location = new System.Drawing.Point(77, 360);
             this.MoveToDBPasswords.Name = "MoveToDBPasswords";
-            this.MoveToDBPasswords.Size = new System.Drawing.Size(110, 109);
+            this.MoveToDBPasswords.Size = new System.Drawing.Size(110, 110);
             this.MoveToDBPasswords.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MoveToDBPasswords.TabIndex = 20;
             this.MoveToDBPasswords.TabStop = false;
@@ -546,7 +548,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PassWord Manager - v4.0.0";
+            this.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

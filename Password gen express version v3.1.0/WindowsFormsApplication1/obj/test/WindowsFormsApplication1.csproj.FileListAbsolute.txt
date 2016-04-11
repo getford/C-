@@ -4,7 +4,6 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\test\WindowsFormsApplication1.SignInForm.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\test\WindowsFormsApplication1.SignInForm.az.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\test\WindowsFormsApplication1.csproj.GenerateResource.Cache
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\test\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\test\Database.mdf
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\test\Database_log.ldf
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\test\System.Data.SqlServerCe.Entity.dll

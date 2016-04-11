@@ -24,11 +24,27 @@ namespace WindowsFormsApplication1
             
         }
 
-        public string first_answer = string.Empty;
-        public string secound_answer = string.Empty;
-        public string user_password = string.Empty;
+        string first_answer = string.Empty;         // сюда запишем секретный ответ 1
+        string secound_answer = string.Empty;       // сюда запишем секретный ответ 2
+        string user_password = string.Empty;        // сюда запишем пароль пользователя
 
         private void button_restore_Click(object sender, EventArgs e)
+        {
+            // проверяем корректность введенных данных
+
+            if (textBox_first_a.Text.ToString() == first_answer.ToString() && textBox_secound_a.Text.ToString() == secound_answer.ToString())
+            {
+                MessageBox.Show("Ваш пароль: " + user_password.ToString(), "Пароль", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Проверьте введенные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox_first_a.Clear();
+                textBox_secound_a.Clear();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
 
@@ -77,7 +93,7 @@ namespace WindowsFormsApplication1
                 string sql_query_first_answer = @"select user_first_answer from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_f_a = new SqlCommand(sql_query_first_answer, connectDB);
                 SqlDataReader dr_f_a = cmd_f_a.ExecuteReader();
-                while(dr_f_a.Read())
+                while (dr_f_a.Read())
                 {
                     first_answer += dr_f_a["user_first_answer"];
                 }
@@ -92,13 +108,13 @@ namespace WindowsFormsApplication1
                 string sql_query_secound_answer = @"select user_secound_answer from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_s_a = new SqlCommand(sql_query_secound_answer, connectDB);
                 SqlDataReader dr_s_a = cmd_s_a.ExecuteReader();
-                while(dr_s_a.Read())
+                while (dr_s_a.Read())
                 {
                     secound_answer += dr_s_a["user_secound_answer"];
                 }
                 dr_s_a.Close();
             }
-            catch(SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
 
             // получаем пароль из бд
 
@@ -107,31 +123,19 @@ namespace WindowsFormsApplication1
                 string sql_query_user_password = @"select user_password from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_u_p = new SqlCommand(sql_query_user_password, connectDB);
                 SqlDataReader dr_u_p = cmd_u_p.ExecuteReader();
-                while(dr_u_p.Read())
+                while (dr_u_p.Read())
                 {
                     user_password += dr_u_p["user_password"];
                 }
                 dr_u_p.Close();
             }
-            catch(SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-
-            // проверяем корректность введенных данных
-
-
-
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            if (textBox_first_a.Text.ToString() == first_answer.ToString() && textBox_secound_a.Text.ToString() == secound_answer.ToString())
-            {
-                MessageBox.Show("Ваш пароль: " + user_password.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Проверьте введенные данные");
-            }
+
         }
     }
 }

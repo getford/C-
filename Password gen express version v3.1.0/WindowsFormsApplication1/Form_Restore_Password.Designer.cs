@@ -44,6 +44,9 @@
             this.textBox_first_a = new System.Windows.Forms.TextBox();
             this.textBox_secound_q = new System.Windows.Forms.TextBox();
             this.textBox_secound_a = new System.Windows.Forms.TextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource2)).BeginInit();
@@ -63,16 +66,18 @@
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(55, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Логин или e-mail";
+            this.label1.Text = "Логин указанный при регистрации";
             // 
             // button_restore
             // 
             this.button_restore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_restore.Location = new System.Drawing.Point(192, 293);
+            this.button_restore.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_restore.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button_restore.Location = new System.Drawing.Point(97, 255);
             this.button_restore.Name = "button_restore";
-            this.button_restore.Size = new System.Drawing.Size(129, 23);
+            this.button_restore.Size = new System.Drawing.Size(129, 39);
             this.button_restore.TabIndex = 4;
             this.button_restore.Text = "Восстановить";
             this.button_restore.UseVisualStyleBackColor = true;
@@ -96,7 +101,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(333, 328);
+            this.pictureBox1.Size = new System.Drawing.Size(328, 319);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -135,11 +140,37 @@
             this.textBox_secound_a.Size = new System.Drawing.Size(227, 20);
             this.textBox_secound_a.TabIndex = 10;
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(55, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Ответьте на первый вопрос";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(55, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Ответьте на второй вопрос";
+            // 
             // Form_Restore_Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 328);
+            this.ClientSize = new System.Drawing.Size(328, 319);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_secound_a);
             this.Controls.Add(this.textBox_secound_q);
             this.Controls.Add(this.textBox_first_a);
@@ -181,5 +212,8 @@
         private System.Windows.Forms.TextBox textBox_first_a;
         private System.Windows.Forms.TextBox textBox_secound_q;
         private System.Windows.Forms.TextBox textBox_secound_a;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
