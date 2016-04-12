@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
                 }
                 else { MessageBox.Show("Введенные пароли не совпадают!", "Ошибка паролей", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
-            else { MessageBox.Show("Неизвестная ошибка!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop); }       // подумать над этой ошибкой
+            else { MessageBox.Show("Неизвестная ошибка #1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop); }       // подумать над этой ошибкой
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -17,8 +17,6 @@ namespace WindowsFormsApplication1
         public account()
         {
             InitializeComponent();
-
-
         }
 
         private void account_Load(object sender, EventArgs e)
@@ -90,7 +88,15 @@ namespace WindowsFormsApplication1
         private void OnClick(object sender, EventArgs e)    // смена пароля
         {
             change_password_acc cpa = new change_password_acc();
+            cpa.Owner = this;
             cpa.Show();
+        }
+
+        private void OnClick_change_email(object sender, EventArgs e)   // смена email
+        {
+            change_email_acc cea = new change_email_acc();
+            cea.Owner = this;
+            cea.Show();
         }
 
         private void linkLabel_delete_account_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -120,5 +126,7 @@ namespace WindowsFormsApplication1
             catch(SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
         }
+
+
     }
 }

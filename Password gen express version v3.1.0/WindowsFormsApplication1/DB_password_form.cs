@@ -15,6 +15,19 @@ namespace WindowsFormsApplication1
 {
     public partial class DB_password_form : Form
     {
+        public DB_password_form()
+        {
+            InitializeComponent();
+        }
+
+        private void DB_password_form_Load(object sender, EventArgs e)
+        {
+            Form1 f1 = this.Owner as Form1;
+            if(f1 != null) { textBox_user_login_now.Text = f1.user_login_under_avatar.Text.ToString(); }
+
+            refresh_data();     // функция обновления
+        }
+
         public void refresh_data()      // функция обновления датагрида... после того как внесли запись, обновиться грид
         {
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
@@ -31,20 +44,6 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }
-
-        public DB_password_form()
-        {
-            InitializeComponent();
-        }
-
-        private void DB_password_form_Load(object sender, EventArgs e)
-        {
-            Form1 f1 = this.Owner as Form1;
-            if(f1 != null) { textBox_user_login_now.Text = f1.user_login_under_avatar.Text.ToString(); }
-
-            refresh_data();     // функция обновления
-                        
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -111,10 +110,15 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        private void OnClick(object sender, EventArgs e)
+        private void OnClick(object sender, EventArgs e)        // открывает информацию об акк
         {
-            account acc = new account();
-            acc.Show();
+            //account acc = new account();
+            //acc.Show();
+        }
+
+        private void textBox_user_login_now_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

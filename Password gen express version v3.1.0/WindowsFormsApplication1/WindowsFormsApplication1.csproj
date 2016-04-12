@@ -96,6 +96,12 @@
     <Compile Include="account.Designer.cs">
       <DependentUpon>account.cs</DependentUpon>
     </Compile>
+    <Compile Include="change_email_acc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="change_email_acc.Designer.cs">
+      <DependentUpon>change_email_acc.cs</DependentUpon>
+    </Compile>
     <Compile Include="change_password_acc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </Compile>
     <EmbeddedResource Include="account.resx">
       <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="change_email_acc.resx">
+      <DependentUpon>change_email_acc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="change_password_acc.resx">
       <DependentUpon>change_password_acc.cs</DependentUpon>

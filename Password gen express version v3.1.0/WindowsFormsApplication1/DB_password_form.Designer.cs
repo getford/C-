@@ -140,18 +140,19 @@
             // textBox_user_login_now
             // 
             this.textBox_user_login_now.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_user_login_now.Cursor = System.Windows.Forms.Cursors.Help;
+            this.textBox_user_login_now.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox_user_login_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.textBox_user_login_now.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox_user_login_now.Location = new System.Drawing.Point(213, 474);
+            this.textBox_user_login_now.Location = new System.Drawing.Point(213, 468);
+            this.textBox_user_login_now.Multiline = true;
             this.textBox_user_login_now.Name = "textBox_user_login_now";
             this.textBox_user_login_now.ReadOnly = true;
             this.textBox_user_login_now.ShortcutsEnabled = false;
-            this.textBox_user_login_now.Size = new System.Drawing.Size(140, 17);
+            this.textBox_user_login_now.Size = new System.Drawing.Size(178, 26);
             this.textBox_user_login_now.TabIndex = 8;
             this.textBox_user_login_now.TabStop = false;
-            this.textBox_user_login_now.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox_user_login_now.Click += new System.EventHandler(this.OnClick);
+            this.textBox_user_login_now.TextChanged += new System.EventHandler(this.textBox_user_login_now_TextChanged);
             // 
             // button_clear
             // 

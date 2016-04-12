@@ -260,9 +260,9 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(18, 88);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(89, 17);
+            this.checkBox3.Size = new System.Drawing.Size(144, 17);
             this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Кракозябры";
+            this.checkBox3.Text = "Специальные символы";
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 

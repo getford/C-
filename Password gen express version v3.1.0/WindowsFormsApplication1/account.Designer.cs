@@ -83,7 +83,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(295, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(298, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +99,7 @@
             this.group_box_setup_acc.Location = new System.Drawing.Point(12, 152);
             this.group_box_setup_acc.Name = "group_box_setup_acc";
             this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.group_box_setup_acc.Size = new System.Drawing.Size(243, 121);
+            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 121);
             this.group_box_setup_acc.TabIndex = 18;
             this.group_box_setup_acc.TabStop = false;
             this.group_box_setup_acc.Text = "Управление аккаунтом";
@@ -107,7 +107,7 @@
             // label_change_avatar
             // 
             this.label_change_avatar.AutoSize = true;
-            this.label_change_avatar.Location = new System.Drawing.Point(6, 75);
+            this.label_change_avatar.Location = new System.Drawing.Point(9, 77);
             this.label_change_avatar.Name = "label_change_avatar";
             this.label_change_avatar.Size = new System.Drawing.Size(107, 13);
             this.label_change_avatar.TabIndex = 2;
@@ -116,16 +116,17 @@
             // label_change_e_mail
             // 
             this.label_change_e_mail.AutoSize = true;
-            this.label_change_e_mail.Location = new System.Drawing.Point(6, 53);
+            this.label_change_e_mail.Location = new System.Drawing.Point(9, 55);
             this.label_change_e_mail.Name = "label_change_e_mail";
             this.label_change_e_mail.Size = new System.Drawing.Size(192, 13);
             this.label_change_e_mail.TabIndex = 1;
             this.label_change_e_mail.Text = "Изменить адрес электронной почты";
+            this.label_change_e_mail.Click += new System.EventHandler(this.OnClick_change_email);
             // 
             // label_change_password
             // 
             this.label_change_password.AutoSize = true;
-            this.label_change_password.Location = new System.Drawing.Point(6, 31);
+            this.label_change_password.Location = new System.Drawing.Point(9, 33);
             this.label_change_password.Name = "label_change_password";
             this.label_change_password.Size = new System.Drawing.Size(90, 13);
             this.label_change_password.TabIndex = 0;
@@ -207,6 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(379, 341);
             this.Controls.Add(this.linkLabel_delete_account);
             this.Controls.Add(this.groupBox_info_account);
@@ -215,6 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "account";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аккаунт";
             this.TopMost = true;
