@@ -97,16 +97,16 @@ namespace WindowsFormsApplication1
                             string sql_query = string.Format("CREATE TABLE {0}" + "(Name_site NVARCHAR(30)," + "URL_site NVARCHAR(30)," + "Login_site NVARCHAR(15)," + "Password_site NVARCHAR(50))", textBox1.Text.ToString());
                             SqlCommand cmd = new SqlCommand(sql_query, connectDB);
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("Ваша учетная запись успешно создана, теперь вы можете войти в систему используя свой логин и пароль.");
+                            MessageBox.Show("Ваша учетная запись успешно создана, теперь вы можете войти в систему используя свой логин и пароль.", "Добро пожаловать!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch(SqlException ex) { MessageBox.Show(ex.Message); }
                         finally { connectDB.Close(); }
                     }
-                    else { MessageBox.Show("Пароль должен содержать хотя бы одну кракозябру! ( ! @ # $ % & * ( ) [ ] )"); }
+                    else { MessageBox.Show("Пароль должен содержать хотя бы один спец. символ!", "! @ # $ % & * ( ) [ ]", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 }
-                else { MessageBox.Show("Введенные пароли не совпадают!"); }
+                else { MessageBox.Show("Введенные пароли не совпадают!", "Ошибка паролей", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
-            else { MessageBox.Show("Ошибка не определена"); }       // подумать над этой ошибкой
+            else { MessageBox.Show("Неизвестная ошибка!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop); }       // подумать над этой ошибкой
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

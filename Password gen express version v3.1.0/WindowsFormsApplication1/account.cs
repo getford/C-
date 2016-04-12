@@ -26,8 +26,55 @@ namespace WindowsFormsApplication1
             Form1 f1 = this.Owner as Form1;
             if (f1 != null)
             {
-                label_login.Text = f1.user_login_under_avatar.Text.ToString();
+                textBox_login.Text = f1.user_login_under_avatar.Text.ToString();
             }
+
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
+
+            try
+            {
+                connectDB.Open();
+                string sql_query_f_n = @"select user_first_name from introduce where user_login = '" + f1.user_login_under_avatar.Text.ToString() + "'";
+                SqlCommand cmd_f_n = new SqlCommand(sql_query_f_n, connectDB);
+                SqlDataReader dr = cmd_f_n.ExecuteReader();
+                while(dr.Read())
+                {
+                    textBox_first_name.Text += dr["user_first_name"];
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connectDB.Close(); }
+
+            try
+            {
+                connectDB.Open();
+                string sql_query_l_n = @"select user_last_name from introduce where user_login = '" + f1.user_login_under_avatar.Text.ToString() + "'";
+                SqlCommand cmd_l_n = new SqlCommand(sql_query_l_n, connectDB);
+                SqlDataReader dr = cmd_l_n.ExecuteReader();
+                while(dr.Read())
+                {
+                    textBox_last_name.Text += dr["user_last_name"];
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connectDB.Close(); }
+
+            try
+            {
+                connectDB.Open();
+                string sql_query_email = @"select user_e_mail from introduce where user_login = '" + f1.user_login_under_avatar.Text.ToString() + "'";
+                SqlCommand cmd_u_email = new SqlCommand(sql_query_email, connectDB);
+                SqlDataReader dr = cmd_u_email.ExecuteReader();
+                while(dr.Read())
+                {
+                    textBox_email.Text += dr["user_e_mail"];
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connectDB.Close(); }
         }
 
         private void label_login_Click(object sender, EventArgs e)
@@ -44,6 +91,34 @@ namespace WindowsFormsApplication1
         {
             change_password_acc cpa = new change_password_acc();
             cpa.Show();
+        }
+
+        private void linkLabel_delete_account_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
+            SqlConnection connectDB_site = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
+
+            try
+            {
+                connectDB_site.Open();
+                string sql_query_del = string.Format("drop table {0}", textBox_login.Text.ToString());
+                SqlCommand cmd = new SqlCommand(sql_query_del, connectDB_site);
+                cmd.ExecuteNonQuery();
+            }
+            catch(SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connectDB_site.Close(); }
+
+            try
+            {
+                connectDB.Open();
+                string sql_query_del = string.Format("delete from introduce where user_login = '" + textBox_login.Text.ToString() + "'");
+                SqlCommand cmd = new SqlCommand(sql_query_del, connectDB);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Ваш аккаунт успешно удален из базы данных.", "Удаление прошло успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch(SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connectDB.Close(); }
         }
     }
 }
