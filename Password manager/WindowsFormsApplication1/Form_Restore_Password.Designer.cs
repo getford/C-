@@ -79,8 +79,7 @@
             this.button_restore.Text = "Восстановить";
             this.button_restore.UseVisualStyleBackColor = true;
             this.button_restore.Click += new System.EventHandler(this.button_restore_Click);
-            // 
-            // 
+            //
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;

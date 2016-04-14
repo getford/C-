@@ -181,15 +181,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // introduceBindingSource
-            // 
-            this.introduceBindingSource.DataMember = "introduce";
-            // 
-            // 
-            // introduceBindingSource1
-            // 
-            this.introduceBindingSource1.DataMember = "introduce";
-            // 
             // 
             // pictureBox2
             // 
