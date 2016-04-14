@@ -108,31 +108,6 @@
     <Compile Include="change_password_acc.Designer.cs">
       <DependentUpon>change_password_acc.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet4.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Database_siteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,61 +201,6 @@
       <DependentUpon>start.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet1.xsc">
-      <DependentUpon>DatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet1.xss">
-      <DependentUpon>DatabaseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet2.xsc">
-      <DependentUpon>DatabaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet2.xss">
-      <DependentUpon>DatabaseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet3.xsc">
-      <DependentUpon>DatabaseDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet3.xss">
-      <DependentUpon>DatabaseDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet4.xsc">
-      <DependentUpon>DatabaseDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet4.xss">
-      <DependentUpon>DatabaseDataSet4.xsd</DependentUpon>
-    </None>
     <None Include="Database_siteDataSet.xsc">
       <DependentUpon>Database_siteDataSet.xsd</DependentUpon>
     </None>

@@ -43,11 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.introduceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet = new WindowsFormsApplication1.DatabaseDataSet();
-            this.introduceTableAdapter = new WindowsFormsApplication1.DatabaseDataSetTableAdapters.introduceTableAdapter();
             this.introduceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet1 = new WindowsFormsApplication1.DatabaseDataSet1();
-            this.introduceTableAdapter1 = new WindowsFormsApplication1.DatabaseDataSet1TableAdapters.introduceTableAdapter();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_help = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,9 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,30 +184,12 @@
             // introduceBindingSource
             // 
             this.introduceBindingSource.DataMember = "introduce";
-            this.introduceBindingSource.DataSource = this.databaseDataSet;
             // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // introduceTableAdapter
-            // 
-            this.introduceTableAdapter.ClearBeforeFill = true;
             // 
             // introduceBindingSource1
             // 
             this.introduceBindingSource1.DataMember = "introduce";
-            this.introduceBindingSource1.DataSource = this.databaseDataSet1;
             // 
-            // databaseDataSet1
-            // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // introduceTableAdapter1
-            // 
-            this.introduceTableAdapter1.ClearBeforeFill = true;
             // 
             // pictureBox2
             // 
@@ -272,9 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,12 +268,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
-        private DatabaseDataSet databaseDataSet;
         private System.Windows.Forms.BindingSource introduceBindingSource;
-        private DatabaseDataSetTableAdapters.introduceTableAdapter introduceTableAdapter;
-        private DatabaseDataSet1 databaseDataSet1;
         private System.Windows.Forms.BindingSource introduceBindingSource1;
-        private DatabaseDataSet1TableAdapters.introduceTableAdapter introduceTableAdapter1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button_help;
     }

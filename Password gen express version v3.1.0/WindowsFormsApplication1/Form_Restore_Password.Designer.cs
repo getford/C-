@@ -35,10 +35,7 @@
             this.introduceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.introduceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button_restore = new System.Windows.Forms.Button();
-            this.introduceTableAdapter = new WindowsFormsApplication1.DatabaseDataSet2TableAdapters.introduceTableAdapter();
-            this.introduceTableAdapter1 = new WindowsFormsApplication1.DatabaseDataSet3TableAdapters.introduceTableAdapter();
             this.introduceBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.introduceTableAdapter2 = new WindowsFormsApplication1.DatabaseDataSet4TableAdapters.introduceTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_first_q = new System.Windows.Forms.TextBox();
             this.textBox_first_a = new System.Windows.Forms.TextBox();
@@ -83,17 +80,6 @@
             this.button_restore.UseVisualStyleBackColor = true;
             this.button_restore.Click += new System.EventHandler(this.button_restore_Click);
             // 
-            // introduceTableAdapter
-            // 
-            this.introduceTableAdapter.ClearBeforeFill = true;
-            // 
-            // introduceTableAdapter1
-            // 
-            this.introduceTableAdapter1.ClearBeforeFill = true;
-            // 
-            // introduceTableAdapter2
-            // 
-            this.introduceTableAdapter2.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
@@ -201,12 +187,9 @@
         private System.Windows.Forms.TextBox textBox_login_email;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource introduceBindingSource;
-        private DatabaseDataSet2TableAdapters.introduceTableAdapter introduceTableAdapter;
         private System.Windows.Forms.BindingSource introduceBindingSource1;
-        private DatabaseDataSet3TableAdapters.introduceTableAdapter introduceTableAdapter1;
         private System.Windows.Forms.Button button_restore;
         private System.Windows.Forms.BindingSource introduceBindingSource2;
-        private DatabaseDataSet4TableAdapters.introduceTableAdapter introduceTableAdapter2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox_first_q;
         private System.Windows.Forms.TextBox textBox_first_a;

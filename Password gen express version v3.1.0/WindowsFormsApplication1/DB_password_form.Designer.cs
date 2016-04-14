@@ -37,8 +37,11 @@
             this.button_authorization_site = new System.Windows.Forms.Button();
             this.button_register = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.database_siteDataSet = new WindowsFormsApplication1.Database_siteDataSet();
+            this.namesiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uRLsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qqqBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database_siteDataSet = new WindowsFormsApplication1.Database_siteDataSet();
             this.qqqTableAdapter = new WindowsFormsApplication1.Database_siteDataSetTableAdapters.qqqTableAdapter();
             this.Label_user_login_now = new System.Windows.Forms.Label();
             this.textBox_user_login_now = new System.Windows.Forms.TextBox();
@@ -46,13 +49,10 @@
             this.button_delete = new System.Windows.Forms.Button();
             this.groupBox_textboxes = new System.Windows.Forms.GroupBox();
             this.groupBox_buttons = new System.Windows.Forms.GroupBox();
-            this.namesiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uRLsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listView_site_login_password = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).BeginInit();
             this.groupBox_textboxes.SuspendLayout();
             this.groupBox_buttons.SuspendLayout();
             this.SuspendLayout();
@@ -121,15 +121,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(358, 450);
             this.dataGridView1.TabIndex = 0;
             // 
-            // database_siteDataSet
+            // namesiteDataGridViewTextBoxColumn
             // 
-            this.database_siteDataSet.DataSetName = "Database_siteDataSet";
-            this.database_siteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.namesiteDataGridViewTextBoxColumn.DataPropertyName = "Name_site";
+            this.namesiteDataGridViewTextBoxColumn.HeaderText = "Name_site";
+            this.namesiteDataGridViewTextBoxColumn.Name = "namesiteDataGridViewTextBoxColumn";
+            // 
+            // uRLsiteDataGridViewTextBoxColumn
+            // 
+            this.uRLsiteDataGridViewTextBoxColumn.DataPropertyName = "URL_site";
+            this.uRLsiteDataGridViewTextBoxColumn.HeaderText = "URL_site";
+            this.uRLsiteDataGridViewTextBoxColumn.Name = "uRLsiteDataGridViewTextBoxColumn";
+            // 
+            // loginsiteDataGridViewTextBoxColumn
+            // 
+            this.loginsiteDataGridViewTextBoxColumn.DataPropertyName = "Login_site";
+            this.loginsiteDataGridViewTextBoxColumn.HeaderText = "Login_site";
+            this.loginsiteDataGridViewTextBoxColumn.Name = "loginsiteDataGridViewTextBoxColumn";
             // 
             // qqqBindingSource
             // 
             this.qqqBindingSource.DataMember = "qqq";
             this.qqqBindingSource.DataSource = this.database_siteDataSet;
+            // 
+            // database_siteDataSet
+            // 
+            this.database_siteDataSet.DataSetName = "Database_siteDataSet";
+            this.database_siteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // qqqTableAdapter
             // 
@@ -206,24 +224,6 @@
             this.groupBox_buttons.TabIndex = 12;
             this.groupBox_buttons.TabStop = false;
             // 
-            // namesiteDataGridViewTextBoxColumn
-            // 
-            this.namesiteDataGridViewTextBoxColumn.DataPropertyName = "Name_site";
-            this.namesiteDataGridViewTextBoxColumn.HeaderText = "Name_site";
-            this.namesiteDataGridViewTextBoxColumn.Name = "namesiteDataGridViewTextBoxColumn";
-            // 
-            // uRLsiteDataGridViewTextBoxColumn
-            // 
-            this.uRLsiteDataGridViewTextBoxColumn.DataPropertyName = "URL_site";
-            this.uRLsiteDataGridViewTextBoxColumn.HeaderText = "URL_site";
-            this.uRLsiteDataGridViewTextBoxColumn.Name = "uRLsiteDataGridViewTextBoxColumn";
-            // 
-            // loginsiteDataGridViewTextBoxColumn
-            // 
-            this.loginsiteDataGridViewTextBoxColumn.DataPropertyName = "Login_site";
-            this.loginsiteDataGridViewTextBoxColumn.HeaderText = "Login_site";
-            this.loginsiteDataGridViewTextBoxColumn.Name = "loginsiteDataGridViewTextBoxColumn";
-            // 
             // listView_site_login_password
             // 
             this.listView_site_login_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -232,6 +232,7 @@
             this.listView_site_login_password.Size = new System.Drawing.Size(427, 438);
             this.listView_site_login_password.TabIndex = 13;
             this.listView_site_login_password.UseCompatibleStateImageBehavior = false;
+            this.listView_site_login_password.SelectedIndexChanged += new System.EventHandler(this.listView_site_login_password_SelectedIndexChanged);
             // 
             // DB_password_form
             // 
@@ -250,8 +251,8 @@
             this.Text = "Ваша база паролей";
             this.Load += new System.EventHandler(this.DB_password_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).EndInit();
             this.groupBox_textboxes.ResumeLayout(false);
             this.groupBox_textboxes.PerformLayout();
             this.groupBox_buttons.ResumeLayout(false);
