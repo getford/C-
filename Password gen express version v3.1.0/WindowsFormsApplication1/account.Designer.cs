@@ -84,7 +84,7 @@
             this.group_box_setup_acc.Location = new System.Drawing.Point(12, 152);
             this.group_box_setup_acc.Name = "group_box_setup_acc";
             this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 91);
+            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 67);
             this.group_box_setup_acc.TabIndex = 18;
             this.group_box_setup_acc.TabStop = false;
             this.group_box_setup_acc.Text = "Управление аккаунтом";
@@ -92,7 +92,7 @@
             // label_change_e_mail
             // 
             this.label_change_e_mail.AutoSize = true;
-            this.label_change_e_mail.Location = new System.Drawing.Point(9, 55);
+            this.label_change_e_mail.Location = new System.Drawing.Point(9, 39);
             this.label_change_e_mail.Name = "label_change_e_mail";
             this.label_change_e_mail.Size = new System.Drawing.Size(192, 13);
             this.label_change_e_mail.TabIndex = 1;
@@ -102,7 +102,7 @@
             // label_change_password
             // 
             this.label_change_password.AutoSize = true;
-            this.label_change_password.Location = new System.Drawing.Point(9, 33);
+            this.label_change_password.Location = new System.Drawing.Point(9, 16);
             this.label_change_password.Name = "label_change_password";
             this.label_change_password.Size = new System.Drawing.Size(90, 13);
             this.label_change_password.TabIndex = 0;
@@ -124,32 +124,40 @@
             this.textBox_login.Location = new System.Drawing.Point(87, 19);
             this.textBox_login.Name = "textBox_login";
             this.textBox_login.ReadOnly = true;
+            this.textBox_login.ShortcutsEnabled = false;
             this.textBox_login.Size = new System.Drawing.Size(156, 20);
             this.textBox_login.TabIndex = 20;
+            this.textBox_login.TabStop = false;
             // 
             // textBox_email
             // 
             this.textBox_email.Location = new System.Drawing.Point(87, 97);
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.ReadOnly = true;
+            this.textBox_email.ShortcutsEnabled = false;
             this.textBox_email.Size = new System.Drawing.Size(156, 20);
             this.textBox_email.TabIndex = 21;
+            this.textBox_email.TabStop = false;
             // 
             // textBox_first_name
             // 
             this.textBox_first_name.Location = new System.Drawing.Point(87, 45);
             this.textBox_first_name.Name = "textBox_first_name";
             this.textBox_first_name.ReadOnly = true;
+            this.textBox_first_name.ShortcutsEnabled = false;
             this.textBox_first_name.Size = new System.Drawing.Size(156, 20);
             this.textBox_first_name.TabIndex = 22;
+            this.textBox_first_name.TabStop = false;
             // 
             // textBox_last_name
             // 
             this.textBox_last_name.Location = new System.Drawing.Point(87, 71);
             this.textBox_last_name.Name = "textBox_last_name";
             this.textBox_last_name.ReadOnly = true;
+            this.textBox_last_name.ShortcutsEnabled = false;
             this.textBox_last_name.Size = new System.Drawing.Size(156, 20);
             this.textBox_last_name.TabIndex = 23;
+            this.textBox_last_name.TabStop = false;
             // 
             // groupBox_info_account
             // 
@@ -172,7 +180,7 @@
             this.linkLabel_delete_account.AutoSize = true;
             this.linkLabel_delete_account.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel_delete_account.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_delete_account.Location = new System.Drawing.Point(52, 246);
+            this.linkLabel_delete_account.Location = new System.Drawing.Point(52, 232);
             this.linkLabel_delete_account.Name = "linkLabel_delete_account";
             this.linkLabel_delete_account.Size = new System.Drawing.Size(175, 22);
             this.linkLabel_delete_account.TabIndex = 25;
@@ -185,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(285, 285);
+            this.ClientSize = new System.Drawing.Size(285, 271);
             this.Controls.Add(this.linkLabel_delete_account);
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.group_box_setup_acc);

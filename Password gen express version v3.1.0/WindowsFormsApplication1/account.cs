@@ -123,8 +123,8 @@ namespace WindowsFormsApplication1
                     string sql_query_del = string.Format("delete from introduce where user_login = '" + textBox_login.Text.ToString() + "'");
                     SqlCommand cmd = new SqlCommand(sql_query_del, connectDB);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Ваш аккаунт успешно удален из базы данных.", "Удаление прошло успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Ваш аккаунт успешно удален из базы данных.\nПерезапустите приложение.", "Удаление прошло успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Exit();
                 }
                 catch (SqlException ex) { MessageBox.Show(ex.Message); }
                 finally { connectDB.Close(); }
@@ -132,6 +132,9 @@ namespace WindowsFormsApplication1
             else { /*Тут что-то должно быть, а может и не должно :)*/}          
         }
 
-
+        private void OnClick_help_button(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Информация о пользователе\nДля изменения пароля или электронной почты, нажмите на соответствующую надпись.", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

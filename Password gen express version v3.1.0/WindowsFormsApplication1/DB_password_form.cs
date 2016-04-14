@@ -46,11 +46,6 @@ namespace WindowsFormsApplication1
             finally { connectDB.Close(); }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button_authorization_site_Click(object sender, EventArgs e)        // обработка авторизации
         {
             Process.Start("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", textBox_URL_site.Text.ToString());
@@ -98,16 +93,6 @@ namespace WindowsFormsApplication1
         {
             //account acc = new account();
             //acc.Show();
-        }
-
-        private void textBox_user_login_now_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_textboxes_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

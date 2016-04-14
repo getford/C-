@@ -49,6 +49,7 @@
             this.namesiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uRLsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginsiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listView_site_login_password = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).BeginInit();
@@ -117,9 +118,8 @@
             this.dataGridView1.DataSource = this.qqqBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(498, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(358, 450);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // database_siteDataSet
             // 
@@ -161,7 +161,6 @@
             this.textBox_user_login_now.TabIndex = 8;
             this.textBox_user_login_now.TabStop = false;
             this.textBox_user_login_now.Click += new System.EventHandler(this.OnClick);
-            this.textBox_user_login_now.TextChanged += new System.EventHandler(this.textBox_user_login_now_TextChanged);
             // 
             // button_clear
             // 
@@ -189,12 +188,11 @@
             this.groupBox_textboxes.Controls.Add(this.textBox_URL_site);
             this.groupBox_textboxes.Controls.Add(this.textBox_login_site);
             this.groupBox_textboxes.Controls.Add(this.textBox_password_site);
-            this.groupBox_textboxes.Location = new System.Drawing.Point(536, 12);
+            this.groupBox_textboxes.Location = new System.Drawing.Point(376, 12);
             this.groupBox_textboxes.Name = "groupBox_textboxes";
             this.groupBox_textboxes.Size = new System.Drawing.Size(291, 149);
             this.groupBox_textboxes.TabIndex = 11;
             this.groupBox_textboxes.TabStop = false;
-            this.groupBox_textboxes.Enter += new System.EventHandler(this.groupBox_textboxes_Enter);
             // 
             // groupBox_buttons
             // 
@@ -202,7 +200,7 @@
             this.groupBox_buttons.Controls.Add(this.button_authorization_site);
             this.groupBox_buttons.Controls.Add(this.button_delete);
             this.groupBox_buttons.Controls.Add(this.button_clear);
-            this.groupBox_buttons.Location = new System.Drawing.Point(536, 326);
+            this.groupBox_buttons.Location = new System.Drawing.Point(376, 326);
             this.groupBox_buttons.Name = "groupBox_buttons";
             this.groupBox_buttons.Size = new System.Drawing.Size(291, 136);
             this.groupBox_buttons.TabIndex = 12;
@@ -226,11 +224,21 @@
             this.loginsiteDataGridViewTextBoxColumn.HeaderText = "Login_site";
             this.loginsiteDataGridViewTextBoxColumn.Name = "loginsiteDataGridViewTextBoxColumn";
             // 
+            // listView_site_login_password
+            // 
+            this.listView_site_login_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView_site_login_password.Location = new System.Drawing.Point(700, 12);
+            this.listView_site_login_password.Name = "listView_site_login_password";
+            this.listView_site_login_password.Size = new System.Drawing.Size(427, 438);
+            this.listView_site_login_password.TabIndex = 13;
+            this.listView_site_login_password.UseCompatibleStateImageBehavior = false;
+            // 
             // DB_password_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 599);
+            this.Controls.Add(this.listView_site_login_password);
             this.Controls.Add(this.groupBox_buttons);
             this.Controls.Add(this.groupBox_textboxes);
             this.Controls.Add(this.textBox_user_login_now);
@@ -273,5 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn namesiteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uRLsiteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginsiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListView listView_site_login_password;
     }
 }
