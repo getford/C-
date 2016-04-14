@@ -182,9 +182,10 @@
             this.groupBox_textboxes.Controls.Add(this.textBox_password_site);
             this.groupBox_textboxes.Location = new System.Drawing.Point(536, 12);
             this.groupBox_textboxes.Name = "groupBox_textboxes";
-            this.groupBox_textboxes.Size = new System.Drawing.Size(291, 241);
+            this.groupBox_textboxes.Size = new System.Drawing.Size(291, 149);
             this.groupBox_textboxes.TabIndex = 11;
             this.groupBox_textboxes.TabStop = false;
+            this.groupBox_textboxes.Enter += new System.EventHandler(this.groupBox_textboxes_Enter);
             // 
             // groupBox_buttons
             // 
@@ -202,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 512);
+            this.ClientSize = new System.Drawing.Size(1468, 599);
             this.Controls.Add(this.groupBox_buttons);
             this.Controls.Add(this.groupBox_textboxes);
             this.Controls.Add(this.textBox_user_login_now);

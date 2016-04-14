@@ -14,33 +14,35 @@ namespace WindowsFormsApplication1
         static public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
 
         /*запрос для регистрации*/
-        public static void select(DataGridView dgv)
-        {
-            try
-            {
-                connect.Open();
-                SqlDataAdapter command_data_adapter = new SqlDataAdapter(@"SELECT user_login, user_password, user_e_mail FROM [introduce]", connect);
-                DataTable dt = new DataTable();
-                command_data_adapter.Fill(dt);
-                dgv.DataSource = dt;
+        //public static void select(DataGridView dgv)
+        //{
+        //    try
+        //    {
+        //        connect.Open();
+        //        SqlDataAdapter command_data_adapter = new SqlDataAdapter(@"SELECT user_login, user_password, user_e_mail FROM [introduce]", connect);
+        //        DataTable dt = new DataTable();
+        //        command_data_adapter.Fill(dt);
+        //        dgv.DataSource = dt;
 
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                connect.Close();
-            }
-        }
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        connect.Close();
+        //    }
+        //}
 
         public static void Insert(string _userlogin, string _userpassword, string _reuserpassword, string _useremail, string _userfirstname, string _userlastname, string _userfirstqst, string _userfirstansw, string _usersecoundqsr, string _usersecoungansw)
         {
             try
             {
+                //open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$';
                 connect.Open();
-                SqlCommand commandInsert = new SqlCommand("INSERT INTO [introduce] VALUES (@user_login, @user_password, @user_re_password, @user_e_mail, @user_first_name, @user_last_name, @user_first_question, @user_first_answer, @user_secound_question, @user_secound_answer)", connect);
+                string sql_query = string.Format("open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin INSERT INTO [dbo].[introduce] VALUES (@user_login, ENCRYPTBYKEY(@Symmetric_key_GUID, @user_password), ENCRYPTBYKEY(@Symmetric_key_GUID, @user_re_password), @user_e_mail, @user_first_name, @user_last_name, @user_first_question, ENCRYPTBYKEY(@Symmetric_key_GUID, @user_first_answer), @user_secound_question, ENCRYPTBYKEY(@Symmetric_key_GUID, @user_secound_answer)) end");
+                SqlCommand commandInsert = new SqlCommand(sql_query, connect);
                 commandInsert.Parameters.AddWithValue(@"user_login", _userlogin);
                 commandInsert.Parameters.AddWithValue(@"user_password", _userpassword);
                 commandInsert.Parameters.AddWithValue(@"user_re_password", _reuserpassword);

@@ -101,30 +101,35 @@ namespace WindowsFormsApplication1
 
         private void linkLabel_delete_account_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
-            SqlConnection connectDB_site = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
 
-            try
+            if(MessageBox.Show("Вы действительно хотите удалить аккауни?", "Подтверждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                connectDB_site.Open();
-                string sql_query_del = string.Format("drop table {0}", textBox_login.Text.ToString());
-                SqlCommand cmd = new SqlCommand(sql_query_del, connectDB_site);
-                cmd.ExecuteNonQuery();
-            }
-            catch(SqlException ex) { MessageBox.Show(ex.Message); }
-            finally { connectDB_site.Close(); }
+                SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
+                SqlConnection connectDB_site = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
 
-            try
-            {
-                connectDB.Open();
-                string sql_query_del = string.Format("delete from introduce where user_login = '" + textBox_login.Text.ToString() + "'");
-                SqlCommand cmd = new SqlCommand(sql_query_del, connectDB);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Ваш аккаунт успешно удален из базы данных.", "Удаление прошло успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try             // удаляем таблицу паролей
+                {
+                    connectDB_site.Open();
+                    string sql_query_del = string.Format("drop table {0}", textBox_login.Text.ToString());
+                    SqlCommand cmd = new SqlCommand(sql_query_del, connectDB_site);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (SqlException ex) { MessageBox.Show(ex.Message); }
+                finally { connectDB_site.Close(); }
 
+                try             // удаляем аккаунт
+                {
+                    connectDB.Open();
+                    string sql_query_del = string.Format("delete from introduce where user_login = '" + textBox_login.Text.ToString() + "'");
+                    SqlCommand cmd = new SqlCommand(sql_query_del, connectDB);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Ваш аккаунт успешно удален из базы данных.", "Удаление прошло успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (SqlException ex) { MessageBox.Show(ex.Message); }
+                finally { connectDB.Close(); }
             }
-            catch(SqlException ex) { MessageBox.Show(ex.Message); }
-            finally { connectDB.Close(); }
+            else { /*Тут что-то должно быть, а может и не должно :)*/}          
         }
 
 

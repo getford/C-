@@ -32,12 +32,14 @@ namespace WindowsFormsApplication1
         }
 
         private void button1_Click(object sender, EventArgs e)              // log in
-        { 
+        {
+            string pw = string.Empty;       // сюда положим расшифрованный пароль
             SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
             try
             {
                 connect.Open();
-                SqlCommand cmd_select = new SqlCommand("select user_password from introduce where user_login = '" + textBox1.Text.ToString() + "'", connect);
+                string sql_quert_select_password = string.Format("open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; select CONVERT(nvarchar(50), DECRYPTBYKEY(user_password)) as [user_password] from [dbo].[introduce] where user_login = '" + textBox1.Text.ToString() + "'");
+                SqlCommand cmd_select = new SqlCommand(sql_quert_select_password, connect);
                 SqlDataReader dr = cmd_select.ExecuteReader();
                 if (textBox1.Text.ToString() == "" || textBox2.Text.ToString() == "")
                 {
@@ -49,7 +51,9 @@ namespace WindowsFormsApplication1
                 {
                     while (dr.Read())
                     {
-                        if (textBox2.Text.ToString() == dr.GetString(0))
+                        pw += dr["user_password"];
+
+                        if (textBox2.Text.ToString() == pw.ToString())
                         {
                             Form1 f1_main = new Form1();
                             f1_main.Owner = this;
@@ -61,6 +65,8 @@ namespace WindowsFormsApplication1
                             MessageBox.Show("Введен не верный пароль!(Логин верный!). Если вы забыли ваш пароль, вы можете воспользоваться формой восстановления пароля!");
                         }
                     }
+                    dr.Close();
+
                 }
             }
             catch(SqlException ex)
@@ -71,16 +77,6 @@ namespace WindowsFormsApplication1
             {
                 connect.Close();
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)       // login textbox
-        {
-            
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)       // password  textbox
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)              // close button
@@ -106,30 +102,6 @@ namespace WindowsFormsApplication1
         {
             Form_Restore_Password frm = new Form_Restore_Password();
             frm.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
-
-            try
-            {
-                connectDB.Open();
-                MessageBox.Show("OK", "Соединение установленно!");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Соединение с бд НЕ установленно!", ex.Message);
-            }
-            finally
-            {
-                connectDB.Close();
-            }
         }
 
         private void Key_Down(object sender, KeyEventArgs e)  // сюда писать обработку нажатия кнопок

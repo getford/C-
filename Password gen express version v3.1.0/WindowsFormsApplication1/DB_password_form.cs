@@ -91,23 +91,7 @@ namespace WindowsFormsApplication1
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-            //SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
 
-            //try
-            //{
-            //    connectDB.Open();
-            //    int ind = dataGridView1.SelectedCells[0].RowIndex;
-            //    dataGridView1.Rows.RemoveAt(ind);
-            //    refresh_data();
-            //}
-            //catch(SqlException ex) { MessageBox.Show(ex.Message); }
-            //finally { connectDB.Close(); }
-
-            //foreach(DataGridViewRow row in dataGridView1.SelectedRows)
-            //{
-            //    dataGridView1.Rows.Remove(row);
-            //    refresh_data();
-            //}
         }
 
         private void OnClick(object sender, EventArgs e)        // открывает информацию об акк
@@ -117,6 +101,11 @@ namespace WindowsFormsApplication1
         }
 
         private void textBox_user_login_now_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_textboxes_Enter(object sender, EventArgs e)
         {
 
         }

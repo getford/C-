@@ -48,7 +48,8 @@
             this.introduceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet1 = new WindowsFormsApplication1.DatabaseDataSet1();
             this.introduceTableAdapter1 = new WindowsFormsApplication1.DatabaseDataSet1TableAdapters.introduceTableAdapter();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button_help = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,7 +74,6 @@
             pictureBox1.Size = new System.Drawing.Size(480, 320);
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
             // 
@@ -98,7 +99,6 @@
             this.textBox1.Size = new System.Drawing.Size(276, 21);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -112,7 +112,6 @@
             this.textBox2.TabIndex = 2;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.WordWrap = false;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button4
             // 
@@ -216,20 +215,26 @@
             // 
             this.introduceTableAdapter1.ClearBeforeFill = true;
             // 
-            // linkLabel3
+            // pictureBox2
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(12, 8);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(174, 13);
-            this.linkLabel3.TabIndex = 20;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Проверить соединение с бд";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button_help
+            // 
+            this.button_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_help.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button_help.Location = new System.Drawing.Point(396, 12);
+            this.button_help.Name = "button_help";
+            this.button_help.Size = new System.Drawing.Size(20, 20);
+            this.button_help.TabIndex = 24;
+            this.button_help.Text = "?";
+            this.button_help.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -238,7 +243,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(480, 320);
-            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.button_help);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -269,6 +275,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +300,7 @@
         private DatabaseDataSet1 databaseDataSet1;
         private System.Windows.Forms.BindingSource introduceBindingSource1;
         private DatabaseDataSet1TableAdapters.introduceTableAdapter introduceTableAdapter1;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button_help;
     }
 }

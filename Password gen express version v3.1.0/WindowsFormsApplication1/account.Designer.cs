@@ -32,9 +32,7 @@
             this.label_login = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.label_family = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_box_setup_acc = new System.Windows.Forms.GroupBox();
-            this.label_change_avatar = new System.Windows.Forms.Label();
             this.label_change_e_mail = new System.Windows.Forms.Label();
             this.label_change_password = new System.Windows.Forms.Label();
             this.label_email = new System.Windows.Forms.Label();
@@ -44,7 +42,6 @@
             this.textBox_last_name = new System.Windows.Forms.TextBox();
             this.groupBox_info_account = new System.Windows.Forms.GroupBox();
             this.linkLabel_delete_account = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.group_box_setup_acc.SuspendLayout();
             this.groupBox_info_account.SuspendLayout();
             this.SuspendLayout();
@@ -80,38 +77,17 @@
             this.label_family.TabIndex = 2;
             this.label_family.Text = "Фамилия:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(298, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // group_box_setup_acc
             // 
-            this.group_box_setup_acc.Controls.Add(this.label_change_avatar);
             this.group_box_setup_acc.Controls.Add(this.label_change_e_mail);
             this.group_box_setup_acc.Controls.Add(this.label_change_password);
             this.group_box_setup_acc.Location = new System.Drawing.Point(12, 152);
             this.group_box_setup_acc.Name = "group_box_setup_acc";
             this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 121);
+            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 91);
             this.group_box_setup_acc.TabIndex = 18;
             this.group_box_setup_acc.TabStop = false;
             this.group_box_setup_acc.Text = "Управление аккаунтом";
-            // 
-            // label_change_avatar
-            // 
-            this.label_change_avatar.AutoSize = true;
-            this.label_change_avatar.Location = new System.Drawing.Point(9, 77);
-            this.label_change_avatar.Name = "label_change_avatar";
-            this.label_change_avatar.Size = new System.Drawing.Size(107, 13);
-            this.label_change_avatar.TabIndex = 2;
-            this.label_change_avatar.Text = "Изменить аватарку";
             // 
             // label_change_e_mail
             // 
@@ -196,7 +172,7 @@
             this.linkLabel_delete_account.AutoSize = true;
             this.linkLabel_delete_account.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel_delete_account.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_delete_account.Location = new System.Drawing.Point(95, 310);
+            this.linkLabel_delete_account.Location = new System.Drawing.Point(52, 246);
             this.linkLabel_delete_account.Name = "linkLabel_delete_account";
             this.linkLabel_delete_account.Size = new System.Drawing.Size(175, 22);
             this.linkLabel_delete_account.TabIndex = 25;
@@ -209,20 +185,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(379, 341);
+            this.ClientSize = new System.Drawing.Size(285, 285);
             this.Controls.Add(this.linkLabel_delete_account);
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.group_box_setup_acc);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "account";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аккаунт";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.account_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.group_box_setup_acc.ResumeLayout(false);
             this.group_box_setup_acc.PerformLayout();
             this.groupBox_info_account.ResumeLayout(false);
@@ -237,9 +213,7 @@
         public System.Windows.Forms.Label label_login;
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_family;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox group_box_setup_acc;
-        private System.Windows.Forms.Label label_change_avatar;
         private System.Windows.Forms.Label label_change_e_mail;
         private System.Windows.Forms.Label label_change_password;
         private System.Windows.Forms.Label label_email;

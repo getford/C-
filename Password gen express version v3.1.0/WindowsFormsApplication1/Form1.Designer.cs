@@ -46,7 +46,7 @@
             this.историяОбновленийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.благодарностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIcon_totray = new System.Windows.Forms.NotifyIcon(this.components);
             this.main_text = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -95,7 +95,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(722, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // файлToolStripMenuItem
             // 
@@ -129,7 +128,6 @@
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
-            this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
             // 
             // разработчикToolStripMenuItem
             // 
@@ -213,13 +211,12 @@
             this.благодарностьToolStripMenuItem.Text = "Благодарность";
             this.благодарностьToolStripMenuItem.Click += new System.EventHandler(this.благодарностьToolStripMenuItem_Click);
             // 
-            // notifyIcon1
+            // notifyIcon_totray
             // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "PassWord Generation PRO";
-            this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            this.notifyIcon_totray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon_totray.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon_totray.Icon")));
+            this.notifyIcon_totray.Text = "PAssword Manager v1.0.0 ";
+            this.notifyIcon_totray.Visible = true;
             // 
             // main_text
             // 
@@ -231,7 +228,6 @@
             this.main_text.Text = "Добро пожаловать в приложение генерации паролей!\r\n\r\nЧто бы сгенерировать пароль, " +
     "нажмите на клавишу \"Generate\"\r\n";
             this.main_text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.main_text.Click += new System.EventHandler(this.label1_Click);
             // 
             // checkBox1
             // 
@@ -242,7 +238,6 @@
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Большие буквы";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -253,7 +248,6 @@
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "Малые буквы";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -264,7 +258,6 @@
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Специальные символы";
             this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -279,7 +272,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Состав пароля";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // checkBox4
             // 
@@ -290,7 +282,6 @@
             this.checkBox4.TabIndex = 5;
             this.checkBox4.Text = "Цифры";
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // button1
             // 
@@ -315,7 +306,6 @@
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Здесь будет ваш пароль!";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox2
             // 
@@ -328,7 +318,6 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Длина пароля";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBox3
             // 
@@ -338,7 +327,6 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(28, 20);
             this.textBox3.TabIndex = 19;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // track_bar_password_lengh
             // 
@@ -360,10 +348,6 @@
             this.label1.Size = new System.Drawing.Size(222, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Введите кол-во символов в пароле (4 - 29)";
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // button2
             // 
@@ -401,7 +385,6 @@
             this.textBox2.Size = new System.Drawing.Size(388, 183);
             this.textBox2.TabIndex = 11;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button4
             // 
@@ -413,10 +396,6 @@
             this.button4.Text = "Save";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // toolTip2
-            // 
-            this.toolTip2.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip2_Popup);
             // 
             // button5
             // 
@@ -449,7 +428,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 16);
+            this.label2.Location = new System.Drawing.Point(94, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 13);
             this.label2.TabIndex = 15;
@@ -475,7 +454,6 @@
             this.user_login_under_avatar.Text = "Логин";
             this.user_login_under_avatar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.user_login_under_avatar.UseCompatibleTextRendering = true;
-            this.user_login_under_avatar.Click += new System.EventHandler(this.user_login_under_avatar_Click);
             // 
             // pictureBox1
             // 
@@ -517,7 +495,7 @@
             // MoveToDBPasswords
             // 
             this.MoveToDBPasswords.Image = ((System.Drawing.Image)(resources.GetObject("MoveToDBPasswords.Image")));
-            this.MoveToDBPasswords.Location = new System.Drawing.Point(77, 360);
+            this.MoveToDBPasswords.Location = new System.Drawing.Point(86, 360);
             this.MoveToDBPasswords.Name = "MoveToDBPasswords";
             this.MoveToDBPasswords.Size = new System.Drawing.Size(110, 110);
             this.MoveToDBPasswords.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -550,6 +528,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -597,7 +576,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox4;
-        public System.Windows.Forms.NotifyIcon notifyIcon1;
+        public System.Windows.Forms.NotifyIcon notifyIcon_totray;
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolTip toolTip2;

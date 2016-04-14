@@ -19,8 +19,8 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            toolTip1.SetToolTip(button1, "Нажмите для генерации пароля");       // Всплывающая подсказка
 
+            toolTip1.SetToolTip(button1, "Нажмите для генерации пароля");       // Всплывающая подсказка
             toolTip2.ToolTipTitle = ("Путь к файлу C:\\ ... .txt");
             toolTip2.SetToolTip(button4, "Нажмите для сохранения в файл!");
 
@@ -32,14 +32,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == null)
@@ -69,17 +61,6 @@ namespace WindowsFormsApplication1
 
             MessageBox.Show(
                 $"История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)\nv3.3.2 - Добавлена возможность выводы сгенерированных паролей в файл\nv3.3.3 - Исправленые мелкие баги");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void textBox1_TextChanged(object sender, EventArgs e)       // поле вывода пароля
-        {
-
-
         }
 
         public void button1_Click(object sender, EventArgs e)              // кнопка генерации
@@ -283,44 +264,11 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)    // установка длины пароля
-        {
-
-        }
-        public void checkBox1_CheckedChanged(object sender, EventArgs e)       // выбор больших букв
-        {
-
-        }
-        public void checkBox2_CheckedChanged(object sender, EventArgs e)       // выбор маленьких букв
-        {
-
-        }
-        public void checkBox3_CheckedChanged(object sender, EventArgs e)       // выбор кракозябр
-        {
-
-        }
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)       // выбор цифр
-        {
-
-        }   
-
         private void благодарностьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Хотелось бы поблагодарить моего друга fish, \n за помощь с графической составляющей приложения, \nа также за тестирование данного приложения");
         }
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
 
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
@@ -340,31 +288,11 @@ namespace WindowsFormsApplication1
             textBox2.BackColor = Color.Gray;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void дневнаяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             textBox1.BackColor = Color.WhiteSmoke;
             textBox2.BackColor = Color.WhiteSmoke;
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)      // сохранение паролей в файл, файл по умолчанию(диск c:\\)
@@ -383,20 +311,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void toolTip2_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             if (button5.Enabled == true)
                 textBox2.Clear();
-        }
-
-        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -444,10 +362,6 @@ namespace WindowsFormsApplication1
             account acc = new account();
             acc.Owner = this;
             acc.Show();
-        }
-
-        private void user_login_under_avatar_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -478,11 +392,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void MoveToDBPasswords_Click(object sender, EventArgs e)        // окрывает форму с базой паролей пользователя. Проедоставляет возможность авторизации на ращличных ресурсах
         {
             DB_password_form dbpf = new DB_password_form();
@@ -490,7 +399,7 @@ namespace WindowsFormsApplication1
             dbpf.Show();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void Form1_SizeChanged(object sender, EventArgs e)
         {
 
         }

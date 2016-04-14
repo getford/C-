@@ -89,12 +89,12 @@ namespace WindowsFormsApplication1
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
 
-            //////////////////////////////// Получаем первый ответ и сравниваем с веденным ответом пользователя ////////////////////////////
+            //////////////////////////////// Получаем первый ответ  ////////////////////////////
 
             try
             {
                 connectDB.Open();
-                string sql_query_first_answer = @"select user_first_answer from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
+                string sql_query_first_answer = @"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; select CONVERT(nvarchar(50), DECRYPTBYKEY(user_first_answer)) as [user_first_answer] from [dbo].[introduce] where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_f_a = new SqlCommand(sql_query_first_answer, connectDB);
                 SqlDataReader dr_f_a = cmd_f_a.ExecuteReader();
                 while (dr_f_a.Read())
@@ -106,12 +106,12 @@ namespace WindowsFormsApplication1
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
 
-            // получаем второй секретный ответ и аналогично будем сравнивать в введенным ответом пользователя
+            // получаем второй секретный ответ 
 
             try
             {
                 connectDB.Open();
-                string sql_query_secound_answer = @"select user_secound_answer from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
+                string sql_query_secound_answer = @"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; select CONVERT(nvarchar(50), DECRYPTBYKEY(user_secound_answer)) as [user_secound_answer] from [dbo].[introduce] where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_s_a = new SqlCommand(sql_query_secound_answer, connectDB);
                 SqlDataReader dr_s_a = cmd_s_a.ExecuteReader();
                 while (dr_s_a.Read())
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query_user_password = @"select user_password from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
+                string sql_query_user_password = @"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; select CONVERT(nvarchar(50), DECRYPTBYKEY(user_password)) as [user_password] from [dbo].[introduce] where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_u_p = new SqlCommand(sql_query_user_password, connectDB);
                 SqlDataReader dr_u_p = cmd_u_p.ExecuteReader();
                 while (dr_u_p.Read())
