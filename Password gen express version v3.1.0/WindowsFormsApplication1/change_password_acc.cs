@@ -15,7 +15,6 @@ namespace WindowsFormsApplication1
     public partial class change_password_acc : Form
     {
         string string_old_password = string.Empty;      // сюда положим старый пароль
-        string string_new_password = string.Empty;
         string string_user_login = string.Empty;        // тут лежит логин пользователя который зашел в систему
 
         public change_password_acc()

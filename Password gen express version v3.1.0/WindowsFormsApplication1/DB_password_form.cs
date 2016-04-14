@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query_insert = string.Format("insert into {0} values (@Name_site, @URL_site, @Login_site, @Password_site)", textBox_user_login_now.Text);
+                string sql_query_insert = string.Format("open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin INSERT INTO {0} values (@Name_site, @URL_site, @Login_site, ENCRYPTBYKEY(@Symmetric_key_GUID, N'@Password_site')) end", textBox_user_login_now.Text.ToString());
 
                 SqlCommand cmd = new SqlCommand(sql_query_insert, connectDB);
                 if (textBox_name_site.Text != "" || textBox_URL_site.Text != "" || textBox_login_site.Text != "" || textBox_password_site.Text != "")
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
                 }
                 else { MessageBox.Show("Error. Поля не могут быть пустыми!"); }
             }
-            catch(SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
         }
 
