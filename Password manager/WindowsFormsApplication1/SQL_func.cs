@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
                 commandInsert.Parameters.AddWithValue(@"user_secound_answer", _usersecoungansw);
                 commandInsert.ExecuteNonQuery();
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.ToString());
             }
