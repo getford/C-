@@ -49,7 +49,7 @@
             // 
             // textBox_new_password
             // 
-            this.textBox_new_password.Location = new System.Drawing.Point(12, 124);
+            this.textBox_new_password.Location = new System.Drawing.Point(12, 109);
             this.textBox_new_password.Name = "textBox_new_password";
             this.textBox_new_password.PasswordChar = '*';
             this.textBox_new_password.Size = new System.Drawing.Size(237, 20);
@@ -58,7 +58,7 @@
             // 
             // textBox_re_new_password
             // 
-            this.textBox_re_new_password.Location = new System.Drawing.Point(12, 163);
+            this.textBox_re_new_password.Location = new System.Drawing.Point(12, 148);
             this.textBox_re_new_password.Name = "textBox_re_new_password";
             this.textBox_re_new_password.PasswordChar = '*';
             this.textBox_re_new_password.Size = new System.Drawing.Size(237, 20);
@@ -68,7 +68,7 @@
             // button_change_password
             // 
             this.button_change_password.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_change_password.Location = new System.Drawing.Point(62, 211);
+            this.button_change_password.Location = new System.Drawing.Point(62, 196);
             this.button_change_password.Name = "button_change_password";
             this.button_change_password.Size = new System.Drawing.Size(135, 23);
             this.button_change_password.TabIndex = 3;
@@ -88,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 108);
+            this.label2.Location = new System.Drawing.Point(9, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 5;
@@ -97,7 +97,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 147);
+            this.label3.Location = new System.Drawing.Point(9, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 6;
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 249);
+            this.ClientSize = new System.Drawing.Size(261, 238);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

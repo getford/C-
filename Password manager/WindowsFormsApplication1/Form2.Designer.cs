@@ -44,7 +44,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.introduceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.introduceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_help = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
@@ -52,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -181,17 +179,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
             // button_help
             // 
             this.button_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -202,6 +189,7 @@
             this.button_help.TabIndex = 24;
             this.button_help.Text = "?";
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // Form2
             // 
@@ -211,7 +199,6 @@
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(480, 320);
             this.Controls.Add(this.button_help);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -240,7 +227,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +247,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource introduceBindingSource;
         private System.Windows.Forms.BindingSource introduceBindingSource1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button_help;
     }
 }

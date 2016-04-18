@@ -35,16 +35,16 @@
             // 
             // textBox_new_email
             // 
-            this.textBox_new_email.Location = new System.Drawing.Point(25, 22);
+            this.textBox_new_email.Location = new System.Drawing.Point(12, 22);
             this.textBox_new_email.Name = "textBox_new_email";
-            this.textBox_new_email.Size = new System.Drawing.Size(233, 20);
+            this.textBox_new_email.Size = new System.Drawing.Size(237, 20);
             this.textBox_new_email.TabIndex = 0;
             this.textBox_new_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button_change_email
             // 
             this.button_change_email.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_change_email.Location = new System.Drawing.Point(64, 48);
+            this.button_change_email.Location = new System.Drawing.Point(56, 48);
             this.button_change_email.Name = "button_change_email";
             this.button_change_email.Size = new System.Drawing.Size(149, 23);
             this.button_change_email.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 91);
+            this.ClientSize = new System.Drawing.Size(261, 91);
             this.Controls.Add(this.button_change_email);
             this.Controls.Add(this.textBox_new_email);
             this.HelpButton = true;

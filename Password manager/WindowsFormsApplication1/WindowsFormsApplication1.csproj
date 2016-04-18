@@ -96,6 +96,12 @@
     <Compile Include="account.Designer.cs">
       <DependentUpon>account.cs</DependentUpon>
     </Compile>
+    <Compile Include="account_more_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="account_more_info.Designer.cs">
+      <DependentUpon>account_more_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="change_email_acc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     </Compile>
     <Compile Include="change_password_acc.Designer.cs">
       <DependentUpon>change_password_acc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirm_the_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirm_the_password.Designer.cs">
+      <DependentUpon>Confirm_the_password.cs</DependentUpon>
     </Compile>
     <Compile Include="Database_siteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,6 +148,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_help.Designer.cs">
+      <DependentUpon>Form_help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Restore_Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,11 +181,17 @@
     <EmbeddedResource Include="account.resx">
       <DependentUpon>account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="account_more_info.resx">
+      <DependentUpon>account_more_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="change_email_acc.resx">
       <DependentUpon>change_email_acc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="change_password_acc.resx">
       <DependentUpon>change_password_acc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirm_the_password.resx">
+      <DependentUpon>Confirm_the_password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DB_password_form.resx">
       <DependentUpon>DB_password_form.cs</DependentUpon>
@@ -177,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_help.resx">
+      <DependentUpon>Form_help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Restore_Password.resx">
       <DependentUpon>Form_Restore_Password.cs</DependentUpon>
@@ -253,7 +280,6 @@
       <DependentUpon>Database_site.mdf</DependentUpon>
     </Content>
     <Content Include="icontexto-inside-newsvine_8960.ico" />
-    <Content Include="Image1.png" />
     <Content Include="unnamed.ico" />
     <Content Include="Запрос к бд.txt" />
   </ItemGroup>

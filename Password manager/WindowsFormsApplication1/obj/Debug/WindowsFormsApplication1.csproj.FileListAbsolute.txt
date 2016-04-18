@@ -61,3 +61,6 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsAppli
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SignInForm.az.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\az\PassWord Manager.resources.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_help.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.account_more_info.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Confirm_the_password.resources

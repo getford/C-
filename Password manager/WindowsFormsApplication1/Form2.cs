@@ -111,5 +111,11 @@ namespace WindowsFormsApplication1
                 button1_Click(sender, e);
             }
         }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            Form_help fh = new Form_help();         // открывает форму справки, в которой будут ссылки на руководство пользователя ...
+            fh.Show();
+        }
     }
 }

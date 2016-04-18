@@ -33,6 +33,7 @@
             this.label_name = new System.Windows.Forms.Label();
             this.label_family = new System.Windows.Forms.Label();
             this.group_box_setup_acc = new System.Windows.Forms.GroupBox();
+            this.label_more_info = new System.Windows.Forms.Label();
             this.label_change_e_mail = new System.Windows.Forms.Label();
             this.label_change_password = new System.Windows.Forms.Label();
             this.label_email = new System.Windows.Forms.Label();
@@ -84,10 +85,23 @@
             this.group_box_setup_acc.Location = new System.Drawing.Point(12, 152);
             this.group_box_setup_acc.Name = "group_box_setup_acc";
             this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 67);
+            this.group_box_setup_acc.Size = new System.Drawing.Size(258, 61);
             this.group_box_setup_acc.TabIndex = 18;
             this.group_box_setup_acc.TabStop = false;
             this.group_box_setup_acc.Text = "Управление аккаунтом";
+            // 
+            // label_more_info
+            // 
+            this.label_more_info.AutoSize = true;
+            this.label_more_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.label_more_info.ForeColor = System.Drawing.Color.Teal;
+            this.label_more_info.Location = new System.Drawing.Point(29, 216);
+            this.label_more_info.Name = "label_more_info";
+            this.label_more_info.Size = new System.Drawing.Size(226, 13);
+            this.label_more_info.TabIndex = 2;
+            this.label_more_info.Text = "Просмотреть расширенный профиль";
+            this.label_more_info.Click += new System.EventHandler(this.On_Click_more_info);
             // 
             // label_change_e_mail
             // 
@@ -180,7 +194,7 @@
             this.linkLabel_delete_account.AutoSize = true;
             this.linkLabel_delete_account.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel_delete_account.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_delete_account.Location = new System.Drawing.Point(52, 232);
+            this.linkLabel_delete_account.Location = new System.Drawing.Point(50, 247);
             this.linkLabel_delete_account.Name = "linkLabel_delete_account";
             this.linkLabel_delete_account.Size = new System.Drawing.Size(175, 22);
             this.linkLabel_delete_account.TabIndex = 25;
@@ -193,7 +207,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(285, 271);
+            this.ClientSize = new System.Drawing.Size(285, 284);
+            this.Controls.Add(this.label_more_info);
             this.Controls.Add(this.linkLabel_delete_account);
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.group_box_setup_acc);
@@ -231,5 +246,6 @@
         private System.Windows.Forms.GroupBox groupBox_info_account;
         private System.Windows.Forms.LinkLabel linkLabel_delete_account;
         public System.Windows.Forms.TextBox textBox_login;
+        private System.Windows.Forms.Label label_more_info;
     }
 }

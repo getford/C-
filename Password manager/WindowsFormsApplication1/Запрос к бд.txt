@@ -1,6 +1,4 @@
-﻿create database CS_Kurs;
-use CS_Kurs;
-
+﻿
 CREATE TABLE introduce(
 	ID int primary key NOT NULL,
 	user_login nvarchar(15) NOT NULL,

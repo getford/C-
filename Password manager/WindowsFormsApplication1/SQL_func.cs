@@ -13,28 +13,6 @@ namespace WindowsFormsApplication1
     {
         static public SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
 
-        /*запрос для регистрации*/
-        //public static void select(DataGridView dgv)
-        //{
-        //    try
-        //    {
-        //        connect.Open();
-        //        SqlDataAdapter command_data_adapter = new SqlDataAdapter(@"SELECT user_login, user_password, user_e_mail FROM [introduce]", connect);
-        //        DataTable dt = new DataTable();
-        //        command_data_adapter.Fill(dt);
-        //        dgv.DataSource = dt;
-
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        connect.Close();
-        //    }
-        //}
-
         public static void Insert(string _userlogin, string _userpassword, string _reuserpassword, string _useremail, string _userfirstname, string _userlastname, string _userfirstqst, string _userfirstansw, string _usersecoundqsr, string _usersecoungansw)
         {
             try

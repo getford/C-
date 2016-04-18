@@ -136,5 +136,12 @@ namespace WindowsFormsApplication1
         {
             MessageBox.Show("Информация о пользователе\nДля изменения пароля или электронной почты, нажмите на соответствующую надпись.", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void On_Click_more_info(object sender, EventArgs e)         // показать полную информацию об аккаунте
+        {
+            Confirm_the_password ctp = new Confirm_the_password();
+            ctp.Owner = this;
+            ctp.Show();
+        }
     }
 }

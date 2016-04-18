@@ -61,21 +61,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)      // кнопка регистрации
         {
 
@@ -91,7 +76,7 @@ namespace WindowsFormsApplication1
             {
                 if (textBox2.Text.ToString() == textBox3.Text.ToString())       // проверка совпадения паролей
                 {
-                    if (kol >= 4)
+                    if (kol >= 4)       // проверка длины пароля
                     {
                         if (textBox2.Text.Contains('!') || textBox2.Text.Contains('@') || textBox2.Text.Contains('#') || textBox2.Text.Contains('$') || textBox2.Text.Contains('%') || textBox2.Text.Contains('&') || textBox2.Text.Contains('*') || textBox2.Text.Contains('(') || textBox2.Text.Contains(')') || textBox2.Text.Contains('[') || textBox2.Text.Contains(']'))
                         {
@@ -117,14 +102,11 @@ namespace WindowsFormsApplication1
             else { MessageBox.Show("Неизвестная ошибка #1", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop); }       // подумать над этой ошибкой
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void _Click_key_down(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void label10_Click_1(object sender, EventArgs e)
-        {
-
+            if (e.KeyCode == Keys.Enter) { button1_Click(sender, e); }       // при нажатие на enter -> зарегистрироваться
+            if (e.KeyCode == Keys.Delete) { button2_Click(sender, e); }      // при нажатии на delete -> очистка
+            if (e.KeyCode == Keys.Escape) { button3_Click(sender, e); }      // при нажатиии на esc -> отмена
         }
     }
 }
