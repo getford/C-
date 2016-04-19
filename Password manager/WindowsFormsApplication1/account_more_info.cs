@@ -26,6 +26,9 @@ namespace WindowsFormsApplication1
                 this.textBox_login.Text = ctp.acc_login;
             else { MessageBox.Show("Неопределенная ошибка #4", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
+            timer.Interval = 30000;
+            timer.Enabled = true;
+
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
             
             /*Имя*/
@@ -137,20 +140,6 @@ namespace WindowsFormsApplication1
             finally { connectDB.Close(); }
         }
 
-        private void OnClick_change_password(object sender, EventArgs e)        // смена пароля
-        {
-            change_password_acc cpa = new change_password_acc();
-            cpa.Owner = this;
-            cpa.Show();
-        }
-
-        private void OnClick_change_email(object sender, EventArgs e)           // смена email
-        {
-            change_email_acc cea = new change_email_acc();
-            cea.Owner = this;
-            cea.Show();
-        }
-
         private void linkLabel_delete_account_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (MessageBox.Show("Вы действительно хотите удалить аккауни?", "Подтверждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
@@ -181,6 +170,12 @@ namespace WindowsFormsApplication1
                 finally { connectDB.Close(); }
             }
             else { /*Тут что-то должно быть, а может и не должно :)*/}
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Enabled = false;
+            this.Close();
         }
     }
 }

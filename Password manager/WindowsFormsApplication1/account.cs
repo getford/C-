@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             Form1 f1 = this.Owner as Form1;
             if (f1 != null)
             {
-                textBox_login.Text = f1.user_login_under_avatar.Text.ToString();
+                textBox_login.Text = f1.textBox_user_login_under_avatar.Text.ToString();
             }
 
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query_f_n = @"select user_first_name from introduce where user_login = '" + f1.user_login_under_avatar.Text.ToString() + "'";
+                string sql_query_f_n = @"select user_first_name from introduce where user_login = '" + f1.textBox_user_login_under_avatar.Text.ToString() + "'";
                 SqlCommand cmd_f_n = new SqlCommand(sql_query_f_n, connectDB);
                 SqlDataReader dr = cmd_f_n.ExecuteReader();
                 while(dr.Read())
@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query_l_n = @"select user_last_name from introduce where user_login = '" + f1.user_login_under_avatar.Text.ToString() + "'";
+                string sql_query_l_n = @"select user_last_name from introduce where user_login = '" + f1.textBox_user_login_under_avatar.Text.ToString() + "'";
                 SqlCommand cmd_l_n = new SqlCommand(sql_query_l_n, connectDB);
                 SqlDataReader dr = cmd_l_n.ExecuteReader();
                 while(dr.Read())
@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query_email = @"select user_e_mail from introduce where user_login = '" + f1.user_login_under_avatar.Text.ToString() + "'";
+                string sql_query_email = @"select user_e_mail from introduce where user_login = '" + f1.textBox_user_login_under_avatar.Text.ToString() + "'";
                 SqlCommand cmd_u_email = new SqlCommand(sql_query_email, connectDB);
                 SqlDataReader dr = cmd_u_email.ExecuteReader();
                 while(dr.Read())

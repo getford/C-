@@ -34,14 +34,6 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.разработчикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.цветоваяСхемаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дневнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ночнаяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.языкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.русскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.английскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПриложенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.историяОбновленийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,11 +61,11 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.user_login_under_avatar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.MoveToDBPasswords = new System.Windows.Forms.PictureBox();
+            this.textBox_user_login_under_avatar = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,7 +80,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.настройкиToolStripMenuItem,
             this.оПриложенииToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -118,67 +109,6 @@
             this.выходToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
             this.выходToolStripMenuItem1.Text = "Выйти";
             this.выходToolStripMenuItem1.Click += new System.EventHandler(this.выходToolStripMenuItem1_Click);
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.разработчикToolStripMenuItem,
-            this.цветоваяСхемаToolStripMenuItem,
-            this.языкToolStripMenuItem});
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
-            // разработчикToolStripMenuItem
-            // 
-            this.разработчикToolStripMenuItem.Name = "разработчикToolStripMenuItem";
-            this.разработчикToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.разработчикToolStripMenuItem.Text = "Разработчик";
-            this.разработчикToolStripMenuItem.Click += new System.EventHandler(this.разработчикToolStripMenuItem_Click);
-            // 
-            // цветоваяСхемаToolStripMenuItem
-            // 
-            this.цветоваяСхемаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.дневнаяToolStripMenuItem,
-            this.ночнаяToolStripMenuItem});
-            this.цветоваяСхемаToolStripMenuItem.Name = "цветоваяСхемаToolStripMenuItem";
-            this.цветоваяСхемаToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.цветоваяСхемаToolStripMenuItem.Text = "Цветовая схема";
-            // 
-            // дневнаяToolStripMenuItem
-            // 
-            this.дневнаяToolStripMenuItem.Name = "дневнаяToolStripMenuItem";
-            this.дневнаяToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.дневнаяToolStripMenuItem.Text = "Дневная";
-            this.дневнаяToolStripMenuItem.Click += new System.EventHandler(this.дневнаяToolStripMenuItem_Click);
-            // 
-            // ночнаяToolStripMenuItem
-            // 
-            this.ночнаяToolStripMenuItem.Name = "ночнаяToolStripMenuItem";
-            this.ночнаяToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.ночнаяToolStripMenuItem.Text = "Ночная";
-            this.ночнаяToolStripMenuItem.Click += new System.EventHandler(this.ночнаяToolStripMenuItem_Click);
-            // 
-            // языкToolStripMenuItem
-            // 
-            this.языкToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.русскийToolStripMenuItem,
-            this.английскийToolStripMenuItem});
-            this.языкToolStripMenuItem.Name = "языкToolStripMenuItem";
-            this.языкToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.языкToolStripMenuItem.Text = "Язык";
-            // 
-            // русскийToolStripMenuItem
-            // 
-            this.русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
-            this.русскийToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.русскийToolStripMenuItem.Text = "Русский";
-            // 
-            // английскийToolStripMenuItem
-            // 
-            this.английскийToolStripMenuItem.Name = "английскийToolStripMenuItem";
-            this.английскийToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.английскийToolStripMenuItem.Text = "Английский";
             // 
             // оПриложенииToolStripMenuItem
             // 
@@ -434,31 +364,10 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Здесь будут созданные вами пароли";
             // 
-            // user_login_under_avatar
-            // 
-            this.user_login_under_avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.user_login_under_avatar.AutoEllipsis = true;
-            this.user_login_under_avatar.AutoSize = true;
-            this.user_login_under_avatar.BackColor = System.Drawing.Color.Transparent;
-            this.user_login_under_avatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user_login_under_avatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.user_login_under_avatar.ForeColor = System.Drawing.Color.Green;
-            this.user_login_under_avatar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.user_login_under_avatar.Location = new System.Drawing.Point(643, 99);
-            this.user_login_under_avatar.Name = "user_login_under_avatar";
-            this.user_login_under_avatar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.user_login_under_avatar.Size = new System.Drawing.Size(48, 22);
-            this.user_login_under_avatar.TabIndex = 17;
-            this.user_login_under_avatar.Text = "Логин";
-            this.user_login_under_avatar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.user_login_under_avatar.UseCompatibleTextRendering = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(634, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(620, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -503,6 +412,18 @@
             this.MoveToDBPasswords.TabStop = false;
             this.MoveToDBPasswords.Click += new System.EventHandler(this.MoveToDBPasswords_Click);
             // 
+            // textBox_user_login_under_avatar
+            // 
+            this.textBox_user_login_under_avatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_user_login_under_avatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.textBox_user_login_under_avatar.ForeColor = System.Drawing.Color.Lime;
+            this.textBox_user_login_under_avatar.Location = new System.Drawing.Point(603, 102);
+            this.textBox_user_login_under_avatar.Name = "textBox_user_login_under_avatar";
+            this.textBox_user_login_under_avatar.ReadOnly = true;
+            this.textBox_user_login_under_avatar.Size = new System.Drawing.Size(100, 16);
+            this.textBox_user_login_under_avatar.TabIndex = 21;
+            this.textBox_user_login_under_avatar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,10 +431,10 @@
             this.AutoSize = true;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(722, 502);
+            this.Controls.Add(this.textBox_user_login_under_avatar);
             this.Controls.Add(this.MoveToDBPasswords);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.user_login_under_avatar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -527,6 +448,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
@@ -552,13 +474,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПриложенииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem историяОбновленийToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem цветоваяСхемаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem дневнаяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ночнаяToolStripMenuItem;
         private System.Windows.Forms.Label main_text;
         public System.Windows.Forms.CheckBox checkBox1;
         public System.Windows.Forms.CheckBox checkBox2;
@@ -568,9 +486,6 @@
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem языкToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem русскийToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem английскийToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem благодарностьToolStripMenuItem;
         public System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button2;
@@ -584,15 +499,14 @@
         public System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ToolStripMenuItem разработчикToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label user_login_under_avatar;
         private System.Windows.Forms.TrackBar track_bar_password_lengh;
         public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox MoveToDBPasswords;
+        public System.Windows.Forms.TextBox textBox_user_login_under_avatar;
     }
 }
 

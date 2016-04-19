@@ -60,11 +60,11 @@
             this.label_info.AutoSize = true;
             this.label_info.Location = new System.Drawing.Point(9, 9);
             this.label_info.Name = "label_info";
-            this.label_info.Size = new System.Drawing.Size(427, 39);
+            this.label_info.Size = new System.Drawing.Size(430, 52);
             this.label_info.TabIndex = 2;
             this.label_info.Text = "Вы действительно хотите просмотреть полный профиль?\r\nВнимание! Вся зашифрованная " +
-    "информация, будет расшифрована при просмотре\r\nУ вас 1 минута, после чего вам пот" +
-    "ребуется ввести пароль снова\r\n";
+    "информация, будет расшифрована при просмотре.\r\nУ вас 30 секунд, после чего вам п" +
+    "отребуется ввести пароль снова.\r\n\r\n";
             // 
             // Confirm_the_password
             // 

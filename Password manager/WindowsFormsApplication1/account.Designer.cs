@@ -33,9 +33,9 @@
             this.label_name = new System.Windows.Forms.Label();
             this.label_family = new System.Windows.Forms.Label();
             this.group_box_setup_acc = new System.Windows.Forms.GroupBox();
-            this.label_more_info = new System.Windows.Forms.Label();
             this.label_change_e_mail = new System.Windows.Forms.Label();
             this.label_change_password = new System.Windows.Forms.Label();
+            this.label_more_info = new System.Windows.Forms.Label();
             this.label_email = new System.Windows.Forms.Label();
             this.textBox_login = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
@@ -82,6 +82,7 @@
             // 
             this.group_box_setup_acc.Controls.Add(this.label_change_e_mail);
             this.group_box_setup_acc.Controls.Add(this.label_change_password);
+            this.group_box_setup_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.group_box_setup_acc.Location = new System.Drawing.Point(12, 152);
             this.group_box_setup_acc.Name = "group_box_setup_acc";
             this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -89,19 +90,6 @@
             this.group_box_setup_acc.TabIndex = 18;
             this.group_box_setup_acc.TabStop = false;
             this.group_box_setup_acc.Text = "Управление аккаунтом";
-            // 
-            // label_more_info
-            // 
-            this.label_more_info.AutoSize = true;
-            this.label_more_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))));
-            this.label_more_info.ForeColor = System.Drawing.Color.Teal;
-            this.label_more_info.Location = new System.Drawing.Point(29, 216);
-            this.label_more_info.Name = "label_more_info";
-            this.label_more_info.Size = new System.Drawing.Size(226, 13);
-            this.label_more_info.TabIndex = 2;
-            this.label_more_info.Text = "Просмотреть расширенный профиль";
-            this.label_more_info.Click += new System.EventHandler(this.On_Click_more_info);
             // 
             // label_change_e_mail
             // 
@@ -118,10 +106,23 @@
             this.label_change_password.AutoSize = true;
             this.label_change_password.Location = new System.Drawing.Point(9, 16);
             this.label_change_password.Name = "label_change_password";
-            this.label_change_password.Size = new System.Drawing.Size(90, 13);
+            this.label_change_password.Size = new System.Drawing.Size(97, 13);
             this.label_change_password.TabIndex = 0;
-            this.label_change_password.Text = "Сменить пароль";
+            this.label_change_password.Text = "Изменить пароль";
             this.label_change_password.Click += new System.EventHandler(this.OnClick);
+            // 
+            // label_more_info
+            // 
+            this.label_more_info.AutoSize = true;
+            this.label_more_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.label_more_info.ForeColor = System.Drawing.Color.Teal;
+            this.label_more_info.Location = new System.Drawing.Point(29, 216);
+            this.label_more_info.Name = "label_more_info";
+            this.label_more_info.Size = new System.Drawing.Size(226, 13);
+            this.label_more_info.TabIndex = 2;
+            this.label_more_info.Text = "Просмотреть расширенный профиль";
+            this.label_more_info.Click += new System.EventHandler(this.On_Click_more_info);
             // 
             // label_email
             // 

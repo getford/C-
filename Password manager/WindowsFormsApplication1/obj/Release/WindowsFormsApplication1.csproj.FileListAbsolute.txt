@@ -18,3 +18,33 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form_Restore_Password.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Release\Database.mdf
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password gen express version v3.1.0\WindowsFormsApplication1\bin\Release\Database_log.ldf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\PassWord Manager.exe.config
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\Database.mdf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\Database_log.ldf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\Database_site.mdf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\Database_site_log.ldf
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\PassWord Manager.exe
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\PassWord Manager.pdb
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\az\PassWord Manager.resources.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\System.Data.SqlServerCe.Entity.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\System.Data.SqlServerCe.Entity.resources.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Release\RU\System.Data.SqlServerCe.Entity.resources.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.account.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.account_more_info.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.change_email_acc.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.change_password_acc.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Confirm_the_password.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.DB_password_form.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form1.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form2.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form_help.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form_Restore_Password.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.SignInForm.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.start.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.SignInForm.az.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\az\PassWord Manager.resources.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\PassWord Manager.exe
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Release\PassWord Manager.pdb

@@ -28,33 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(account_more_info));
             this.groupBox_info_account = new System.Windows.Forms.GroupBox();
-            this.textBox_first_question = new System.Windows.Forms.TextBox();
-            this.label_first_question = new System.Windows.Forms.Label();
-            this.label_name = new System.Windows.Forms.Label();
-            this.label_email = new System.Windows.Forms.Label();
-            this.label_family = new System.Windows.Forms.Label();
-            this.label_login = new System.Windows.Forms.Label();
-            this.textBox_login = new System.Windows.Forms.TextBox();
-            this.textBox_email = new System.Windows.Forms.TextBox();
-            this.textBox_first_name = new System.Windows.Forms.TextBox();
-            this.textBox_last_name = new System.Windows.Forms.TextBox();
-            this.label_change_password = new System.Windows.Forms.Label();
-            this.linkLabel_delete_account = new System.Windows.Forms.LinkLabel();
-            this.group_box_setup_acc = new System.Windows.Forms.GroupBox();
-            this.label_change_e_mail = new System.Windows.Forms.Label();
-            this.label_first_answer = new System.Windows.Forms.Label();
-            this.textBox_first_answer = new System.Windows.Forms.TextBox();
-            this.label_secound_auestion = new System.Windows.Forms.Label();
-            this.textBox_secound_question = new System.Windows.Forms.TextBox();
             this.textBox_secound_answer = new System.Windows.Forms.TextBox();
             this.label_secound_answer = new System.Windows.Forms.Label();
+            this.textBox_secound_question = new System.Windows.Forms.TextBox();
+            this.label_secound_auestion = new System.Windows.Forms.Label();
+            this.textBox_first_answer = new System.Windows.Forms.TextBox();
+            this.label_first_answer = new System.Windows.Forms.Label();
+            this.label_first_question = new System.Windows.Forms.Label();
+            this.label_name = new System.Windows.Forms.Label();
+            this.textBox_first_question = new System.Windows.Forms.TextBox();
+            this.label_email = new System.Windows.Forms.Label();
+            this.label_family = new System.Windows.Forms.Label();
+            this.textBox_email = new System.Windows.Forms.TextBox();
+            this.textBox_last_name = new System.Windows.Forms.TextBox();
+            this.textBox_login = new System.Windows.Forms.TextBox();
+            this.textBox_first_name = new System.Windows.Forms.TextBox();
+            this.label_login = new System.Windows.Forms.Label();
+            this.linkLabel_delete_account = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_time_close = new System.Windows.Forms.TextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox_info_account.SuspendLayout();
-            this.group_box_setup_acc.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_info_account
@@ -81,15 +79,65 @@
             this.groupBox_info_account.TabIndex = 27;
             this.groupBox_info_account.TabStop = false;
             // 
-            // textBox_first_question
+            // textBox_secound_answer
             // 
-            this.textBox_first_question.Location = new System.Drawing.Point(365, 19);
-            this.textBox_first_question.Name = "textBox_first_question";
-            this.textBox_first_question.ReadOnly = true;
-            this.textBox_first_question.ShortcutsEnabled = false;
-            this.textBox_first_question.Size = new System.Drawing.Size(239, 20);
-            this.textBox_first_question.TabIndex = 25;
-            this.textBox_first_question.TabStop = false;
+            this.textBox_secound_answer.Location = new System.Drawing.Point(365, 95);
+            this.textBox_secound_answer.Name = "textBox_secound_answer";
+            this.textBox_secound_answer.ReadOnly = true;
+            this.textBox_secound_answer.ShortcutsEnabled = false;
+            this.textBox_secound_answer.Size = new System.Drawing.Size(156, 20);
+            this.textBox_secound_answer.TabIndex = 31;
+            this.textBox_secound_answer.TabStop = false;
+            // 
+            // label_secound_answer
+            // 
+            this.label_secound_answer.AutoSize = true;
+            this.label_secound_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_secound_answer.Location = new System.Drawing.Point(237, 100);
+            this.label_secound_answer.Name = "label_secound_answer";
+            this.label_secound_answer.Size = new System.Drawing.Size(80, 13);
+            this.label_secound_answer.TabIndex = 30;
+            this.label_secound_answer.Text = "Второй ответ: ";
+            // 
+            // textBox_secound_question
+            // 
+            this.textBox_secound_question.Location = new System.Drawing.Point(365, 71);
+            this.textBox_secound_question.Name = "textBox_secound_question";
+            this.textBox_secound_question.ReadOnly = true;
+            this.textBox_secound_question.ShortcutsEnabled = false;
+            this.textBox_secound_question.Size = new System.Drawing.Size(239, 20);
+            this.textBox_secound_question.TabIndex = 29;
+            this.textBox_secound_question.TabStop = false;
+            // 
+            // label_secound_auestion
+            // 
+            this.label_secound_auestion.AutoSize = true;
+            this.label_secound_auestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_secound_auestion.Location = new System.Drawing.Point(237, 74);
+            this.label_secound_auestion.Name = "label_secound_auestion";
+            this.label_secound_auestion.Size = new System.Drawing.Size(88, 13);
+            this.label_secound_auestion.TabIndex = 28;
+            this.label_secound_auestion.Text = "Второй вопрос: ";
+            // 
+            // textBox_first_answer
+            // 
+            this.textBox_first_answer.Location = new System.Drawing.Point(365, 43);
+            this.textBox_first_answer.Name = "textBox_first_answer";
+            this.textBox_first_answer.ReadOnly = true;
+            this.textBox_first_answer.ShortcutsEnabled = false;
+            this.textBox_first_answer.Size = new System.Drawing.Size(156, 20);
+            this.textBox_first_answer.TabIndex = 27;
+            this.textBox_first_answer.TabStop = false;
+            // 
+            // label_first_answer
+            // 
+            this.label_first_answer.AutoSize = true;
+            this.label_first_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_first_answer.Location = new System.Drawing.Point(237, 48);
+            this.label_first_answer.Name = "label_first_answer";
+            this.label_first_answer.Size = new System.Drawing.Size(84, 13);
+            this.label_first_answer.TabIndex = 26;
+            this.label_first_answer.Text = "Первый ответ: ";
             // 
             // label_first_question
             // 
@@ -111,6 +159,16 @@
             this.label_name.TabIndex = 1;
             this.label_name.Text = "Имя: ";
             // 
+            // textBox_first_question
+            // 
+            this.textBox_first_question.Location = new System.Drawing.Point(365, 19);
+            this.textBox_first_question.Name = "textBox_first_question";
+            this.textBox_first_question.ReadOnly = true;
+            this.textBox_first_question.ShortcutsEnabled = false;
+            this.textBox_first_question.Size = new System.Drawing.Size(239, 20);
+            this.textBox_first_question.TabIndex = 25;
+            this.textBox_first_question.TabStop = false;
+            // 
             // label_email
             // 
             this.label_email.AutoSize = true;
@@ -131,26 +189,6 @@
             this.label_family.TabIndex = 2;
             this.label_family.Text = "Фамилия:";
             // 
-            // label_login
-            // 
-            this.label_login.AutoSize = true;
-            this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_login.Location = new System.Drawing.Point(6, 22);
-            this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(41, 13);
-            this.label_login.TabIndex = 0;
-            this.label_login.Text = "Логин:";
-            // 
-            // textBox_login
-            // 
-            this.textBox_login.Location = new System.Drawing.Point(75, 19);
-            this.textBox_login.Name = "textBox_login";
-            this.textBox_login.ReadOnly = true;
-            this.textBox_login.ShortcutsEnabled = false;
-            this.textBox_login.Size = new System.Drawing.Size(156, 20);
-            this.textBox_login.TabIndex = 20;
-            this.textBox_login.TabStop = false;
-            // 
             // textBox_email
             // 
             this.textBox_email.Location = new System.Drawing.Point(75, 97);
@@ -160,16 +198,6 @@
             this.textBox_email.Size = new System.Drawing.Size(156, 20);
             this.textBox_email.TabIndex = 21;
             this.textBox_email.TabStop = false;
-            // 
-            // textBox_first_name
-            // 
-            this.textBox_first_name.Location = new System.Drawing.Point(75, 45);
-            this.textBox_first_name.Name = "textBox_first_name";
-            this.textBox_first_name.ReadOnly = true;
-            this.textBox_first_name.ShortcutsEnabled = false;
-            this.textBox_first_name.Size = new System.Drawing.Size(156, 20);
-            this.textBox_first_name.TabIndex = 22;
-            this.textBox_first_name.TabStop = false;
             // 
             // textBox_last_name
             // 
@@ -181,22 +209,42 @@
             this.textBox_last_name.TabIndex = 23;
             this.textBox_last_name.TabStop = false;
             // 
-            // label_change_password
+            // textBox_login
             // 
-            this.label_change_password.AutoSize = true;
-            this.label_change_password.Location = new System.Drawing.Point(9, 16);
-            this.label_change_password.Name = "label_change_password";
-            this.label_change_password.Size = new System.Drawing.Size(90, 13);
-            this.label_change_password.TabIndex = 0;
-            this.label_change_password.Text = "Сменить пароль";
-            this.label_change_password.Click += new System.EventHandler(this.OnClick_change_password);
+            this.textBox_login.Location = new System.Drawing.Point(75, 19);
+            this.textBox_login.Name = "textBox_login";
+            this.textBox_login.ReadOnly = true;
+            this.textBox_login.ShortcutsEnabled = false;
+            this.textBox_login.Size = new System.Drawing.Size(156, 20);
+            this.textBox_login.TabIndex = 20;
+            this.textBox_login.TabStop = false;
+            // 
+            // textBox_first_name
+            // 
+            this.textBox_first_name.Location = new System.Drawing.Point(75, 45);
+            this.textBox_first_name.Name = "textBox_first_name";
+            this.textBox_first_name.ReadOnly = true;
+            this.textBox_first_name.ShortcutsEnabled = false;
+            this.textBox_first_name.Size = new System.Drawing.Size(156, 20);
+            this.textBox_first_name.TabIndex = 22;
+            this.textBox_first_name.TabStop = false;
+            // 
+            // label_login
+            // 
+            this.label_login.AutoSize = true;
+            this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_login.Location = new System.Drawing.Point(6, 22);
+            this.label_login.Name = "label_login";
+            this.label_login.Size = new System.Drawing.Size(41, 13);
+            this.label_login.TabIndex = 0;
+            this.label_login.Text = "Логин:";
             // 
             // linkLabel_delete_account
             // 
             this.linkLabel_delete_account.AutoSize = true;
             this.linkLabel_delete_account.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel_delete_account.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_delete_account.Location = new System.Drawing.Point(455, 172);
+            this.linkLabel_delete_account.Location = new System.Drawing.Point(228, 153);
             this.linkLabel_delete_account.Name = "linkLabel_delete_account";
             this.linkLabel_delete_account.Size = new System.Drawing.Size(175, 22);
             this.linkLabel_delete_account.TabIndex = 28;
@@ -204,94 +252,12 @@
             this.linkLabel_delete_account.Text = "Удалить аккаунт";
             this.linkLabel_delete_account.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_delete_account_LinkClicked);
             // 
-            // group_box_setup_acc
-            // 
-            this.group_box_setup_acc.Controls.Add(this.label_change_e_mail);
-            this.group_box_setup_acc.Controls.Add(this.label_change_password);
-            this.group_box_setup_acc.Location = new System.Drawing.Point(13, 156);
-            this.group_box_setup_acc.Name = "group_box_setup_acc";
-            this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.group_box_setup_acc.Size = new System.Drawing.Size(415, 67);
-            this.group_box_setup_acc.TabIndex = 26;
-            this.group_box_setup_acc.TabStop = false;
-            this.group_box_setup_acc.Text = "Управление аккаунтом";
-            // 
-            // label_change_e_mail
-            // 
-            this.label_change_e_mail.AutoSize = true;
-            this.label_change_e_mail.Location = new System.Drawing.Point(9, 39);
-            this.label_change_e_mail.Name = "label_change_e_mail";
-            this.label_change_e_mail.Size = new System.Drawing.Size(192, 13);
-            this.label_change_e_mail.TabIndex = 1;
-            this.label_change_e_mail.Text = "Изменить адрес электронной почты";
-            this.label_change_e_mail.Click += new System.EventHandler(this.OnClick_change_email);
-            // 
-            // label_first_answer
-            // 
-            this.label_first_answer.AutoSize = true;
-            this.label_first_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_first_answer.Location = new System.Drawing.Point(237, 48);
-            this.label_first_answer.Name = "label_first_answer";
-            this.label_first_answer.Size = new System.Drawing.Size(84, 13);
-            this.label_first_answer.TabIndex = 26;
-            this.label_first_answer.Text = "Первый ответ: ";
-            // 
-            // textBox_first_answer
-            // 
-            this.textBox_first_answer.Location = new System.Drawing.Point(365, 43);
-            this.textBox_first_answer.Name = "textBox_first_answer";
-            this.textBox_first_answer.ReadOnly = true;
-            this.textBox_first_answer.ShortcutsEnabled = false;
-            this.textBox_first_answer.Size = new System.Drawing.Size(156, 20);
-            this.textBox_first_answer.TabIndex = 27;
-            this.textBox_first_answer.TabStop = false;
-            // 
-            // label_secound_auestion
-            // 
-            this.label_secound_auestion.AutoSize = true;
-            this.label_secound_auestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_secound_auestion.Location = new System.Drawing.Point(237, 74);
-            this.label_secound_auestion.Name = "label_secound_auestion";
-            this.label_secound_auestion.Size = new System.Drawing.Size(88, 13);
-            this.label_secound_auestion.TabIndex = 28;
-            this.label_secound_auestion.Text = "Второй вопрос: ";
-            // 
-            // textBox_secound_question
-            // 
-            this.textBox_secound_question.Location = new System.Drawing.Point(365, 71);
-            this.textBox_secound_question.Name = "textBox_secound_question";
-            this.textBox_secound_question.ReadOnly = true;
-            this.textBox_secound_question.ShortcutsEnabled = false;
-            this.textBox_secound_question.Size = new System.Drawing.Size(239, 20);
-            this.textBox_secound_question.TabIndex = 29;
-            this.textBox_secound_question.TabStop = false;
-            // 
-            // textBox_secound_answer
-            // 
-            this.textBox_secound_answer.Location = new System.Drawing.Point(365, 95);
-            this.textBox_secound_answer.Name = "textBox_secound_answer";
-            this.textBox_secound_answer.ReadOnly = true;
-            this.textBox_secound_answer.ShortcutsEnabled = false;
-            this.textBox_secound_answer.Size = new System.Drawing.Size(156, 20);
-            this.textBox_secound_answer.TabIndex = 31;
-            this.textBox_secound_answer.TabStop = false;
-            // 
-            // label_secound_answer
-            // 
-            this.label_secound_answer.AutoSize = true;
-            this.label_secound_answer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_secound_answer.Location = new System.Drawing.Point(237, 100);
-            this.label_secound_answer.Name = "label_secound_answer";
-            this.label_secound_answer.Size = new System.Drawing.Size(80, 13);
-            this.label_secound_answer.TabIndex = 30;
-            this.label_secound_answer.Text = "Второй ответ: ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(13, 237);
+            this.label1.Location = new System.Drawing.Point(11, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 13);
             this.label1.TabIndex = 29;
@@ -302,7 +268,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(259, 237);
+            this.label2.Location = new System.Drawing.Point(250, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(373, 39);
             this.label2.TabIndex = 30;
@@ -310,23 +276,26 @@
             // 
             // textBox_time_close
             // 
-            this.textBox_time_close.Location = new System.Drawing.Point(188, 234);
+            this.textBox_time_close.Location = new System.Drawing.Point(186, 184);
             this.textBox_time_close.Name = "textBox_time_close";
             this.textBox_time_close.ReadOnly = true;
             this.textBox_time_close.Size = new System.Drawing.Size(55, 20);
             this.textBox_time_close.TabIndex = 31;
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // account_more_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 262);
+            this.ClientSize = new System.Drawing.Size(644, 221);
             this.Controls.Add(this.textBox_time_close);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.linkLabel_delete_account);
-            this.Controls.Add(this.group_box_setup_acc);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -337,8 +306,6 @@
             this.Load += new System.EventHandler(this.account_more_info_Load);
             this.groupBox_info_account.ResumeLayout(false);
             this.groupBox_info_account.PerformLayout();
-            this.group_box_setup_acc.ResumeLayout(false);
-            this.group_box_setup_acc.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,10 +322,7 @@
         private System.Windows.Forms.TextBox textBox_email;
         private System.Windows.Forms.TextBox textBox_first_name;
         private System.Windows.Forms.TextBox textBox_last_name;
-        private System.Windows.Forms.Label label_change_password;
         private System.Windows.Forms.LinkLabel linkLabel_delete_account;
-        private System.Windows.Forms.GroupBox group_box_setup_acc;
-        private System.Windows.Forms.Label label_change_e_mail;
         private System.Windows.Forms.TextBox textBox_first_question;
         private System.Windows.Forms.Label label_first_question;
         private System.Windows.Forms.TextBox textBox_first_answer;
@@ -370,5 +334,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_time_close;
+        private System.Windows.Forms.Timer timer;
     }
 }

@@ -17,11 +17,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void start_Load(object sender, EventArgs e)
         {
             timer.Interval = 1500;
@@ -35,7 +30,6 @@ namespace WindowsFormsApplication1
             Form2 fm2 = new Form2();
             fm2.Show();
             this.Hide();
-
         }
     }
 }

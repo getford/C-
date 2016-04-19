@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
         private void DB_password_form_Load(object sender, EventArgs e)
         {
             Form1 f1 = this.Owner as Form1;
-            if(f1 != null) { textBox_user_login_now.Text = f1.user_login_under_avatar.Text.ToString(); }
+            if(f1 != null) { textBox_user_login_now.Text = f1.textBox_user_login_under_avatar.Text.ToString(); }
 
             refresh_data();     // функция обновления
         }

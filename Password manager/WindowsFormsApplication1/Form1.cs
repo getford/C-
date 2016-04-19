@@ -27,8 +27,8 @@ namespace WindowsFormsApplication1
             Form2 f2 = this.Owner as Form2;         // указываем родительскую форму из котороый будет получено поле (поле должно быть public)
             if (f2 != null)
             {
-                user_login_under_avatar.Text = f2.textBox1.Text.ToString();
-                string st = user_login_under_avatar.Text.ToString();
+                textBox_user_login_under_avatar.Text = f2.textBox1.Text.ToString();
+                string st = textBox_user_login_under_avatar.Text.ToString();
             }
         }
 
@@ -44,14 +44,68 @@ namespace WindowsFormsApplication1
                 if (save_password.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
-                    wr.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
-                    wr.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
+                    wr.Write("Data & Time:  " + System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                    wr.Write("User:         " + Environment.UserName + Environment.NewLine);
+                    wr.Write("PC Name:      " + Environment.MachineName + Environment.NewLine);
+                    wr.Write("OS Version:   " + Environment.OSVersion + Environment.NewLine + Environment.NewLine + Environment.NewLine);
+                    wr.Write("          *** Password's ***" + Environment.NewLine);
                     wr.Write(textBox2.Text);
                     wr.Close();
                     Application.Exit();
                 }
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)          // сохранить как (сохраняет сганирированные пароли в файл)
+        {
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Не создано ни одного пароля!");
+            }
+            else
+            {
+                SaveFileDialog save_password = new SaveFileDialog();
+
+                save_password.FileName = Environment.UserName + "_password.txt";
+                if (save_password.ShowDialog() == DialogResult.OK)
+                {
+                    System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
+                    wr.Write("Data & Time:  " + System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                    wr.Write("User:         " + Environment.UserName + Environment.NewLine);
+                    wr.Write("PC Name:      " + Environment.MachineName + Environment.NewLine);
+                    wr.Write("OS Version:   " + Environment.OSVersion + Environment.NewLine + Environment.NewLine + Environment.NewLine);
+                    wr.Write("          *** Password's ***" + Environment.NewLine);
+                    wr.Write(textBox2.Text);
+                    wr.Close();
+                }
+                else { }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)      // сохранение паролей в файл, файл по умолчанию(диск c:\\)
+        {
+
+            System.IO.StreamWriter wr = new System.IO.StreamWriter(@"C:\" + Environment.UserName + "_password.txt");
+
+            if (button4.Enabled == true)
+            {
+                wr.Write("Data & Time:  " + System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
+                wr.Write("User:         " + Environment.UserName + Environment.NewLine);
+                wr.Write("PC Name:      " + Environment.MachineName + Environment.NewLine);
+                wr.Write("OS Version:   " + Environment.OSVersion + Environment.NewLine + Environment.NewLine + Environment.NewLine);
+                wr.Write("          *** Password's ***" + Environment.NewLine);
+                wr.Write(textBox2.Text);
+                wr.Close();
+                if (wr != null)
+                {
+                    wr.Close();
+                    MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\username_password.txt");
+                }
+                else { }
+            }
+            else { }
+        }
+
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Версия приложения: v3.3.3");
@@ -295,22 +349,6 @@ namespace WindowsFormsApplication1
             textBox2.BackColor = Color.WhiteSmoke;
         }
 
-        private void button4_Click(object sender, EventArgs e)      // сохранение паролей в файл, файл по умолчанию(диск c:\\)
-        {
-
-            System.IO.StreamWriter File = new System.IO.StreamWriter(@"C:\" + Environment.UserName + "_password.txt");
-
-            if (button4.Enabled == true)
-            {
-                File.Write(System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
-                File.Write("User: " + Environment.UserName + Environment.NewLine + Environment.NewLine);
-                File.WriteLine(textBox2.Text);
-                if (File != null)
-                    File.Close();
-                MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\username_password.txt");
-            }
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             if (button5.Enabled == true)
@@ -327,31 +365,6 @@ namespace WindowsFormsApplication1
             Application.Exit();
         }
 
-        private void button6_Click(object sender, EventArgs e)          // сохранить как (сохраняет сганирированные пароли в файл)
-        {
-            if (textBox2.Text == "")
-            {
-                MessageBox.Show("Не создано ни одного пароля!");
-            }
-            else
-            {
-                SaveFileDialog save_password = new SaveFileDialog();
-
-                save_password.FileName = Environment.UserName + "_password.txt";
-                if (save_password.ShowDialog() == DialogResult.OK)
-                {
-                    System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
-                    wr.Write("Data & Time:  " + System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
-                    wr.Write("User:         " + Environment.UserName + Environment.NewLine);
-                    wr.Write("PC Name:      " + Environment.MachineName + Environment.NewLine);
-                    wr.Write("OS Version:   " + Environment.OSVersion + Environment.NewLine + Environment.NewLine + Environment.NewLine);
-                    wr.Write("          *** Password's ***" + Environment.NewLine);
-                    wr.Write(textBox2.Text);
-                    wr.Close();
-                }
-            }
-        }
-
         private void разработчикToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Vladimir Zhigalo ©. BSTU 2016 FIT SIT(Software Information Technology)");
@@ -362,7 +375,6 @@ namespace WindowsFormsApplication1
             account acc = new account();
             acc.Owner = this;
             acc.Show();
-
         }
 
         private void track_bar_password_lengh_Scroll(object sender, EventArgs e)        // ползунок для выбора длины создаваемого пароля
@@ -400,6 +412,11 @@ namespace WindowsFormsApplication1
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void user_login_under_avatar_Click(object sender, EventArgs e)
         {
 
         }

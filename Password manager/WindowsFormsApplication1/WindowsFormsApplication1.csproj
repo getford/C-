@@ -227,7 +227,6 @@
     <EmbeddedResource Include="start.resx">
       <DependentUpon>start.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Database_siteDataSet.xsc">
       <DependentUpon>Database_siteDataSet.xsd</DependentUpon>
     </None>
