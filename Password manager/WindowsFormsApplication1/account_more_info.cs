@@ -14,9 +14,16 @@ namespace WindowsFormsApplication1
 {
     public partial class account_more_info : Form
     {
+        System.Diagnostics.Stopwatch t = new System.Diagnostics.Stopwatch();
         public account_more_info()
         {
             InitializeComponent();
+
+            timer.Interval = 2000;      // 
+            timer.Start();              // стартуем
+            t.Start();                  // стартует проверка точности
+            timer.Tick += new EventHandler(timer_Tick);
+            progressBar_timer.Maximum = 30;         // 30 секунд
         }
 
         private void account_more_info_Load(object sender, EventArgs e)
@@ -25,9 +32,6 @@ namespace WindowsFormsApplication1
             if (ctp != null)
                 this.textBox_login.Text = ctp.acc_login;
             else { MessageBox.Show("Неопределенная ошибка #4", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-
-            timer.Interval = 30000;
-            timer.Enabled = true;
 
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
             
@@ -174,8 +178,13 @@ namespace WindowsFormsApplication1
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            timer.Enabled = false;
-            this.Close();
+            progressBar_timer.Increment(1);
+            if(progressBar_timer.Value == progressBar_timer.Maximum)
+            {
+                t.Stop();
+                timer.Stop();
+                this.Close();
+            }
         }
     }
 }

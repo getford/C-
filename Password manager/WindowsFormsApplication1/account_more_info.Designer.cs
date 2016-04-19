@@ -49,9 +49,8 @@
             this.label_login = new System.Windows.Forms.Label();
             this.linkLabel_delete_account = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_time_close = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.progressBar_timer = new System.Windows.Forms.ProgressBar();
             this.groupBox_info_account.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -257,42 +256,29 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(11, 187);
+            this.label1.Location = new System.Drawing.Point(12, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "До закрытия формы осталось: ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(250, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(373, 39);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "_____________________________________________________________\r\n\r\n\r\n";
-            // 
-            // textBox_time_close
-            // 
-            this.textBox_time_close.Location = new System.Drawing.Point(186, 184);
-            this.textBox_time_close.Name = "textBox_time_close";
-            this.textBox_time_close.ReadOnly = true;
-            this.textBox_time_close.Size = new System.Drawing.Size(55, 20);
-            this.textBox_time_close.TabIndex = 31;
-            // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // progressBar_timer
+            // 
+            this.progressBar_timer.Location = new System.Drawing.Point(186, 186);
+            this.progressBar_timer.Name = "progressBar_timer";
+            this.progressBar_timer.Size = new System.Drawing.Size(444, 23);
+            this.progressBar_timer.TabIndex = 31;
             // 
             // account_more_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 221);
-            this.Controls.Add(this.textBox_time_close);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.progressBar_timer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.linkLabel_delete_account);
@@ -332,8 +318,7 @@
         private System.Windows.Forms.TextBox textBox_secound_question;
         private System.Windows.Forms.Label label_secound_auestion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_time_close;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ProgressBar progressBar_timer;
     }
 }

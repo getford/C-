@@ -94,5 +94,10 @@ namespace WindowsFormsApplication1
             //account acc = new account();
             //acc.Show();
         }
+
+        private void listView_site_login_password_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
