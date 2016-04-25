@@ -72,21 +72,21 @@
             this.button_restore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_restore.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_restore.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button_restore.Location = new System.Drawing.Point(97, 255);
+            this.button_restore.Location = new System.Drawing.Point(97, 247);
             this.button_restore.Name = "button_restore";
             this.button_restore.Size = new System.Drawing.Size(129, 39);
             this.button_restore.TabIndex = 4;
             this.button_restore.Text = "Восстановить";
             this.button_restore.UseVisualStyleBackColor = true;
             this.button_restore.Click += new System.EventHandler(this.button_restore_Click);
-            //
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 319);
+            this.pictureBox1.Size = new System.Drawing.Size(323, 319);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 319);
+            this.ClientSize = new System.Drawing.Size(323, 319);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_secound_a);

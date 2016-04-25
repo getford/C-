@@ -60,12 +60,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button6 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.MoveToDBPasswords = new System.Windows.Forms.PictureBox();
             this.textBox_user_login_under_avatar = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -151,7 +151,7 @@
             // main_text
             // 
             this.main_text.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.main_text.Location = new System.Drawing.Point(61, 27);
+            this.main_text.Location = new System.Drawing.Point(73, 27);
             this.main_text.Name = "main_text";
             this.main_text.Size = new System.Drawing.Size(507, 86);
             this.main_text.TabIndex = 1;
@@ -162,7 +162,8 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(18, 65);
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox1.Location = new System.Drawing.Point(161, 42);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(105, 17);
             this.checkBox1.TabIndex = 2;
@@ -172,7 +173,8 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(18, 42);
+            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox2.Location = new System.Drawing.Point(161, 19);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(95, 17);
             this.checkBox2.TabIndex = 3;
@@ -182,7 +184,8 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(18, 88);
+            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox3.Location = new System.Drawing.Point(15, 42);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(144, 17);
             this.checkBox3.TabIndex = 4;
@@ -198,7 +201,7 @@
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(288, 114);
+            this.groupBox1.Size = new System.Drawing.Size(288, 78);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Состав пароля";
@@ -206,7 +209,8 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(18, 19);
+            this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox4.Location = new System.Drawing.Point(15, 22);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(62, 17);
             this.checkBox4.TabIndex = 5;
@@ -234,7 +238,6 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(391, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Здесь будет ваш пароль!";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox2
@@ -242,7 +245,7 @@
             this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.track_bar_password_lengh);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 246);
+            this.groupBox2.Location = new System.Drawing.Point(12, 210);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(288, 108);
             this.groupBox2.TabIndex = 8;
@@ -260,13 +263,17 @@
             // 
             // track_bar_password_lengh
             // 
+            this.track_bar_password_lengh.AutoSize = false;
             this.track_bar_password_lengh.LargeChange = 1;
             this.track_bar_password_lengh.Location = new System.Drawing.Point(6, 49);
             this.track_bar_password_lengh.Maximum = 29;
             this.track_bar_password_lengh.Minimum = 4;
             this.track_bar_password_lengh.Name = "track_bar_password_lengh";
-            this.track_bar_password_lengh.Size = new System.Drawing.Size(273, 45);
+            this.track_bar_password_lengh.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.track_bar_password_lengh.Size = new System.Drawing.Size(273, 40);
             this.track_bar_password_lengh.TabIndex = 18;
+            this.track_bar_password_lengh.TabStop = false;
+            this.track_bar_password_lengh.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.track_bar_password_lengh.Value = 4;
             this.track_bar_password_lengh.Scroll += new System.EventHandler(this.track_bar_password_lengh_Scroll);
             // 
@@ -306,20 +313,18 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 32);
+            this.textBox2.Location = new System.Drawing.Point(6, 19);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(388, 183);
+            this.textBox2.Size = new System.Drawing.Size(388, 178);
             this.textBox2.TabIndex = 11;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(167, 221);
+            this.button4.Location = new System.Drawing.Point(168, 203);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 12;
@@ -331,7 +336,7 @@
             // 
             this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(86, 222);
+            this.button5.Location = new System.Drawing.Point(87, 204);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 13;
@@ -347,7 +352,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(248, 221);
+            this.button6.Location = new System.Drawing.Point(249, 203);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 14;
@@ -355,17 +360,9 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Здесь будут созданные вами пароли";
-            // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(620, 27);
             this.pictureBox1.Name = "pictureBox1";
@@ -386,27 +383,28 @@
             this.groupBox3.Size = new System.Drawing.Size(403, 78);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Генерация пароля";
+            this.groupBox3.Text = "Здесь будет ваш пароль!";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Location = new System.Drawing.Point(309, 214);
+            this.groupBox4.Location = new System.Drawing.Point(306, 210);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(400, 255);
+            this.groupBox4.Size = new System.Drawing.Size(400, 233);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Здесь будут созданные вами пароли";
             // 
             // MoveToDBPasswords
             // 
+            this.MoveToDBPasswords.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MoveToDBPasswords.Image = ((System.Drawing.Image)(resources.GetObject("MoveToDBPasswords.Image")));
-            this.MoveToDBPasswords.Location = new System.Drawing.Point(86, 360);
+            this.MoveToDBPasswords.Location = new System.Drawing.Point(12, 333);
             this.MoveToDBPasswords.Name = "MoveToDBPasswords";
-            this.MoveToDBPasswords.Size = new System.Drawing.Size(110, 110);
+            this.MoveToDBPasswords.Size = new System.Drawing.Size(288, 110);
             this.MoveToDBPasswords.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MoveToDBPasswords.TabIndex = 20;
             this.MoveToDBPasswords.TabStop = false;
@@ -424,13 +422,25 @@
             this.textBox_user_login_under_avatar.TabIndex = 21;
             this.textBox_user_login_under_avatar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.Location = new System.Drawing.Point(12, 458);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(703, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016    _________________" +
+    "_____________________________________________";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(722, 502);
+            this.ClientSize = new System.Drawing.Size(722, 483);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_user_login_under_avatar);
             this.Controls.Add(this.MoveToDBPasswords);
             this.Controls.Add(this.groupBox4);
@@ -450,7 +460,6 @@
             this.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -499,7 +508,6 @@
         public System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TrackBar track_bar_password_lengh;
         public System.Windows.Forms.TextBox textBox3;
@@ -507,6 +515,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox MoveToDBPasswords;
         public System.Windows.Forms.TextBox textBox_user_login_under_avatar;
+        private System.Windows.Forms.Label label3;
     }
 }
 

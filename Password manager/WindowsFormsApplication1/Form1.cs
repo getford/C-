@@ -119,203 +119,232 @@ namespace WindowsFormsApplication1
 
         public void button1_Click(object sender, EventArgs e)              // кнопка генерации
         {
-            if(track_bar_password_lengh.Value == 4)     // если по дефлдту длина пароля 4 фон сразу красный
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
             {
-                textBox1.BackColor = Color.Red;
-            }
-
-            char s;
-            char[] liter_full = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-            char[] liter_m = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
-            char[] liter_b = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
-            char[] liter_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']' };   // 10
-            char[] liter_m_b = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 52
-            char[] liter_m_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
-            char[] liter_b_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
-            char[] liter_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-            char[] liter_c_n = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };   // 20
-            char[] liter_m_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
-            char[] liter_b_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
-            char[] liter_m_b_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 52
-            char[] liter_m_b_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 52
-            char[] liter_m_c_n = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
-            char[] liter_b_c_n = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
-
-            Random rnd = new Random();
-
-            int N;
-            N = (int)track_bar_password_lengh.Value;
-
-
-            if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
-            {
-                textBox1.Text = ("Password: ");
-
-                for (int i = 0; i < N; i++)
+                if (track_bar_password_lengh.Value == 4)     // если по дефлдту длина пароля 4 фон сразу красный
                 {
-                    s = liter_m[rnd.Next(26)];
-                    textBox1.Text += (s);
+                    textBox1.BackColor = Color.Red;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
+                else { }
 
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)    // большие
-            {
-                textBox1.Text = ("Password: ");
+                char s;
+                char[] liter_full = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+                char[] liter_m = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
+                char[] liter_b = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
+                char[] liter_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']' };   // 10
+                char[] liter_m_b = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 52
+                char[] liter_m_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
+                char[] liter_b_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
+                char[] liter_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+                char[] liter_c_n = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };   // 20
+                char[] liter_m_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
+                char[] liter_b_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
+                char[] liter_m_b_c = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 52
+                char[] liter_m_b_n = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 52
+                char[] liter_m_c_n = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };   // 26
+                char[] liter_b_c_n = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };   // 26
 
-                for (int i = 0; i < N; i++)
+                Random rnd = new Random();
+
+                int N;
+                N = (int)track_bar_password_lengh.Value;
+
+
+                if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
                 {
-                    s = liter_b[rnd.Next(26)];
-                    textBox1.Text += (s);
-                }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)    // кракозябры
-            {
-                textBox1.Text = ("Password: ");
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m[rnd.Next(26)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
+
+                if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)    // большие
                 {
-                    s = liter_c[rnd.Next(10)];
-                    textBox1.Text += (s);
-                }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)    // цифры
-            {
-                textBox1.Text = ("Password: ");
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_b[rnd.Next(26)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
+
+                if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)    // кракозябры
                 {
-                    s = liter_n[rnd.Next(10)];
-                    textBox1.Text += (s);
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_c[rnd.Next(10)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
+                else { }
 
-            if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие большие
-            {
-                textBox1.Text = ("Password: ");
-
-                for (int i = 0; i < N; i++)
+                if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)    // цифры
                 {
-                    s = liter_m_b[rnd.Next(52)];
-                    textBox1.Text += (s);
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_n[rnd.Next(10)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
+                else { }
 
-            if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)     // малекние кракозябры
-            {
-                textBox1.Text = ("Password: ");
-
-                for (int i = 0; i < N; i++)
+                if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие большие
                 {
-                    s = liter_m_c[rnd.Next(36)];
-                    textBox1.Text += (s);
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m_b[rnd.Next(52)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
+                else { }
 
-            if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)     // малекние цифры
-            {
-                textBox1.Text = ("Password: ");
-
-                for (int i = 0; i < N; i++)
+                if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)     // малекние кракозябры
                 {
-                    s = liter_m_n[rnd.Next(36)];
-                    textBox1.Text += (s);
-                }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // большие цифры
-            {
-                textBox1.Text = ("Password: ");
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
-                {
-                    s = liter_b_n[rnd.Next(36)];
-                    textBox1.Text += (s);
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m_c[rnd.Next(36)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // большие кракозябры
-            {
-                textBox1.Text = ("Password: ");
+                else { }
 
-                for (int i = 0; i < N; i++)
+                if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)     // малекние цифры
                 {
-                    s = liter_b_c[rnd.Next(36)];
-                    textBox1.Text += (s);
-                }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // маленькие большие кракозябры
-            {
-                textBox1.Text = ("Password: ");
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
-                {
-                    s = liter_m_b_c[rnd.Next(56)];
-                    textBox1.Text += (s);
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m_n[rnd.Next(36)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // маленькие большие цифры
-            {
-                textBox1.Text = ("Password: ");
+                else { }
+                if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // большие цифры
+                {
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
-                {
-                    s = liter_m_b_n[rnd.Next(56)];
-                    textBox1.Text += (s);
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_b_n[rnd.Next(36)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // маленькие кракозябры цифры
-            {
-                textBox1.Text = ("Password: ");
+                else { }
 
-                for (int i = 0; i < N; i++)
+                if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // большие кракозябры
                 {
-                    s = liter_m_c_n[rnd.Next(46)];
-                    textBox1.Text += (s);
-                }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // кракозябры цифры
-            {
-                textBox1.Text = ("Password: ");
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
-                {
-                    s = liter_c_n[rnd.Next(20)];
-                    textBox1.Text += (s);
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_b_c[rnd.Next(36)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)      // большие кракозябры цифры
-            {
-                textBox1.Text = ("Password: ");
+                else { }
 
-                for (int i = 0; i < N; i++)
+                if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // маленькие большие кракозябры
                 {
-                    s = liter_b_c_n[rnd.Next(46)];
-                    textBox1.Text += (s);
-                }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
-            }
-            if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)       // маленькие большие кракозябры цифры 
-            {
-                textBox1.Text = ("Password: ");
+                    textBox1.Text = ("Password: ");
 
-                for (int i = 0; i < N; i++)
-                {
-                    s = liter_full[rnd.Next(72)];
-                    textBox1.Text += (s);
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m_b_c[rnd.Next(56)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
                 }
-                textBox2.Text += textBox1.Text + Environment.NewLine;
+                else { }
+
+                if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // маленькие большие цифры
+                {
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m_b_n[rnd.Next(56)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
+
+                if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // маленькие кракозябры цифры
+                {
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_m_c_n[rnd.Next(46)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
+
+                if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // кракозябры цифры
+                {
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_c_n[rnd.Next(20)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
+
+                if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)      // большие кракозябры цифры
+                {
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_b_c_n[rnd.Next(46)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
+
+                if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)       // маленькие большие кракозябры цифры 
+                {
+                    textBox1.Text = ("Password: ");
+
+                    for (int i = 0; i < N; i++)
+                    {
+                        s = liter_full[rnd.Next(72)];
+                        textBox1.Text += (s);
+                    }
+                    textBox2.Text += textBox1.Text + Environment.NewLine;
+                }
+                else { }
             }
+            else { MessageBox.Show("Выберите состав пароля!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void благодарностьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -326,13 +355,15 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
-            textBox1.Text = ("Здесь будет ваш пароль!");
             textBox1.BackColor = Color.White;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(textBox1.Text);
+            if (textBox1.Text.ToString() != "")
+                Clipboard.SetText(textBox1.Text);
+            else
+                MessageBox.Show("Вы не можете скопировать пустое поле!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
         }
 
         private void ночнаяToolStripMenuItem_Click(object sender, EventArgs e)
@@ -409,16 +440,6 @@ namespace WindowsFormsApplication1
             DB_password_form dbpf = new DB_password_form();
             dbpf.Owner = this;
             dbpf.Show();
-        }
-
-        private void Form1_SizeChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void user_login_under_avatar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
