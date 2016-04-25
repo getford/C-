@@ -120,16 +120,6 @@
     <Compile Include="Confirm_the_password.Designer.cs">
       <DependentUpon>Confirm_the_password.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database_siteDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database_siteDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Database_siteDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database_siteDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DB_password_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,9 +159,6 @@
       <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL_func.cs" />
-    <Compile Include="SQL_query_form_restore_password.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="start.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,28 +215,6 @@
       <DependentUpon>start.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
-    <None Include="Database_siteDataSet.xsc">
-      <DependentUpon>Database_siteDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database_siteDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database_siteDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database_siteDataSet.xss">
-      <DependentUpon>Database_siteDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database_siteDataSet1.xsc">
-      <DependentUpon>Database_siteDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Database_siteDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database_siteDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database_siteDataSet1.xss">
-      <DependentUpon>Database_siteDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

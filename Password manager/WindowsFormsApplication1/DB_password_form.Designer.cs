@@ -47,14 +47,11 @@
             this.listView_site_login_password = new System.Windows.Forms.ListView();
             this.groupBox_info_user_name = new System.Windows.Forms.GroupBox();
             this.qqqBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database_siteDataSet = new WindowsFormsApplication1.Database_siteDataSet();
-            this.qqqTableAdapter = new WindowsFormsApplication1.Database_siteDataSetTableAdapters.qqqTableAdapter();
             label_info_app = new System.Windows.Forms.Label();
             this.groupBox_textboxes.SuspendLayout();
             this.groupBox_buttons.SuspendLayout();
             this.groupBox_info_user_name.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_name_site
@@ -216,16 +213,6 @@
             // qqqBindingSource
             // 
             this.qqqBindingSource.DataMember = "qqq";
-            this.qqqBindingSource.DataSource = this.database_siteDataSet;
-            // 
-            // database_siteDataSet
-            // 
-            this.database_siteDataSet.DataSetName = "Database_siteDataSet";
-            this.database_siteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qqqTableAdapter
-            // 
-            this.qqqTableAdapter.ClearBeforeFill = true;
             // 
             // label_info_app
             // 
@@ -267,16 +254,13 @@
             this.groupBox_info_user_name.ResumeLayout(false);
             this.groupBox_info_user_name.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database_siteDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Database_siteDataSet database_siteDataSet;
         private System.Windows.Forms.BindingSource qqqBindingSource;
-        private Database_siteDataSetTableAdapters.qqqTableAdapter qqqTableAdapter;
         private System.Windows.Forms.TextBox textBox_name_site;
         private System.Windows.Forms.TextBox textBox_URL_site;
         private System.Windows.Forms.TextBox textBox_login_site;

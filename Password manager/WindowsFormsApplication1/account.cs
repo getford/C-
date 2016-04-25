@@ -75,16 +75,6 @@ namespace WindowsFormsApplication1
             finally { connectDB.Close(); }
         }
 
-        private void label_login_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void OnClick(object sender, EventArgs e)    // смена пароля
         {
             change_password_acc cpa = new change_password_acc();

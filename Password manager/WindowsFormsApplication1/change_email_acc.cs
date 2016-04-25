@@ -42,6 +42,7 @@ namespace WindowsFormsApplication1
                 SqlCommand cmd = new SqlCommand(sql_query_email_change, connectDB);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Ваш email успешно изменен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
 
             }
             catch(SqlException ex) { MessageBox.Show(ex.Message); }

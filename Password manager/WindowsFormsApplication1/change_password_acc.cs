@@ -75,6 +75,7 @@ namespace WindowsFormsApplication1
             else { MessageBox.Show("Не верный старый пароль. Попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             /*Изменение пароля дописать*/
+            this.Close();
         }
 
 

@@ -1,163 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="WindowsFormsApplication1.account" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gACAIAEAAyQQAAQAAFCAAABCAQAAAAwBhABAAAAgAgA=</HashCode>
       <FileName>account.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.account_more_info" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.75" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>oISAAAAAACAQABQAARCUAABCEiAgAEBBhARAAAAgAAA=</HashCode>
       <FileName>account_more_info.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.change_email_acc" Collapsed="true">
-    <Position X="11" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAABAAAiAAAgCAQAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>change_email_acc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.change_password_acc" Collapsed="true">
-    <Position X="12.75" Y="0.5" Width="1.75" />
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAACAAABIAAAKAAAgCAAAAAAAAAwAAAAAYAAA=</HashCode>
       <FileName>change_password_acc.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Confirm_the_password" Collapsed="true">
-    <Position X="7.5" Y="1.5" Width="1.75" />
+    <Position X="5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAASABAAAAAACgAAACAABACAAAAAAAAQAAAAA=</HashCode>
       <FileName>Confirm_the_password.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApplication1.Database_siteDataSet" Collapsed="true">
-    <Position X="9.25" Y="1.5" Width="1.75" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <NestedTypes>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet.qqqDataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet.qqqRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet.qqqRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Delegate Name="WindowsFormsApplication1.Database_siteDataSet.qqqRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAwAAAAJABAAAQIABAAgCQBgAEAAAAAEABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WindowsFormsApplication1.Database_siteDataSet1" Collapsed="true">
-    <Position X="11" Y="1.5" Width="1.75" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <NestedTypes>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet1.qqqDataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet1.qqqRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet1.qqqRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Delegate Name="WindowsFormsApplication1.Database_siteDataSet1.qqqRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet1.qwertyDataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet1.qwertyRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="WindowsFormsApplication1.Database_siteDataSet1.qwertyRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Delegate Name="WindowsFormsApplication1.Database_siteDataSet1.qwertyRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAACAAwAAAAJAFAAAQIABAAgCQBgAEgAAAAEABBA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="WindowsFormsApplication1.DB_password_form" Collapsed="true">
-    <Position X="12.75" Y="1.5" Width="1.75" />
+    <Position X="6.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>UkAAAAAAAiEAAQAICRmAAAACBBCgBEAAAAAQAAACRwo=</HashCode>
+      <HashCode>UkAAAAAAAiEAAQAICBmAAAACBBCABEAAAAAQAAACRwo=</HashCode>
       <FileName>DB_password_form.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Form_help" Collapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+    <Position X="8.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Form_help.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Form_Restore_Password" Collapsed="true">
-    <Position X="5" Y="0.5" Width="2" />
+    <Position X="10.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAUAIAQAgCQAgBgAAACBCIACAAAAAABAAAAQAgBACAA=</HashCode>
       <FileName>Form_Restore_Password.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Form1" Collapsed="true">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BSAABAAVIDCAQBACAgCBAABCQOC5BiAAMnQOAAFAIEA=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Form2" Collapsed="true">
-    <Position X="11" Y="2.5" Width="1.5" />
+    <Position X="6.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACEAQIAAACAAABAAAAyAAAgCAGA8AAAAEGEIAAEACAA=</HashCode>
       <FileName>Form2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.Program" Collapsed="true">
-    <Position X="12.75" Y="2.5" Width="1.5" />
+    <Position X="8.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.SignInForm" Collapsed="true">
-    <Position X="7.5" Y="3.5" Width="1.5" />
+    <Position X="10.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>cCEAAAAAASAAABCQAACAAABCIAA5AAAAEHAAAABAAIE=</HashCode>
       <FileName>SignInForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApplication1.SQL_func" Collapsed="true">
-    <Position X="9.25" Y="3.5" Width="1.5" />
+    <Position X="5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SQL_func.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApplication1.SQL_query_form_restore_password" Collapsed="true">
-    <Position X="4.5" Y="2" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SQL_query_form_restore_password.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="WindowsFormsApplication1.start" Collapsed="true">
-    <Position X="11" Y="3.5" Width="1.5" />
+    <Position X="6.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAACAAAQCAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>start.cs</FileName>

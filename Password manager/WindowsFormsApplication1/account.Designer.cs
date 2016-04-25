@@ -56,7 +56,6 @@
             this.label_login.Size = new System.Drawing.Size(41, 13);
             this.label_login.TabIndex = 0;
             this.label_login.Text = "Логин:";
-            this.label_login.Click += new System.EventHandler(this.label_login_Click);
             // 
             // label_name
             // 
