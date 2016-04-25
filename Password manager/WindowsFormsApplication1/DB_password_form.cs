@@ -25,11 +25,15 @@ namespace WindowsFormsApplication1
         private void DB_password_form_Load(object sender, EventArgs e)
         {
             Form1 f1 = this.Owner as Form1;
-            if(f1 != null) { textBox_user_login_now.Text = f1.textBox_user_login_under_avatar.Text.ToString(); }
-            else { MessageBox.Show("Неизвестная ошибка #6", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            //refresh_data();     // функция обновления
+            if(f1 != null)
+            {
+                textBox_user_login_now.Text = f1.textBox_user_login_under_avatar.Text.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Неизвестная ошибка #6", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             data();
-
         }
 
         private void Initialize_List()
@@ -61,7 +65,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query = string.Format("select * from {0}", textBox_user_login_now.Text);
+                string sql_query = $"select * from {textBox_user_login_now.Text}";
                 SqlCommand cmd = new SqlCommand(sql_query, connectDB);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -70,6 +74,7 @@ namespace WindowsFormsApplication1
 
                 listView_site_login_password.Clear();
                 fill_ListView();
+
                 for(int i = 0; i < dt.Rows.Count; i++)
                 {
                     ListViewItem lvi = new ListViewItem(dt.Rows[i][0].ToString());
@@ -80,7 +85,12 @@ namespace WindowsFormsApplication1
                             lvi.SubItems.Add("Пароль зашифрован");
                             continue;
                         }
+                        else { }
                         lvi.SubItems.Add(dt.Rows[i][j].ToString());
+                        if (dt.Rows[i][4].ToString() == System.DateTime.Today.ToString())
+                        {
+                            lvi.ForeColor = Color.Red;
+                        }
                     }
                     listView_site_login_password.Items.Add(lvi);
                 }
@@ -187,6 +197,12 @@ namespace WindowsFormsApplication1
                 string sql_query = $"delete from {textBox_user_login_now.Text.ToString()} where URL_site = '{textBox_URL_site.Text}' and Name_site = '{textBox_name_site.Text}'";
                 SqlCommand cmd = new SqlCommand(sql_query, connectDB);
                 cmd.ExecuteNonQuery();
+                        // Очистим поля удаления
+                textBox_name_site.Clear();
+                textBox_URL_site.Clear();
+                textBox_login_site.Clear();
+                textBox_password_site.Clear();
+                dateTimePicker_valid_password.Value = System.DateTime.Now;
                 data();
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
