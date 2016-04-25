@@ -37,7 +37,6 @@
             this.textBox_password_site = new System.Windows.Forms.TextBox();
             this.button_authorization_site = new System.Windows.Forms.Button();
             this.button_register = new System.Windows.Forms.Button();
-            this.Label_user_login_now = new System.Windows.Forms.Label();
             this.textBox_user_login_now = new System.Windows.Forms.TextBox();
             this.button_clear = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
@@ -117,24 +116,13 @@
             this.button_register.UseVisualStyleBackColor = true;
             this.button_register.Click += new System.EventHandler(this.button_register_Click);
             // 
-            // Label_user_login_now
-            // 
-            this.Label_user_login_now.AutoSize = true;
-            this.Label_user_login_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Label_user_login_now.ForeColor = System.Drawing.Color.Blue;
-            this.Label_user_login_now.Location = new System.Drawing.Point(6, 16);
-            this.Label_user_login_now.Name = "Label_user_login_now";
-            this.Label_user_login_now.Size = new System.Drawing.Size(195, 18);
-            this.Label_user_login_now.TabIndex = 7;
-            this.Label_user_login_now.Text = "Вы вошли под именем: ";
-            // 
             // textBox_user_login_now
             // 
             this.textBox_user_login_now.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_user_login_now.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox_user_login_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.textBox_user_login_now.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox_user_login_now.Location = new System.Drawing.Point(23, 37);
+            this.textBox_user_login_now.Location = new System.Drawing.Point(28, 19);
             this.textBox_user_login_now.Multiline = true;
             this.textBox_user_login_now.Name = "textBox_user_login_now";
             this.textBox_user_login_now.ReadOnly = true;
@@ -172,7 +160,7 @@
             this.groupBox_textboxes.Controls.Add(this.textBox_login_site);
             this.groupBox_textboxes.Controls.Add(this.textBox_password_site);
             this.groupBox_textboxes.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_textboxes.Location = new System.Drawing.Point(664, 90);
+            this.groupBox_textboxes.Location = new System.Drawing.Point(664, 95);
             this.groupBox_textboxes.Name = "groupBox_textboxes";
             this.groupBox_textboxes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_textboxes.Size = new System.Drawing.Size(212, 158);
@@ -194,7 +182,7 @@
             this.groupBox_buttons.Controls.Add(this.button_delete);
             this.groupBox_buttons.Controls.Add(this.button_clear);
             this.groupBox_buttons.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_buttons.Location = new System.Drawing.Point(664, 254);
+            this.groupBox_buttons.Location = new System.Drawing.Point(664, 259);
             this.groupBox_buttons.Name = "groupBox_buttons";
             this.groupBox_buttons.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_buttons.Size = new System.Drawing.Size(212, 137);
@@ -206,7 +194,7 @@
             this.listView_site_login_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView_site_login_password.Location = new System.Drawing.Point(12, 12);
             this.listView_site_login_password.Name = "listView_site_login_password";
-            this.listView_site_login_password.Size = new System.Drawing.Size(645, 379);
+            this.listView_site_login_password.Size = new System.Drawing.Size(645, 384);
             this.listView_site_login_password.TabIndex = 13;
             this.listView_site_login_password.UseCompatibleStateImageBehavior = false;
             this.listView_site_login_password.View = System.Windows.Forms.View.Details;
@@ -215,15 +203,15 @@
             // 
             // groupBox_info_user_name
             // 
-            this.groupBox_info_user_name.Controls.Add(this.Label_user_login_now);
             this.groupBox_info_user_name.Controls.Add(this.textBox_user_login_now);
             this.groupBox_info_user_name.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox_info_user_name.Location = new System.Drawing.Point(664, 12);
             this.groupBox_info_user_name.Name = "groupBox_info_user_name";
             this.groupBox_info_user_name.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox_info_user_name.Size = new System.Drawing.Size(212, 72);
+            this.groupBox_info_user_name.Size = new System.Drawing.Size(212, 54);
             this.groupBox_info_user_name.TabIndex = 14;
             this.groupBox_info_user_name.TabStop = false;
+            this.groupBox_info_user_name.Text = "Вы вошли под именем: ";
             // 
             // qqqBindingSource
             // 
@@ -232,7 +220,7 @@
             // checkBox_show_password
             // 
             this.checkBox_show_password.AutoSize = true;
-            this.checkBox_show_password.Location = new System.Drawing.Point(673, 397);
+            this.checkBox_show_password.Location = new System.Drawing.Point(670, 72);
             this.checkBox_show_password.Name = "checkBox_show_password";
             this.checkBox_show_password.Size = new System.Drawing.Size(114, 17);
             this.checkBox_show_password.TabIndex = 16;
@@ -280,7 +268,6 @@
         private System.Windows.Forms.TextBox textBox_password_site;
         private System.Windows.Forms.Button button_authorization_site;
         private System.Windows.Forms.Button button_register;
-        private System.Windows.Forms.Label Label_user_login_now;
         public System.Windows.Forms.TextBox textBox_user_login_now;
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Button button_delete;
