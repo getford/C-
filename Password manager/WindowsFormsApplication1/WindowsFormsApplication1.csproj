@@ -247,6 +247,8 @@
     <Content Include="icontexto-inside-newsvine_8960.ico" />
     <Content Include="unnamed.ico" />
     <Content Include="Запрос к бд.txt" />
+    <Content Include="Шифрование бд аккаунтов.txt" />
+    <Content Include="Шифрование бд паролей.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">

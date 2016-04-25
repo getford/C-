@@ -47,12 +47,27 @@
             this.listView_site_login_password = new System.Windows.Forms.ListView();
             this.groupBox_info_user_name = new System.Windows.Forms.GroupBox();
             this.qqqBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.checkBox_show_password = new System.Windows.Forms.CheckBox();
             label_info_app = new System.Windows.Forms.Label();
             this.groupBox_textboxes.SuspendLayout();
             this.groupBox_buttons.SuspendLayout();
             this.groupBox_info_user_name.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label_info_app
+            // 
+            label_info_app.AutoSize = true;
+            label_info_app.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            label_info_app.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            label_info_app.Location = new System.Drawing.Point(9, 408);
+            label_info_app.Name = "label_info_app";
+            label_info_app.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            label_info_app.Size = new System.Drawing.Size(871, 13);
+            label_info_app.TabIndex = 15;
+            label_info_app.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016    _________________" +
+    "_________________________________________________________________________";
+            label_info_app.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox_name_site
             // 
@@ -214,19 +229,16 @@
             // 
             this.qqqBindingSource.DataMember = "qqq";
             // 
-            // label_info_app
+            // checkBox_show_password
             // 
-            label_info_app.AutoSize = true;
-            label_info_app.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            label_info_app.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            label_info_app.Location = new System.Drawing.Point(9, 408);
-            label_info_app.Name = "label_info_app";
-            label_info_app.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            label_info_app.Size = new System.Drawing.Size(871, 13);
-            label_info_app.TabIndex = 15;
-            label_info_app.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016    _________________" +
-    "_________________________________________________________________________";
-            label_info_app.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox_show_password.AutoSize = true;
+            this.checkBox_show_password.Location = new System.Drawing.Point(673, 397);
+            this.checkBox_show_password.Name = "checkBox_show_password";
+            this.checkBox_show_password.Size = new System.Drawing.Size(114, 17);
+            this.checkBox_show_password.TabIndex = 16;
+            this.checkBox_show_password.Text = "Показать пароль";
+            this.checkBox_show_password.UseVisualStyleBackColor = true;
+            this.checkBox_show_password.CheckedChanged += new System.EventHandler(this.checkBox_show_password_CheckedChanged);
             // 
             // DB_password_form
             // 
@@ -234,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(890, 433);
+            this.Controls.Add(this.checkBox_show_password);
             this.Controls.Add(label_info_app);
             this.Controls.Add(this.groupBox_info_user_name);
             this.Controls.Add(this.listView_site_login_password);
@@ -276,5 +289,6 @@
         private System.Windows.Forms.ListView listView_site_login_password;
         private System.Windows.Forms.DateTimePicker dateTimePicker_valid_password;
         private System.Windows.Forms.GroupBox groupBox_info_user_name;
+        private System.Windows.Forms.CheckBox checkBox_show_password;
     }
 }

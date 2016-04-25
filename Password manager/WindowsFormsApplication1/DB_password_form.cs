@@ -36,6 +36,14 @@ namespace WindowsFormsApplication1
             data();
         }
 
+        public void show_password()             // функция выбора показать пароль или не показать
+        {
+            if(checkBox_show_password.Checked == true)
+                data_plus();
+            else
+                data();
+        }
+
         private void Initialize_List()
         {
             listView_site_login_password.GridLines = true;
@@ -100,51 +108,44 @@ namespace WindowsFormsApplication1
             finally { connectDB.Close(); }
         }
 
+        private void data_plus()
+        {
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
+            try
+            {
+                connectDB.Open();
+                string sql_query = $"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; select Name_site, URL_site, Login_site, CONVERT(nvarchar(50), DECRYPTBYKEY(Password_site)) as [Password_site], Time_valid from [dbo].[{textBox_user_login_now.Text.ToString()}]";
+                SqlCommand cmd = new SqlCommand(sql_query, connectDB);
 
-        //public void refresh_data()      // функция обновления датагрида... после того как внесли запись, обновиться грид
-        //{
-        //    SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
-        //    try
-        //    {
-        //        connectDB.Open();
-        //        string sql_query = string.Format("select * from {0}", textBox_user_login_now.Text);
-        //        SqlCommand cmd = new SqlCommand(sql_query, connectDB);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //        DataTable dt = new DataTable();
-        //        da.Fill(dt);
-        //        dataGridView1.DataSource = dt;
+                listView_site_login_password.Clear();
+                fill_ListView();
 
-        //        //////////////////////////////////////////
-
-        //        SqlDataReader dr = cmd.ExecuteReader();
-        //        listView_site_login_password.Items.Clear();
-        //        if (dr.HasRows)
-        //        {
-        //            listView_site_login_password.Items.Clear();
-        //            listView_site_login_password.BeginUpdate();
-        //            while (dr.Read())
-        //            {
-        //                listView_site_login_password.Items.Add(dr["Name_site"].ToString());
-        //                listView_site_login_password.Items.Add(dr["URL_site"].ToString());
-        //                listView_site_login_password.Items.Add(dr["Login_site"].ToString());
-        //                listView_site_login_password.Items.Add("Пароль зашифрован");
-        //                listView_site_login_password.Items.Add(dr["Time_valid"].ToString());
-        //            }
-        //            listView_site_login_password.EndUpdate();
-
-        //        }
-        //        dr.Close();
-
-
-        //    }
-        //    catch (SqlException ex) { MessageBox.Show(ex.Message); }
-        //    finally { connectDB.Close(); }
-        //}
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ListViewItem lvi = new ListViewItem(dt.Rows[i][0].ToString());
+                    for (int j = 1; j < dt.Columns.Count; j++)
+                    {
+                        lvi.SubItems.Add(dt.Rows[i][j].ToString());
+                        if (dt.Rows[i][4].ToString() == System.DateTime.Today.ToString())
+                        {
+                            lvi.ForeColor = Color.Red;
+                        }
+                    }
+                    listView_site_login_password.Items.Add(lvi);
+                }
+                da.Dispose();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connectDB.Close(); }
+        }
 
         private void button_authorization_site_Click(object sender, EventArgs e)        // обработка авторизации
         {
-            Process.Start("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", textBox_URL_site.Text.ToString());
+            Process.Start("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe", textBox_URL_site.Text.ToString());
         }
 
         private void button_register_Click(object sender, EventArgs e)
@@ -154,7 +155,7 @@ namespace WindowsFormsApplication1
             try
             {
                 connectDB.Open();
-                string sql_query_insert = string.Format("open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin INSERT INTO {0} values (@Name_site, @URL_site, @Login_site, ENCRYPTBYKEY(@Symmetric_key_GUID, N'@Password_site'), @Time_valid) end", textBox_user_login_now.Text.ToString());
+                string sql_query_insert = string.Format("open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin INSERT INTO {0} values (@Name_site, @URL_site, @Login_site, ENCRYPTBYKEY(@Symmetric_key_GUID, @Password_site), @Time_valid) end", textBox_user_login_now.Text.ToString());
 
                 SqlCommand cmd = new SqlCommand(sql_query_insert, connectDB);
                 if (textBox_name_site.Text != "" || textBox_URL_site.Text != "" || textBox_login_site.Text != "" || textBox_password_site.Text != "")
@@ -165,7 +166,7 @@ namespace WindowsFormsApplication1
                     cmd.Parameters.AddWithValue(@"Password_site", textBox_password_site.Text.ToString());
                     cmd.Parameters.AddWithValue(@"Time_valid", dateTimePicker_valid_password.Value);
                     cmd.ExecuteNonQuery();
-                    data();         // обновление таблицы
+                    show_password();         // обновление таблицы
                                     // Очистим поля ввода
                     textBox_name_site.Clear();
                     textBox_URL_site.Clear();
@@ -177,9 +178,9 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }
+        }               // добавить запись в бд
 
-        private void button_clear_Click(object sender, EventArgs e)
+        private void button_clear_Click(object sender, EventArgs e)     // очистка текстбоксов
         {
             textBox_name_site.Clear();
             textBox_URL_site.Clear();
@@ -203,7 +204,8 @@ namespace WindowsFormsApplication1
                 textBox_login_site.Clear();
                 textBox_password_site.Clear();
                 dateTimePicker_valid_password.Value = System.DateTime.Now;
-                data();
+                show_password();         // обновление таблицы
+
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             finally { connectDB.Close(); }
@@ -221,6 +223,11 @@ namespace WindowsFormsApplication1
         private void ListView_MouseClick(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void checkBox_show_password_CheckedChanged(object sender, EventArgs e)      // чек бокс
+        {
+            show_password();
         }
     }
 }
