@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label_info_app;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DB_password_form));
             this.textBox_name_site = new System.Windows.Forms.TextBox();
@@ -45,13 +44,11 @@
             this.groupBox_buttons = new System.Windows.Forms.GroupBox();
             this.listView_site_login_password = new System.Windows.Forms.ListView();
             this.groupBox_info_user_name = new System.Windows.Forms.GroupBox();
-            this.qqqBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.checkBox_show_password = new System.Windows.Forms.CheckBox();
             label_info_app = new System.Windows.Forms.Label();
             this.groupBox_textboxes.SuspendLayout();
             this.groupBox_buttons.SuspendLayout();
             this.groupBox_info_user_name.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label_info_app
@@ -119,7 +116,7 @@
             // textBox_user_login_now
             // 
             this.textBox_user_login_now.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_user_login_now.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox_user_login_now.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox_user_login_now.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.textBox_user_login_now.ForeColor = System.Drawing.Color.Yellow;
             this.textBox_user_login_now.Location = new System.Drawing.Point(28, 19);
@@ -160,7 +157,7 @@
             this.groupBox_textboxes.Controls.Add(this.textBox_login_site);
             this.groupBox_textboxes.Controls.Add(this.textBox_password_site);
             this.groupBox_textboxes.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_textboxes.Location = new System.Drawing.Point(664, 95);
+            this.groupBox_textboxes.Location = new System.Drawing.Point(663, 95);
             this.groupBox_textboxes.Name = "groupBox_textboxes";
             this.groupBox_textboxes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_textboxes.Size = new System.Drawing.Size(212, 158);
@@ -182,7 +179,7 @@
             this.groupBox_buttons.Controls.Add(this.button_delete);
             this.groupBox_buttons.Controls.Add(this.button_clear);
             this.groupBox_buttons.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_buttons.Location = new System.Drawing.Point(664, 259);
+            this.groupBox_buttons.Location = new System.Drawing.Point(663, 259);
             this.groupBox_buttons.Name = "groupBox_buttons";
             this.groupBox_buttons.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_buttons.Size = new System.Drawing.Size(212, 137);
@@ -205,7 +202,7 @@
             // 
             this.groupBox_info_user_name.Controls.Add(this.textBox_user_login_now);
             this.groupBox_info_user_name.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_info_user_name.Location = new System.Drawing.Point(664, 12);
+            this.groupBox_info_user_name.Location = new System.Drawing.Point(663, 12);
             this.groupBox_info_user_name.Name = "groupBox_info_user_name";
             this.groupBox_info_user_name.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_info_user_name.Size = new System.Drawing.Size(212, 54);
@@ -213,16 +210,15 @@
             this.groupBox_info_user_name.TabStop = false;
             this.groupBox_info_user_name.Text = "Вы вошли под именем: ";
             // 
-            // qqqBindingSource
-            // 
-            this.qqqBindingSource.DataMember = "qqq";
-            // 
             // checkBox_show_password
             // 
             this.checkBox_show_password.AutoSize = true;
-            this.checkBox_show_password.Location = new System.Drawing.Point(670, 72);
+            this.checkBox_show_password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox_show_password.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox_show_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox_show_password.Location = new System.Drawing.Point(669, 72);
             this.checkBox_show_password.Name = "checkBox_show_password";
-            this.checkBox_show_password.Size = new System.Drawing.Size(114, 17);
+            this.checkBox_show_password.Size = new System.Drawing.Size(112, 17);
             this.checkBox_show_password.TabIndex = 16;
             this.checkBox_show_password.Text = "Показать пароль";
             this.checkBox_show_password.UseVisualStyleBackColor = true;
@@ -233,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(890, 433);
+            this.ClientSize = new System.Drawing.Size(886, 433);
             this.Controls.Add(this.checkBox_show_password);
             this.Controls.Add(label_info_app);
             this.Controls.Add(this.groupBox_info_user_name);
@@ -254,14 +250,12 @@
             this.groupBox_buttons.ResumeLayout(false);
             this.groupBox_info_user_name.ResumeLayout(false);
             this.groupBox_info_user_name.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qqqBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource qqqBindingSource;
         private System.Windows.Forms.TextBox textBox_name_site;
         private System.Windows.Forms.TextBox textBox_URL_site;
         private System.Windows.Forms.TextBox textBox_login_site;
