@@ -172,14 +172,15 @@ namespace WindowsFormsApplication1
             driver.Navigate().GoToUrl(_site);
             driver.Manage().Window.Maximize();
 
-            IWebElement login_input = driver.FindElement(By.Id("mailbox__login"));
+            IWebElement login_input = driver.FindElement(By.Id("mailbox__login"));          // заполняем поле логин
             login_input.SendKeys(textBox_login_site.Text.ToString());
 
-            IWebElement password_input = driver.FindElement(By.Id("mailbox__password"));
+            IWebElement password_input = driver.FindElement(By.Id("mailbox__password"));    // заполняем поле пароля
             password_input.SendKeys(_password);
-            
 
-            //Process.Start("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe", textBox_URL_site.Text.ToString());
+            IWebElement site_button_enter = driver.FindElement(By.Id("mailbox__auth__button"));     // нажатие на кнопку входа
+            site_button_enter.Click();
+
         }       // обработка авторизации
 
         private void button_register_Click(object sender, EventArgs e)
