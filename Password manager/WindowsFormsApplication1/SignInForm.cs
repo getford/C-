@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1
                                 SQL_func.Insert(textBox1.Text, textBox2.Text.ToString(), textBox3.Text.ToString(), textBox8.Text, textBox4.Text, textBox5.Text, select_cb_1, textBox6.Text.ToString(), select_cb_2, textBox7.Text.ToString());
 
                                 connectDB.Open();
-                                string sql_query = string.Format("CREATE TABLE {0}" + "(Name_site NVARCHAR(30)," + "URL_site NVARCHAR(30) primary key," + "Login_site NVARCHAR(15)," + "Password_site VARBINARY (MAX)," + " Time_valid DATE)", textBox1.Text.ToString());
+                                string sql_query = string.Format("CREATE TABLE {0}" + "(Name_site NVARCHAR(50)," + "URL_site NVARCHAR(50) primary key," + "Login_site NVARCHAR(50)," + "Password_site VARBINARY (MAX)," + " Time_valid DATE)", textBox1.Text.ToString());
                                 SqlCommand cmd = new SqlCommand(sql_query, connectDB);
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show("Ваша учетная запись успешно создана, теперь вы можете войти в систему используя свой логин и пароль.", "Добро пожаловать!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -107,6 +107,11 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter) { button1_Click(sender, e); }       // при нажатие на enter -> зарегистрироваться
             if (e.KeyCode == Keys.Delete) { button2_Click(sender, e); }      // при нажатии на delete -> очистка
             if (e.KeyCode == Keys.Escape) { button3_Click(sender, e); }      // при нажатиии на esc -> отмена
+        }
+
+        private void SignInForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

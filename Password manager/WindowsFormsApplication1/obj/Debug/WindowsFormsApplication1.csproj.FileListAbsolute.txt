@@ -64,3 +64,7 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsAppli
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_help.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.account_more_info.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Confirm_the_password.resources
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.Support.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.xml
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.Support.xml

@@ -12,6 +12,9 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows.Input;
 
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+
 namespace WindowsFormsApplication1
 {
     public partial class DB_password_form : Form
@@ -36,13 +39,13 @@ namespace WindowsFormsApplication1
             data();
         }
 
-        public void show_password()             // функция выбора показать пароль или не показать
+        public void show_password()
         {
             if(checkBox_show_password.Checked == true)
                 data_plus();
             else
                 data();
-        }
+        }       // функция выбора показать пароль или не показать
 
         private void Initialize_List()
         {
@@ -51,7 +54,7 @@ namespace WindowsFormsApplication1
             listView_site_login_password.LabelEdit = true;
             listView_site_login_password.FullRowSelect = true;
             listView_site_login_password.View = View.Details; // стиль вывода в таблицу
-        }
+        }       // инициализация listview
 
         private void fill_ListView()
         {
@@ -65,7 +68,7 @@ namespace WindowsFormsApplication1
                 listView_site_login_password.Columns.Add("Дата валидности пароля", listView_site_login_password.Width / 5);
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
+        }           // инициализация listview (колонки)
 
         private void data()
         {
@@ -106,7 +109,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }
+        }       // пароли в таблице скрыты!
 
         private void data_plus()
         {
@@ -141,12 +144,43 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }
+        }   // пароли в таблице открыты!
 
-        private void button_authorization_site_Click(object sender, EventArgs e)        // обработка авторизации
+        private void button_authorization_site_Click(object sender, EventArgs e)
         {
-            Process.Start("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe", textBox_URL_site.Text.ToString());
-        }
+            IWebDriver driver = new FirefoxDriver();
+            string _site = $"http://www.{textBox_URL_site.Text.ToString()}";         // тут лежит адрес сайта         
+            string _password = string.Empty;                                         // тут лежит расшифрованный пароль
+
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
+            try
+            {
+                connectDB.Open();
+                string sql_query = $"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; select CONVERT(nvarchar(50), DECRYPTBYKEY(Password_site)) as [Password_site] from [dbo].[{textBox_user_login_now.Text.ToString()}] where URL_site = '{textBox_URL_site.Text.ToString()}'";
+                SqlCommand cmd = new SqlCommand(sql_query, connectDB);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    _password += dr["Password_site"];
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            finally { connectDB.Close(); }
+
+            /*для сайта mail.ru*/
+            driver.Navigate().GoToUrl(_site);
+            driver.Manage().Window.Maximize();
+
+            IWebElement login_input = driver.FindElement(By.Id("mailbox__login"));
+            login_input.SendKeys(textBox_login_site.Text.ToString());
+
+            IWebElement password_input = driver.FindElement(By.Id("mailbox__password"));
+            password_input.SendKeys(_password);
+            
+
+            //Process.Start("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe", textBox_URL_site.Text.ToString());
+        }       // обработка авторизации
 
         private void button_register_Click(object sender, EventArgs e)
         {
@@ -180,14 +214,14 @@ namespace WindowsFormsApplication1
             finally { connectDB.Close(); }
         }               // добавить запись в бд
 
-        private void button_clear_Click(object sender, EventArgs e)     // очистка текстбоксов
+        private void button_clear_Click(object sender, EventArgs e)
         {
             textBox_name_site.Clear();
             textBox_URL_site.Clear();
             textBox_login_site.Clear();
             textBox_password_site.Clear();
             dateTimePicker_valid_password.Value = System.DateTime.Now;
-        }
+        }           // очистка текстбоксов
 
         private void button_delete_Click(object sender, EventArgs e)
         {
@@ -209,7 +243,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             finally { connectDB.Close(); }
-        }
+        }   // уладение записи из бд
 
         private void listView_site_login_password_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -225,9 +259,9 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void checkBox_show_password_CheckedChanged(object sender, EventArgs e)      // чек бокс
+        private void checkBox_show_password_CheckedChanged(object sender, EventArgs e)
         {
             show_password();
-        }
+        }       // показать/не показать пароль
     }
 }

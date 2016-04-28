@@ -413,14 +413,16 @@
             // textBox_user_login_under_avatar
             // 
             this.textBox_user_login_under_avatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_user_login_under_avatar.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox_user_login_under_avatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox_user_login_under_avatar.ForeColor = System.Drawing.Color.Lime;
-            this.textBox_user_login_under_avatar.Location = new System.Drawing.Point(603, 102);
+            this.textBox_user_login_under_avatar.Location = new System.Drawing.Point(606, 102);
             this.textBox_user_login_under_avatar.Name = "textBox_user_login_under_avatar";
             this.textBox_user_login_under_avatar.ReadOnly = true;
             this.textBox_user_login_under_avatar.Size = new System.Drawing.Size(100, 16);
             this.textBox_user_login_under_avatar.TabIndex = 21;
             this.textBox_user_login_under_avatar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_user_login_under_avatar.TextChanged += new System.EventHandler(this.textBox_user_login_under_avatar_TextChanged);
             // 
             // label3
             // 

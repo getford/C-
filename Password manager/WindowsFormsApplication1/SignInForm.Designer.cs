@@ -251,6 +251,7 @@
             this.Name = "SignInForm";
             this.ShowInTaskbar = false;
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.SignInForm_Load_1);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this._Click_key_down);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).EndInit();

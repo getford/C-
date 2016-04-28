@@ -441,5 +441,10 @@ namespace WindowsFormsApplication1
             dbpf.Owner = this;
             dbpf.Show();
         }
+
+        private void textBox_user_login_under_avatar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
