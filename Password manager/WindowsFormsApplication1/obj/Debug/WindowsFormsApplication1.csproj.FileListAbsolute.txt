@@ -68,3 +68,34 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsAppli
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.Support.dll
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.xml
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.Support.xml
+H:\Password manager\WindowsFormsApplication1\bin\Debug\PassWord Manager.exe.config
+H:\Password manager\WindowsFormsApplication1\obj\Debug\PassWord Manager.exe
+H:\Password manager\WindowsFormsApplication1\obj\Debug\PassWord Manager.pdb
+H:\Password manager\WindowsFormsApplication1\bin\Debug\Database.mdf
+H:\Password manager\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+H:\Password manager\WindowsFormsApplication1\bin\Debug\Database_site.mdf
+H:\Password manager\WindowsFormsApplication1\bin\Debug\Database_site_log.ldf
+H:\Password manager\WindowsFormsApplication1\bin\Debug\PassWord Manager.exe
+H:\Password manager\WindowsFormsApplication1\bin\Debug\PassWord Manager.pdb
+H:\Password manager\WindowsFormsApplication1\bin\Debug\az\PassWord Manager.resources.dll
+H:\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.dll
+H:\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.Support.dll
+H:\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.xml
+H:\Password manager\WindowsFormsApplication1\bin\Debug\WebDriver.Support.xml
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.account.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.account_more_info.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.change_email_acc.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.change_password_acc.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Confirm_the_password.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.DB_password_form.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_help.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_Restore_Password.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SignInForm.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.start.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SignInForm.az.resources
+H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+H:\Password manager\WindowsFormsApplication1\obj\Debug\az\PassWord Manager.resources.dll
