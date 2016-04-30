@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
                 textBox_password_site.Text = f1.textBox1.Text.ToString();                           // при открытии главной формы значение созданного пароля передается на добавление в бд
             }
             else { MessageBox.Show("Неизвестная ошибка #6", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            data();
+            data();         // вызываем заполнение таблицы записями из бд (пароли скрыты по дефолту)
         }
 
         public void show_password()
@@ -97,6 +97,7 @@ namespace WindowsFormsApplication1
                     listView_site_login_password.Items.Add(lvi);
                 }
                 da.Dispose();
+                textBox_password_site.PasswordChar = '*';
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
@@ -132,6 +133,7 @@ namespace WindowsFormsApplication1
                     listView_site_login_password.Items.Add(lvi);
                 }
                 da.Dispose();
+                textBox_password_site.PasswordChar = '\0';
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }

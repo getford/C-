@@ -24,6 +24,8 @@ namespace WindowsFormsApplication1
             toolTip2.ToolTipTitle = ("Путь к файлу C:\\ ... .txt");
             toolTip2.SetToolTip(button4, "Нажмите для сохранения в файл!");
 
+            textBox3.Text = track_bar_password_lengh.Value.ToString();                  // показываем дефолтное значение длины пароля
+
             Form2 f2 = this.Owner as Form2;         // указываем родительскую форму из котороый будет получено поле (поле должно быть public)
             if (f2 != null)
             {
@@ -113,6 +115,7 @@ namespace WindowsFormsApplication1
         {
             MessageBox.Show("Версия приложения: v3.3.3");
         }   // версия приложенния
+
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -340,10 +343,9 @@ namespace WindowsFormsApplication1
             MessageBox.Show("Хотелось бы поблагодарить моего друга fish, \n за помощь с графической составляющей приложения, \nа также за тестирование данного приложения");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)              // очистка текстбокса где генерируется пароль
         {
             textBox1.Clear();
-            textBox1.BackColor = Color.White;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -352,27 +354,13 @@ namespace WindowsFormsApplication1
                 Clipboard.SetText(textBox1.Text);
             else
                 MessageBox.Show("Вы не можете скопировать пустое поле!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-        }
-
-        private void ночнаяToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = System.Drawing.Color.Gray;
-            textBox1.BackColor = Color.Gray;
-            textBox2.BackColor = Color.Gray;
-        }
-
-        private void дневнаяToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox2.BackColor = Color.WhiteSmoke;
-        }
+        }           // посместить в буфер значение из текстбокса
 
         private void button5_Click(object sender, EventArgs e)
         {
             if (button5.Enabled == true)
                 textBox2.Clear();
-        }
+        }           // очиста текстбокса со всеми паролями
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
@@ -414,24 +402,19 @@ namespace WindowsFormsApplication1
             N = (int)track_bar_password_lengh.Value;
 
             if (N >= 4 && N < 6)
-            {
                 textBox1.BackColor = Color.Red;
-            }
             else { }
+
             if (N >= 6 && N < 8)
-            {
                 textBox1.BackColor = Color.Orange;
-            }
             else { }
+
             if (N >= 8 && N <= 11)
-            {
                 textBox1.BackColor = Color.Olive;
-            }
             else { }
+
             if (N >= 12 && N <= 29)
-            {
                 textBox1.BackColor = Color.Green;
-            }
             else { }
         }
 

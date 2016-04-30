@@ -264,6 +264,7 @@
             // track_bar_password_lengh
             // 
             this.track_bar_password_lengh.AutoSize = false;
+            this.track_bar_password_lengh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.track_bar_password_lengh.LargeChange = 1;
             this.track_bar_password_lengh.Location = new System.Drawing.Point(6, 49);
             this.track_bar_password_lengh.Maximum = 29;
@@ -274,7 +275,7 @@
             this.track_bar_password_lengh.TabIndex = 18;
             this.track_bar_password_lengh.TabStop = false;
             this.track_bar_password_lengh.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.track_bar_password_lengh.Value = 4;
+            this.track_bar_password_lengh.Value = 9;
             this.track_bar_password_lengh.Scroll += new System.EventHandler(this.track_bar_password_lengh_Scroll);
             // 
             // label1
