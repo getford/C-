@@ -422,7 +422,6 @@
             this.textBox_user_login_under_avatar.Size = new System.Drawing.Size(100, 16);
             this.textBox_user_login_under_avatar.TabIndex = 21;
             this.textBox_user_login_under_avatar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_user_login_under_avatar.TextChanged += new System.EventHandler(this.textBox_user_login_under_avatar_TextChanged);
             // 
             // label3
             // 

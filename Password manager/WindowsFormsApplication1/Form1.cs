@@ -41,6 +41,7 @@ namespace WindowsFormsApplication1
                 SaveFileDialog save_password = new SaveFileDialog();
 
                 save_password.FileName = Environment.UserName + "_password.txt";
+                save_password.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 if (save_password.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
@@ -67,6 +68,8 @@ namespace WindowsFormsApplication1
                 SaveFileDialog save_password = new SaveFileDialog();
 
                 save_password.FileName = Environment.UserName + "_password.txt";
+                save_password.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
                 if (save_password.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
@@ -152,8 +155,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m[rnd.Next(26)];
@@ -165,8 +167,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)    // большие
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_b[rnd.Next(26)];
@@ -178,8 +179,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)    // кракозябры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_c[rnd.Next(10)];
@@ -191,8 +191,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)    // цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_n[rnd.Next(10)];
@@ -204,8 +203,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие большие
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m_b[rnd.Next(52)];
@@ -217,8 +215,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == false)     // малекние кракозябры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m_c[rnd.Next(36)];
@@ -230,8 +227,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == true)     // малекние цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m_n[rnd.Next(36)];
@@ -242,8 +238,7 @@ namespace WindowsFormsApplication1
                 else { }
                 if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // большие цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_b_n[rnd.Next(36)];
@@ -255,8 +250,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // большие кракозябры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_b_c[rnd.Next(36)];
@@ -268,8 +262,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == false)     // маленькие большие кракозябры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m_b_c[rnd.Next(56)];
@@ -281,8 +274,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == false && checkBox4.Checked == true)     // маленькие большие цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m_b_n[rnd.Next(56)];
@@ -294,8 +286,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // маленькие кракозябры цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_m_c_n[rnd.Next(46)];
@@ -307,8 +298,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == false && checkBox1.Checked == false && checkBox3.Checked == true && checkBox4.Checked == true)     // кракозябры цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_c_n[rnd.Next(20)];
@@ -320,8 +310,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == false && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)      // большие кракозябры цифры
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_b_c_n[rnd.Next(46)];
@@ -333,8 +322,7 @@ namespace WindowsFormsApplication1
 
                 if (checkBox2.Checked == true && checkBox1.Checked == true && checkBox3.Checked == true && checkBox4.Checked == true)       // маленькие большие кракозябры цифры 
                 {
-                    textBox1.Text = ("Password: ");
-
+                    textBox1.Clear();
                     for (int i = 0; i < N; i++)
                     {
                         s = liter_full[rnd.Next(72)];
@@ -403,6 +391,14 @@ namespace WindowsFormsApplication1
 
         private void OnClick(object sender, EventArgs e)        // информация об аккаунте пользователя
         {
+            foreach(Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            {
+                if(f.Name == "account")
+                {
+                    MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
             account acc = new account();
             acc.Owner = this;
             acc.Show();
@@ -421,30 +417,37 @@ namespace WindowsFormsApplication1
             {
                 textBox1.BackColor = Color.Red;
             }
+            else { }
             if (N >= 6 && N < 8)
             {
                 textBox1.BackColor = Color.Orange;
             }
+            else { }
             if (N >= 8 && N <= 11)
             {
                 textBox1.BackColor = Color.Olive;
             }
+            else { }
             if (N >= 12 && N <= 29)
             {
                 textBox1.BackColor = Color.Green;
             }
+            else { }
         }
 
         private void MoveToDBPasswords_Click(object sender, EventArgs e)        // окрывает форму с базой паролей пользователя. Проедоставляет возможность авторизации на ращличных ресурсах
         {
+            foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            {
+                if (f.Name == "DB_password_form")
+                {
+                    MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
             DB_password_form dbpf = new DB_password_form();
             dbpf.Owner = this;
             dbpf.Show();
-        }
-
-        private void textBox_user_login_under_avatar_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

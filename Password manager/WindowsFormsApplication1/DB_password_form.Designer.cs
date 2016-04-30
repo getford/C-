@@ -90,7 +90,6 @@
             // 
             this.textBox_password_site.Location = new System.Drawing.Point(6, 97);
             this.textBox_password_site.Name = "textBox_password_site";
-            this.textBox_password_site.PasswordChar = '*';
             this.textBox_password_site.Size = new System.Drawing.Size(200, 20);
             this.textBox_password_site.TabIndex = 4;
             // 
@@ -261,7 +260,6 @@
         private System.Windows.Forms.TextBox textBox_name_site;
         private System.Windows.Forms.TextBox textBox_URL_site;
         private System.Windows.Forms.TextBox textBox_login_site;
-        private System.Windows.Forms.TextBox textBox_password_site;
         private System.Windows.Forms.Button button_authorization_site;
         private System.Windows.Forms.Button button_register;
         public System.Windows.Forms.TextBox textBox_user_login_now;
@@ -273,5 +271,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_valid_password;
         private System.Windows.Forms.GroupBox groupBox_info_user_name;
         private System.Windows.Forms.CheckBox checkBox_show_password;
+        public System.Windows.Forms.TextBox textBox_password_site;
     }
 }

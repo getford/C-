@@ -85,6 +85,14 @@ namespace WindowsFormsApplication1
         {
             if (linkLabel2.Enabled == true)
             {
+                foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+                {
+                    if (f.Name == "SignInForm")
+                    {
+                        MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
                 SignInForm sgn_form = new SignInForm();
                 sgn_form.Show();
             }
@@ -97,6 +105,14 @@ namespace WindowsFormsApplication1
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            {
+                if (f.Name == "Form_Restore_Password")
+                {
+                    MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
             Form_Restore_Password frm = new Form_Restore_Password();
             frm.Show();
         }

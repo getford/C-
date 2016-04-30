@@ -21,14 +21,12 @@ namespace WindowsFormsApplication1
         private void DB_password_form_Load(object sender, EventArgs e)
         {
             Form1 f1 = this.Owner as Form1;
-            if(f1 != null)
+            if (f1 != null)
             {
                 textBox_user_login_now.Text = f1.textBox_user_login_under_avatar.Text.ToString();
+                textBox_password_site.Text = f1.textBox1.Text.ToString();                           // при открытии главной формы значение созданного пароля передается на добавление в бд
             }
-            else
-            {
-                MessageBox.Show("Неизвестная ошибка #6", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            else { MessageBox.Show("Неизвестная ошибка #6", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             data();
         }
 

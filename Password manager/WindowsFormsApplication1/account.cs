@@ -77,6 +77,14 @@ namespace WindowsFormsApplication1
 
         private void OnClick(object sender, EventArgs e)    // смена пароля
         {
+            foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            {
+                if (f.Name == "change_password_acc")
+                {
+                    MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
             change_password_acc cpa = new change_password_acc();
             cpa.Owner = this;
             cpa.Show();
@@ -84,6 +92,14 @@ namespace WindowsFormsApplication1
 
         private void OnClick_change_email(object sender, EventArgs e)   // смена email
         {
+            foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            {
+                if (f.Name == "change_email_acc")
+                {
+                    MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
             change_email_acc cea = new change_email_acc();
             cea.Owner = this;
             cea.Show();
@@ -129,6 +145,14 @@ namespace WindowsFormsApplication1
 
         private void On_Click_more_info(object sender, EventArgs e)         // показать полную информацию об аккаунте
         {
+            foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            {
+                if (f.Name == "Confirm_the_password")
+                {
+                    MessageBox.Show("Форма уже открыта", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
             Confirm_the_password ctp = new Confirm_the_password();
             ctp.Owner = this;
             ctp.Show();

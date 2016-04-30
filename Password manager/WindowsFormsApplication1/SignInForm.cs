@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
                 if (textBox2.Text.ToString() == textBox3.Text.ToString())       // проверка совпадения паролей
                 {
                     if (kol >= 4)       // проверка длины пароля
-                    {
+                    { 
                         if (textBox2.Text.Contains('!') || textBox2.Text.Contains('@') || textBox2.Text.Contains('#') || textBox2.Text.Contains('$') || textBox2.Text.Contains('%') || textBox2.Text.Contains('&') || textBox2.Text.Contains('*') || textBox2.Text.Contains('(') || textBox2.Text.Contains(')') || textBox2.Text.Contains('[') || textBox2.Text.Contains(']'))
                         {
                             try        // создание таблицы в бд databace_site для хранения логин/пароль для авторизации на сайтах
@@ -89,6 +89,7 @@ namespace WindowsFormsApplication1
                                 SqlCommand cmd = new SqlCommand(sql_query, connectDB);
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show("Ваша учетная запись успешно создана, теперь вы можете войти в систему используя свой логин и пароль.", "Добро пожаловать!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
                             }
                             catch (SqlException ex) { MessageBox.Show(ex.Message); }
                             finally { connectDB.Close();}
