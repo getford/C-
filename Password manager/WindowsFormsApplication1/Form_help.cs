@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Diagnostics;
+
 namespace WindowsFormsApplication1
 {
     public partial class Form_help : Form
@@ -15,6 +17,13 @@ namespace WindowsFormsApplication1
         public Form_help()
         {
             InitializeComponent();
+        }
+
+        private void button_folder_readme_Click(object sender, EventArgs e)
+        {
+            
+
+
         }
     }
 }

@@ -13,6 +13,7 @@ using System.Data.OleDb;
 
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Diagnostics;
 
 namespace WindowsFormsApplication1
 {
@@ -127,8 +128,9 @@ namespace WindowsFormsApplication1
 
         private void button_help_Click(object sender, EventArgs e)
         {
-            Form_help fh = new Form_help();         // открывает форму справки, в которой будут ссылки на руководство пользователя ...
-            fh.Show();
+            Process.Start("C:\\Users\\getford\\Source\\Repos\\C-Sharp-Private\\Password manager\\readme");
+            //Form_help fh = new Form_help();         // открывает форму справки, в которой будут ссылки на руководство пользователя ...
+            //fh.Show();
         }
     }
 }
