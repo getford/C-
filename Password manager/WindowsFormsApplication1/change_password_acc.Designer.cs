@@ -116,6 +116,7 @@
             this.Controls.Add(this.textBox_new_password);
             this.Controls.Add(this.textBox_old_password);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -123,6 +124,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение пароля";
             this.TopMost = true;
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.change_password_acc_HelpButtonClicked);
             this.Load += new System.EventHandler(this.change_password_acc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

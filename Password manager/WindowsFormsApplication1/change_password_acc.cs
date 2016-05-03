@@ -53,51 +53,38 @@ namespace WindowsFormsApplication1
 
             if (textBox_old_password.Text.ToString() == string_old_password.ToString())
             {
-                if (textBox_new_password.Text.Contains('!') || textBox_new_password.Text.Contains('@') || textBox_new_password.Text.Contains('#') || textBox_new_password.Text.Contains('$') || textBox_new_password.Text.Contains('%') || textBox_new_password.Text.Contains('&') || textBox_new_password.Text.Contains('*') || textBox_new_password.Text.Contains('(') || textBox_new_password.Text.Contains(')') || textBox_new_password.Text.Contains('[') || textBox_new_password.Text.Contains(']'))
+                if (textBox_new_password.Text.Length >= 4)       // длина пароля должна быть длинее 4х символов
                 {
-                    if (textBox_new_password.Text.ToString() == textBox_re_new_password.Text.ToString())
+                    if (textBox_new_password.Text.Contains('!') || textBox_new_password.Text.Contains('@') || textBox_new_password.Text.Contains('#') || textBox_new_password.Text.Contains('$') || textBox_new_password.Text.Contains('%') || textBox_new_password.Text.Contains('&') || textBox_new_password.Text.Contains('*') || textBox_new_password.Text.Contains('(') || textBox_new_password.Text.Contains(')') || textBox_new_password.Text.Contains('[') || textBox_new_password.Text.Contains(']'))
                     {
-                        try
+                        if (textBox_new_password.Text.ToString() == textBox_re_new_password.Text.ToString())
                         {
-                            connectDB.Open();
-                            string sql_query_password_change = string.Format(@"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin update [dbo].[introduce] set user_password = ENCRYPTBYKEY(@Symmetric_key_GUID, N'" + textBox_new_password.Text.ToString() + "'), user_re_password = ENCRYPTBYKEY(@Symmetric_key_GUID, N'" + textBox_re_new_password.Text.ToString() + "') where user_login = '" + string_user_login.ToString() + "'end");
-                            SqlCommand cmd = new SqlCommand(sql_query_password_change, connectDB);
-                            cmd.ExecuteNonQuery();
-                            MessageBox.Show("Смена пароля прошла успешно!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            try
+                            {
+                                connectDB.Open();
+                                string sql_query_password_change = string.Format(@"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin update [dbo].[introduce] set user_password = ENCRYPTBYKEY(@Symmetric_key_GUID, N'" + textBox_new_password.Text.ToString() + "'), user_re_password = ENCRYPTBYKEY(@Symmetric_key_GUID, N'" + textBox_re_new_password.Text.ToString() + "') where user_login = '" + string_user_login.ToString() + "'end");
+                                SqlCommand cmd = new SqlCommand(sql_query_password_change, connectDB);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Смена пароля прошла успешно!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+                            finally { connectDB.Close(); this.Close(); }
                         }
-                        catch (SqlException ex) { MessageBox.Show(ex.Message); }
-                        finally { connectDB.Close(); }
+                        else { MessageBox.Show("Введенные пароли не совпадают. Попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     }
-                    else { MessageBox.Show("Введенные пароли не совпадают. Попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    else { MessageBox.Show("Ваш пароль должен содержать хотя бы один специальный символ @ # $ % ^ & * ( ) ( ) [ ]", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
-                else { MessageBox.Show("Ваш пароль должен содержать хотя бы один специальный символ @ # $ % ^ & * ( ) ( ) [ ]", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else { MessageBox.Show("Пароль должен быть длинее 4х символов!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             else { MessageBox.Show("Не верный старый пароль. Попробуйте снова.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             /*Изменение пароля дописать*/
-            this.Close();
         }
 
+        private void change_password_acc_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("В данной форме вы можете изменить свой пароль!\nПароль должен содержать специальные символы и его длина не должна быть менее 4х символов!", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
     }
 }
-
-/*
-            
-            textBox_old_password.Clear();
-            textBox_old_password.PasswordChar = '*';
-            textBox_new_password.Clear();
-            textBox_new_password.PasswordChar = '*';
-            textBox_re_new_password.Clear();
-            textBox_re_new_password.PasswordChar = '*';
-*/
-
-/*
-open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'; 
-
-declare @Symmetric_key_GUID as [uniqueidentifier] 
-set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') 
-if (@Symmetric_key_GUID is not null) 
-    begin 
-update [dbo].[introduce] set ENCRYPTBYKEY(@Symmetric_key_GUID, user_password = {0}), ENCRYPTBYKEY(@Symmetric_key_GUID, user_re_password = {1}) where user_login = {2} end "
-*/

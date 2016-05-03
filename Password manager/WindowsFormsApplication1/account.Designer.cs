@@ -213,6 +213,7 @@
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.group_box_setup_acc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -221,6 +222,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аккаунт";
             this.TopMost = true;
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.account_HelpButtonClicked);
             this.Load += new System.EventHandler(this.account_Load);
             this.group_box_setup_acc.ResumeLayout(false);
             this.group_box_setup_acc.PerformLayout();

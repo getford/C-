@@ -89,9 +89,12 @@ namespace WindowsFormsApplication1
                         }
                         else { }
                         lvi.SubItems.Add(dt.Rows[i][j].ToString());
-                        if (dt.Rows[i][4].ToString() == System.DateTime.Today.ToString())
+                        /* Тут будем решать с датой*/
+                        DateTime _date_last_change_password = DateTime.Parse((string)dt.Rows[i][4].ToString());     // тут будет дата из таблицы
+                        DateTime _date_today = DateTime.Parse((string)DateTime.Today.ToString());                   // настоящая дата
+                        if (_date_today >= _date_last_change_password)
                         {
-                            lvi.ForeColor = Color.Red;
+                            lvi.ForeColor = Color.Red;              // красим строку талбицы в красный если пришла дата
                         }
                     }
                     listView_site_login_password.Items.Add(lvi);
@@ -125,9 +128,12 @@ namespace WindowsFormsApplication1
                     for (int j = 1; j < dt.Columns.Count; j++)
                     {
                         lvi.SubItems.Add(dt.Rows[i][j].ToString());
-                        if (dt.Rows[i][4].ToString() == System.DateTime.Today.ToString())
+                        /* Тут будем решать с датой*/
+                        DateTime _date_last_change_password = DateTime.Parse((string)dt.Rows[i][4].ToString());     // тут будет дата из таблицы
+                        DateTime _date_today = DateTime.Parse((string)DateTime.Today.ToString());                   // настоящая дата
+                        if (_date_today >= _date_last_change_password)
                         {
-                            lvi.ForeColor = Color.Red;
+                            lvi.ForeColor = Color.Red;              // красим строку талбицы в красный если пришла дата
                         }
                     }
                     listView_site_login_password.Items.Add(lvi);
@@ -226,7 +232,7 @@ namespace WindowsFormsApplication1
                 string sql_query = $"delete from {textBox_user_login_now.Text.ToString()} where URL_site = '{textBox_URL_site.Text}' and Name_site = '{textBox_name_site.Text}'";
                 SqlCommand cmd = new SqlCommand(sql_query, connectDB);
                 cmd.ExecuteNonQuery();
-                        // Очистим поля удаления
+                // Очистим поля удаления
                 textBox_name_site.Clear();
                 textBox_URL_site.Clear();
                 textBox_login_site.Clear();
@@ -241,12 +247,11 @@ namespace WindowsFormsApplication1
 
         private void listView_site_login_password_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /** При нажитии на строку - данные строки в textbox*/
             textBox_name_site.Text = listView_site_login_password.FocusedItem.SubItems[0].Text;
             textBox_URL_site.Text = listView_site_login_password.FocusedItem.SubItems[1].Text;
             textBox_login_site.Text = listView_site_login_password.FocusedItem.SubItems[2].Text;
             textBox_password_site.Text = listView_site_login_password.FocusedItem.SubItems[3].Text;
-        }
+        }   // При нажитии на строку - данные строки в textbox
 
         private void ListView_MouseClick(object sender, MouseEventArgs e)
         {

@@ -282,6 +282,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_info_account);
             this.Controls.Add(this.linkLabel_delete_account);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -289,6 +290,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Аккаунт (расширенный)";
             this.TopMost = true;
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.account_more_info_HelpButtonClicked);
             this.Load += new System.EventHandler(this.account_more_info_Load);
             this.groupBox_info_account.ResumeLayout(false);
             this.groupBox_info_account.PerformLayout();

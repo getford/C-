@@ -186,5 +186,11 @@ namespace WindowsFormsApplication1
                 this.Close();
             }
         }
+
+        private void account_more_info_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Информация о пользователе, который авторизовался в проложении\nНа данной форме содержаться секретные ответы для восстановления доступа к вашему аккаунту, пожалуйста, не показывайте их никому!", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

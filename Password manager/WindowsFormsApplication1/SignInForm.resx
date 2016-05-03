@@ -349,7 +349,7 @@
     <value>Popup</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 359</value>
+    <value>13, 382</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 23</value>
@@ -379,7 +379,7 @@
     <value>Popup</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 359</value>
+    <value>288, 382</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 23</value>
@@ -679,7 +679,7 @@
     <value>Popup</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 359</value>
+    <value>184, 382</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 23</value>
@@ -1103,11 +1103,14 @@
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
+  </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 395</value>
+    <value>82, 336</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 13</value>
+    <value>262, 17</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>

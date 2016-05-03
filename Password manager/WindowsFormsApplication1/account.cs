@@ -157,5 +157,10 @@ namespace WindowsFormsApplication1
             ctp.Owner = this;
             ctp.Show();
         }
+
+        private void account_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Информация о пользователе, который авторизовался в проложении", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

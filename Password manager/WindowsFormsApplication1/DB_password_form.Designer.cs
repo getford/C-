@@ -167,6 +167,8 @@
             // dateTimePicker_valid_password
             // 
             this.dateTimePicker_valid_password.Location = new System.Drawing.Point(6, 123);
+            this.dateTimePicker_valid_password.MaxDate = new System.DateTime(2096, 9, 29, 0, 0, 0, 0);
+            this.dateTimePicker_valid_password.MinDate = new System.DateTime(1996, 9, 29, 0, 0, 0, 0);
             this.dateTimePicker_valid_password.Name = "dateTimePicker_valid_password";
             this.dateTimePicker_valid_password.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker_valid_password.Size = new System.Drawing.Size(200, 20);

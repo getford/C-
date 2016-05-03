@@ -211,6 +211,7 @@
             resources.ApplyResources(this.label10, "label10");
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
             this.label10.Name = "label10";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // SignInForm
             // 
