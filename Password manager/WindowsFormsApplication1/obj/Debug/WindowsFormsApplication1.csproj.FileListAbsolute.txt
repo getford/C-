@@ -99,3 +99,7 @@ H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.
 H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.SignInForm.az.resources
 H:\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 H:\Password manager\WindowsFormsApplication1\obj\Debug\az\PassWord Manager.resources.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\Selenium.WebDriverBackedSelenium.xml

@@ -66,6 +66,7 @@
             this.MoveToDBPasswords = new System.Windows.Forms.PictureBox();
             this.textBox_user_login_under_avatar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox_db_password = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -74,6 +75,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoveToDBPasswords)).BeginInit();
+            this.groupBox_db_password.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -222,6 +224,7 @@
             this.button1.AutoEllipsis = true;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(168, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 23);
@@ -232,6 +235,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox1.Location = new System.Drawing.Point(6, 19);
             this.textBox1.Name = "textBox1";
@@ -314,6 +318,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(6, 19);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -321,6 +326,7 @@
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(388, 178);
             this.textBox2.TabIndex = 11;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button4
             // 
@@ -402,10 +408,12 @@
             // MoveToDBPasswords
             // 
             this.MoveToDBPasswords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MoveToDBPasswords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoveToDBPasswords.ErrorImage = ((System.Drawing.Image)(resources.GetObject("MoveToDBPasswords.ErrorImage")));
             this.MoveToDBPasswords.Image = ((System.Drawing.Image)(resources.GetObject("MoveToDBPasswords.Image")));
-            this.MoveToDBPasswords.Location = new System.Drawing.Point(12, 333);
+            this.MoveToDBPasswords.Location = new System.Drawing.Point(3, 16);
             this.MoveToDBPasswords.Name = "MoveToDBPasswords";
-            this.MoveToDBPasswords.Size = new System.Drawing.Size(288, 110);
+            this.MoveToDBPasswords.Size = new System.Drawing.Size(282, 99);
             this.MoveToDBPasswords.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MoveToDBPasswords.TabIndex = 20;
             this.MoveToDBPasswords.TabStop = false;
@@ -435,6 +443,16 @@
             this.label3.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016    _________________" +
     "_____________________________________________";
             // 
+            // groupBox_db_password
+            // 
+            this.groupBox_db_password.Controls.Add(this.MoveToDBPasswords);
+            this.groupBox_db_password.Location = new System.Drawing.Point(12, 325);
+            this.groupBox_db_password.Name = "groupBox_db_password";
+            this.groupBox_db_password.Size = new System.Drawing.Size(288, 118);
+            this.groupBox_db_password.TabIndex = 23;
+            this.groupBox_db_password.TabStop = false;
+            this.groupBox_db_password.Text = "Ваша база паролей";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,9 +460,9 @@
             this.AutoSize = true;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(722, 483);
+            this.Controls.Add(this.groupBox_db_password);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_user_login_under_avatar);
-            this.Controls.Add(this.MoveToDBPasswords);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox1);
@@ -475,6 +493,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoveToDBPasswords)).EndInit();
+            this.groupBox_db_password.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,6 +537,7 @@
         private System.Windows.Forms.PictureBox MoveToDBPasswords;
         public System.Windows.Forms.TextBox textBox_user_login_under_avatar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox_db_password;
     }
 }
 

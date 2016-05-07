@@ -34,16 +34,17 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)           // сохранить и выйти
         {
-            if (textBox2.Text == null)
-                Close();
+            if (textBox2.Text == "")
+                MessageBox.Show("Нет данных для сохранения!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 SaveFileDialog save_password = new SaveFileDialog();
 
                 save_password.FileName = Environment.UserName + "_password.txt";
-                save_password.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                save_password.Filter = "txt files|*.txt|RTF files|*.rtf|All files (*.*)|*.*";
+                save_password.DefaultExt = "*.txt";
                 if (save_password.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.StreamWriter wr = new System.IO.StreamWriter(save_password.FileName);
@@ -70,7 +71,8 @@ namespace WindowsFormsApplication1
                 SaveFileDialog save_password = new SaveFileDialog();
 
                 save_password.FileName = Environment.UserName + "_password.txt";
-                save_password.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                save_password.Filter = "txt files|*.txt|RTF files|*.rtf|All files (*.*)|*.*";
+                save_password.DefaultExt = "*.txt";
 
                 if (save_password.ShowDialog() == DialogResult.OK)
                 {
@@ -119,11 +121,10 @@ namespace WindowsFormsApplication1
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show(
-                $"История обновлений:\n\nv1.0.0 - Создано окно (09.02.2016)\nv1.0.1 - Добавлена панель меню (файл, настройки, о приложении)\nv1.0.2 - Генерация цифрового пароля по кнопке Generation\nv1.0.3 - Добавлена генерация пароля цифро-буквенного с выводом в окошко\nv2.0.0 - Генерация паролей c кракозябрами\nv2.1.0 - Добавлена кнопка copy и clear\nv3.0.0 - Весь базовый функционал\nv3.1.0 - Добавлена иконка приложения(а также в трее). Добавлены цифры\nv3.2.0 - Подсветка пароля цветом (зависит от сложности)\nv3.3.2 - Добавлена возможность выводы сгенерированных паролей в файл\nv3.3.3 - Исправленые мелкие баги");
-        }
+            MessageBox.Show("История обновлений:\n\nv1.0.0 Release");
+        }       // история обновления
 
-        public void button1_Click(object sender, EventArgs e)              // кнопка генерации
+        public void button1_Click(object sender, EventArgs e)                                                           // кнопка генерации
         {
             if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
             {
@@ -431,6 +432,11 @@ namespace WindowsFormsApplication1
             DB_password_form dbpf = new DB_password_form();
             dbpf.Owner = this;
             dbpf.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)               // большой текстбокс со всеми паролями, он будет сохранен в файл
+        {
+
         }
     }
 }
