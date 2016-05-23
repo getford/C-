@@ -37,7 +37,6 @@
             this.оПриложенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.историяОбновленийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.благодарностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon_totray = new System.Windows.Forms.NotifyIcon(this.components);
             this.main_text = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -116,14 +115,14 @@
             // 
             this.оПриложенииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.историяОбновленийToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.благодарностьToolStripMenuItem});
+            this.toolStripMenuItem1});
             this.оПриложенииToolStripMenuItem.Name = "оПриложенииToolStripMenuItem";
             this.оПриложенииToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.оПриложенииToolStripMenuItem.Text = "О приложении";
             // 
             // историяОбновленийToolStripMenuItem
             // 
+            this.историяОбновленийToolStripMenuItem.Enabled = false;
             this.историяОбновленийToolStripMenuItem.Name = "историяОбновленийToolStripMenuItem";
             this.историяОбновленийToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.историяОбновленийToolStripMenuItem.Text = "История обновлений";
@@ -135,13 +134,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
             this.toolStripMenuItem1.Text = "Версия";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // благодарностьToolStripMenuItem
-            // 
-            this.благодарностьToolStripMenuItem.Name = "благодарностьToolStripMenuItem";
-            this.благодарностьToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.благодарностьToolStripMenuItem.Text = "Благодарность";
-            this.благодарностьToolStripMenuItem.Click += new System.EventHandler(this.благодарностьToolStripMenuItem_Click);
             // 
             // notifyIcon_totray
             // 
@@ -225,9 +217,9 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(168, 45);
+            this.button1.Location = new System.Drawing.Point(87, 49);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 23);
+            this.button1.Size = new System.Drawing.Size(229, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Generate";
             this.button1.UseVisualStyleBackColor = true;
@@ -295,7 +287,7 @@
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(87, 45);
+            this.button2.Location = new System.Drawing.Point(6, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -307,7 +299,7 @@
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(251, 46);
+            this.button3.Location = new System.Drawing.Point(322, 49);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -326,7 +318,6 @@
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(388, 178);
             this.textBox2.TabIndex = 11;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button4
             // 
@@ -422,7 +413,7 @@
             // textBox_user_login_under_avatar
             // 
             this.textBox_user_login_under_avatar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_user_login_under_avatar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox_user_login_under_avatar.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox_user_login_under_avatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox_user_login_under_avatar.ForeColor = System.Drawing.Color.Lime;
             this.textBox_user_login_under_avatar.Location = new System.Drawing.Point(606, 102);
@@ -438,10 +429,8 @@
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label3.Location = new System.Drawing.Point(12, 458);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(703, 13);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 22;
-            this.label3.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016    _________________" +
-    "_____________________________________________";
             // 
             // groupBox_db_password
             // 
@@ -516,7 +505,6 @@
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem благодарностьToolStripMenuItem;
         public System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

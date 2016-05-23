@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -32,6 +27,8 @@ namespace WindowsFormsApplication1
                 textBox_user_login_under_avatar.Text = f2.textBox1.Text.ToString();
                 string st = textBox_user_login_under_avatar.Text.ToString();
             }
+
+            label3.Text = $"PassWord Manager - v{Application.ProductVersion.ToString()} © Vladimir Zhigalo BSTU Minsk 2016    ______________________________________________________________";
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)           // сохранить и выйти
@@ -64,7 +61,7 @@ namespace WindowsFormsApplication1
         {
             if (textBox2.Text == "")
             {
-                MessageBox.Show("Не создано ни одного пароля!");
+                MessageBox.Show("Не создано ни одного пароля!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -115,7 +112,7 @@ namespace WindowsFormsApplication1
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Версия приложения: v3.3.3");
+            MessageBox.Show("Версия приложения: " + Application.ProductVersion.ToString(), "Версия", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }   // версия приложенния
 
         private void историяОбновленийToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,15 +121,15 @@ namespace WindowsFormsApplication1
             MessageBox.Show("История обновлений:\n\nv1.0.0 Release");
         }       // история обновления
 
-        public void button1_Click(object sender, EventArgs e)                                                           // кнопка генерации
+        public void button1_Click(object sender, EventArgs e)  // кнопка генерации
         {
             if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
             {
-                if (track_bar_password_lengh.Value == 4)     // если по дефлдту длина пароля 4 фон сразу красный
-                {
-                    textBox1.BackColor = Color.Red;
-                }
-                else { }
+                //if (track_bar_password_lengh.Value == 9)     // если по дефлдту длина пароля 4
+                //{
+                //    textBox1.BackColor = Color.Green;
+                //}
+                //else { }
 
                 char s;
                 char[] liter_full = new char[] { '!', '@', '#', '$', '%', '&', '(', ')', '[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
@@ -339,11 +336,6 @@ namespace WindowsFormsApplication1
             else { MessageBox.Show("Выберите состав пароля!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
-        private void благодарностьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Хотелось бы поблагодарить моего друга fish, \n за помощь с графической составляющей приложения, \nа также за тестирование данного приложения");
-        }
-
         private void button2_Click(object sender, EventArgs e)              // очистка текстбокса где генерируется пароль
         {
             textBox1.Clear();
@@ -432,11 +424,6 @@ namespace WindowsFormsApplication1
             DB_password_form dbpf = new DB_password_form();
             dbpf.Owner = this;
             dbpf.Show();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)               // большой текстбокс со всеми паролями, он будет сохранен в файл
-        {
-
         }
     }
 }

@@ -47,7 +47,6 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsAppli
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\System.Data.SqlServerCe.Entity.dll
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\System.Data.SqlServerCe.Entity.resources.dll
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\RU\System.Data.SqlServerCe.Entity.resources.dll
-C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.account.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.change_email_acc.resources
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.change_password_acc.resources

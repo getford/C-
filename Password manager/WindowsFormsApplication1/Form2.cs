@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.CodeDom;
-using System.Data.OleDb;
 
 using System.Data.SqlClient;
-using System.Data.Sql;
 using System.Diagnostics;
 
 namespace WindowsFormsApplication1
@@ -61,7 +50,7 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            MessageBox.Show("Введен не верный пароль!(Логин верный!). Если вы забыли ваш пароль, вы можете воспользоваться формой восстановления пароля!");
+                            MessageBox.Show("Введен не верный пароль!. Если вы забыли ваш пароль, воспользуйтесь формой восстановления пароля!");
                         }
                     }
                     dr.Close();
@@ -128,7 +117,7 @@ namespace WindowsFormsApplication1
 
         private void button_help_Click(object sender, EventArgs e)
         {
-            Process.Start("C:\\Users\\getford\\Source\\Repos\\C-Sharp-Private\\Password manager\\readme");
+            Process.Start(AppDomain.CurrentDomain.BaseDirectory );
             //Form_help fh = new Form_help();         // открывает форму справки, в которой будут ссылки на руководство пользователя ...
             //fh.Show();
         }

@@ -79,11 +79,13 @@
             // 
             resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.Name = "textBox4";
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.no_number);
             // 
             // textBox5
             // 
             resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.Name = "textBox5";
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.no_number);
             // 
             // comboBox1
             // 
@@ -211,7 +213,6 @@
             resources.ApplyResources(this.label10, "label10");
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
             this.label10.Name = "label10";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // SignInForm
             // 
@@ -252,7 +253,6 @@
             this.Name = "SignInForm";
             this.ShowInTaskbar = false;
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.SignInForm_Load_1);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this._Click_key_down);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.introduceBindingSource)).EndInit();

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
@@ -43,7 +36,7 @@ namespace WindowsFormsApplication1
                 textBox_secound_a.Clear();
             }
         }
-
+        /* нажмите на фон окошка. Если логин существет, вам будет предложены секретные вопросы, если вопросы не появились проверьте логин*/
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
@@ -139,7 +132,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }
+        } 
 
         private void timer_Tick(object sender, EventArgs e)
         {

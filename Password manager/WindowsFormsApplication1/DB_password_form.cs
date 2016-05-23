@@ -30,6 +30,9 @@ namespace WindowsFormsApplication1
             }
             else { MessageBox.Show("Неизвестная ошибка #6", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             data();         // вызываем заполнение таблицы записями из бд (пароли скрыты по дефолту)
+
+            label_status.Text = $"PassWord Manager - v{Application.ProductVersion.ToString()} © Vladimir Zhigalo BSTU Minsk 2016    ___________________________________________________________________________________________________________";
+            label_status.ForeColor = Color.Gray;
         }
 
         public void show_password()
@@ -106,7 +109,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }       // пароли в таблице скрыты!
+        }       // ====================== пароли в таблице скрыты! ============================
 
         private void data_plus()
         {
@@ -145,52 +148,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }   // пароли в таблице открыты!
-
-        private void button_authorization_site_Click(object sender, EventArgs e)
-        {
-            IWebDriver driver = new FirefoxDriver();
-            string _site = $"http://www.{textBox_URL_site.Text.ToString()}";         // тут лежит адрес сайта         
-            string _password = string.Empty;                                         // тут лежит расшифрованный пароль
-
-            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
-            try
-            {
-                connectDB.Open();
-                string sql_query = $"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; select CONVERT(nvarchar(50), DECRYPTBYKEY(Password_site)) as [Password_site] from [dbo].[{textBox_user_login_now.Text.ToString()}] where URL_site = '{textBox_URL_site.Text.ToString()}'";
-                SqlCommand cmd = new SqlCommand(sql_query, connectDB);
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    _password += dr["Password_site"];
-                }
-                dr.Close();
-            }
-            catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            finally { connectDB.Close(); }
-
-            ise = new WebDriverBackedSelenium(driver, _site);
-            /*для сайта mail.ru*/
-
-            /*первый вариант*/
-            ise.Start();
-            ise.Open(_site);
-            ise.WindowMaximize();
-            ise.Type("mailbox__login", textBox_login_site.Text.ToString());
-            ise.Type("mailbox__password", _password);
-            ise.Click("mailbox__auth__button");
-
-            /*запасной вариант авторизации*/
-            //driver.Navigate().GoToUrl(_site);
-            //driver.Manage().Window.Maximize();
-            //IWebElement login_input = driver.FindElement(By.Id("mailbox__login"));          // заполняем поле логин
-            //login_input.SendKeys(textBox_login_site.Text.ToString());
-            //IWebElement password_input = driver.FindElement(By.Id("mailbox__password"));    // заполняем поле пароля
-            //password_input.SendKeys(_password);
-            //IWebElement site_button_enter = driver.FindElement(By.Id("mailbox__auth__button"));     // нажатие на кнопку входа
-            //site_button_enter.Click();
-
-        }       // обработка авторизации
+        }   // ====================== пароли в таблице открыты! ============================
 
         private void button_register_Click(object sender, EventArgs e)
         {
@@ -200,7 +158,6 @@ namespace WindowsFormsApplication1
             {
                 connectDB.Open();
                 string sql_query_insert = string.Format("open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; declare @Symmetric_key_GUID as [uniqueidentifier] set @Symmetric_key_GUID = KEY_GUID('SYMMETRIC_KEY') if (@Symmetric_key_GUID is not null) begin INSERT INTO {0} values (@Name_site, @URL_site, @Login_site, ENCRYPTBYKEY(@Symmetric_key_GUID, @Password_site), @Time_valid) end", textBox_user_login_now.Text.ToString());
-
                 SqlCommand cmd = new SqlCommand(sql_query_insert, connectDB);
                 if (textBox_name_site.Text != "" || textBox_URL_site.Text != "" || textBox_login_site.Text != "" || textBox_password_site.Text != "")
                 {
@@ -222,7 +179,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }               // добавить запись в бд
+        }    // добавить запись в бд
 
         private void button_clear_Click(object sender, EventArgs e)
         {
@@ -231,7 +188,7 @@ namespace WindowsFormsApplication1
             textBox_login_site.Clear();
             textBox_password_site.Clear();
             dateTimePicker_valid_password.Value = System.DateTime.Now;
-        }           // очистка текстбоксов
+        }       // очистка текстбоксов
 
         private void button_delete_Click(object sender, EventArgs e)
         {
@@ -252,7 +209,7 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             finally { connectDB.Close(); }
-        }   // уладение записи из бд
+        }     // уладение записи из бд
 
         private void listView_site_login_password_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -262,17 +219,58 @@ namespace WindowsFormsApplication1
             textBox_password_site.Text = listView_site_login_password.FocusedItem.SubItems[3].Text;
         }   // При нажитии на строку - данные строки в textbox
 
-        private void ListView_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void checkBox_show_password_CheckedChanged(object sender, EventArgs e)
         {
             show_password();
         }       // показать/не показать пароль
 
         static ISelenium ise;
+        private void button_authorization_site_Click(object sender, EventArgs e)
+        {
+            IWebDriver driver = new FirefoxDriver();
+            string _site = $"http://mail.ru/";         // тут лежит адрес сайта         
+            string _password = string.Empty;                                         // тут лежит расшифрованный пароль
+
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
+            try
+            {
+                connectDB.Open();
+                string sql_query = $"open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '()w(wovbomj@%veuoextufz)b)bmh'; select CONVERT(nvarchar(50), DECRYPTBYKEY(Password_site)) as [Password_site] from [dbo].[{textBox_user_login_now.Text.ToString()}] where URL_site = '{textBox_URL_site.Text.ToString()}'";
+                SqlCommand cmd = new SqlCommand(sql_query, connectDB);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    _password += dr["Password_site"];
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            finally { connectDB.Close(); }
+
+            ise = new WebDriverBackedSelenium(driver, "http://mail.ru/");
+            /*для сайта mail.ru*/
+
+            ///*первый вариант*/
+            //ise.Start();                // запуск selenium
+            //ise.Open("http://mail.ru/");            // говорим какой сайт открыть
+            //ise.WindowMaximize();       // разворачиваем браузер на фул экран
+            ///*заполняем поля и клацаем на кнопку войти*/
+            //ise.Type("mailbox__login", textBox_login_site.Text.ToString());
+            //ise.Type("mailbox__password", _password);
+            //ise.Click("mailbox__auth__button");
+
+            /*запасной вариант авторизации*/
+            driver.Navigate().GoToUrl(_site);
+            driver.Manage().Window.Maximize();
+            IWebElement login_input = driver.FindElement(By.Id("mailbox__login"));          // заполняем поле логин
+            login_input.SendKeys(textBox_login_site.Text.ToString());
+            IWebElement password_input = driver.FindElement(By.Id("mailbox__password"));    // заполняем поле пароля
+            password_input.SendKeys(_password);
+            IWebElement site_button_enter = driver.FindElement(By.Id("mailbox__auth__button"));     // нажатие на кнопку входа
+            site_button_enter.Click();
+
+        }       // обработка авторизации
+
         private void button_register_site_Click(object sender, EventArgs e)             // регистрация на сайте
         {
             string _site_title = string.Empty;          // будем записывать в название сайта
@@ -280,26 +278,28 @@ namespace WindowsFormsApplication1
             string _site_login = string.Empty;          // логин на сайте
             string _site_password = string.Empty;       // пароль сайта
 
+            string _site_ = "https://twitter.com/";
+
             IWebDriver driver = new FirefoxDriver();
 
-            ise = new WebDriverBackedSelenium(driver, "https://twitter.com/");
+            ise = new WebDriverBackedSelenium(driver, _site_);
             ise.Start();
-            ise.Open("https://twitter.com/");
+            ise.Open(_site_);
             _site_URL = ise.GetLocation();
 
             _site_title = ise.GetTitle();
             ise.Open("https://twitter.com/signup");         // откроет форму регистрации
 
-            Thread.Sleep(10000);               // время на заполнение формы регистрации на сайте
+            Thread.Sleep(15000);               // время на заполнение формы регистрации на сайте        1000 = 1секунда
 
             _site_login = ise.GetValue("full-name");
             _site_password = ise.GetValue("password");
-            //ise.Click("submit_button");                           // кнопка авторизации
+            //ise.Click("submit_button");                           // кнопка авторизации открыть при релизе (14.05.2016)
 
 
             //string res = $"Title: {_site_title}\nURL:{_site_URL}\nName: {_site_login}\nPassword: {_site_password}";
             //MessageBox.Show(res, "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
             try
             {
@@ -310,14 +310,13 @@ namespace WindowsFormsApplication1
                 cmd.Parameters.AddWithValue(@"URL_site", _site_URL.ToString());
                 cmd.Parameters.AddWithValue(@"Login_site", _site_login.ToString());
                 cmd.Parameters.AddWithValue(@"Password_site", _site_password.ToString());
-                cmd.Parameters.AddWithValue(@"Time_valid", dateTimePicker_valid_password.Value);
+                cmd.Parameters.AddWithValue(@"Time_valid", dateTimePicker_valid_password.Value.AddDays(15));
                 cmd.ExecuteNonQuery();
+                MessageBox.Show($"Ваши сведения о регистрации с сайта {_site_URL.ToString()} успешно добавлены в базу.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 show_password();         // обновление таблицы
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             finally { connectDB.Close(); }
-
         }
-
     }
 }

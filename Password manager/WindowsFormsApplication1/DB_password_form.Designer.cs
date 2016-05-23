@@ -48,6 +48,7 @@
             this.groupBox_info_user_name = new System.Windows.Forms.GroupBox();
             this.checkBox_show_password = new System.Windows.Forms.CheckBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label_status = new System.Windows.Forms.Label();
             label_info_app = new System.Windows.Forms.Label();
             this.groupBox_textboxes.SuspendLayout();
             this.groupBox_buttons.SuspendLayout();
@@ -59,13 +60,11 @@
             label_info_app.AutoSize = true;
             label_info_app.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             label_info_app.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            label_info_app.Location = new System.Drawing.Point(12, 438);
+            label_info_app.Location = new System.Drawing.Point(9, 463);
             label_info_app.Name = "label_info_app";
             label_info_app.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            label_info_app.Size = new System.Drawing.Size(871, 13);
+            label_info_app.Size = new System.Drawing.Size(0, 13);
             label_info_app.TabIndex = 15;
-            label_info_app.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016    _________________" +
-    "_________________________________________________________________________";
             label_info_app.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox_name_site
@@ -98,17 +97,18 @@
             // 
             // button_authorization_site
             // 
+            this.button_authorization_site.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_authorization_site.Location = new System.Drawing.Point(6, 19);
             this.button_authorization_site.Name = "button_authorization_site";
             this.button_authorization_site.Size = new System.Drawing.Size(200, 23);
             this.button_authorization_site.TabIndex = 5;
-            this.button_authorization_site.Text = "Авторизация";
+            this.button_authorization_site.Text = "Авторизация на сайте";
             this.button_authorization_site.UseVisualStyleBackColor = true;
             this.button_authorization_site.Click += new System.EventHandler(this.button_authorization_site_Click);
             // 
             // button_register
             // 
-            this.button_register.Location = new System.Drawing.Point(6, 48);
+            this.button_register.Location = new System.Drawing.Point(6, 95);
             this.button_register.Name = "button_register";
             this.button_register.Size = new System.Drawing.Size(200, 23);
             this.button_register.TabIndex = 6;
@@ -134,7 +134,7 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(6, 77);
+            this.button_clear.Location = new System.Drawing.Point(6, 124);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(200, 23);
             this.button_clear.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             // button_delete
             // 
-            this.button_delete.Location = new System.Drawing.Point(6, 106);
+            this.button_delete.Location = new System.Drawing.Point(6, 153);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(200, 23);
             this.button_delete.TabIndex = 10;
@@ -160,7 +160,7 @@
             this.groupBox_textboxes.Controls.Add(this.textBox_login_site);
             this.groupBox_textboxes.Controls.Add(this.textBox_password_site);
             this.groupBox_textboxes.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_textboxes.Location = new System.Drawing.Point(663, 95);
+            this.groupBox_textboxes.Location = new System.Drawing.Point(775, 95);
             this.groupBox_textboxes.Name = "groupBox_textboxes";
             this.groupBox_textboxes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_textboxes.Size = new System.Drawing.Size(212, 158);
@@ -185,21 +185,21 @@
             this.groupBox_buttons.Controls.Add(this.button_delete);
             this.groupBox_buttons.Controls.Add(this.button_clear);
             this.groupBox_buttons.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_buttons.Location = new System.Drawing.Point(663, 259);
+            this.groupBox_buttons.Location = new System.Drawing.Point(775, 259);
             this.groupBox_buttons.Name = "groupBox_buttons";
             this.groupBox_buttons.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox_buttons.Size = new System.Drawing.Size(212, 166);
+            this.groupBox_buttons.Size = new System.Drawing.Size(212, 188);
             this.groupBox_buttons.TabIndex = 12;
             this.groupBox_buttons.TabStop = false;
             // 
             // button_register_site
             // 
             this.button_register_site.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_register_site.Location = new System.Drawing.Point(6, 135);
+            this.button_register_site.Location = new System.Drawing.Point(6, 48);
             this.button_register_site.Name = "button_register_site";
             this.button_register_site.Size = new System.Drawing.Size(200, 23);
             this.button_register_site.TabIndex = 11;
-            this.button_register_site.Text = "Зарегистрироваться на сайте";
+            this.button_register_site.Text = "Свединия о регистрации с сайта";
             this.button_register_site.UseVisualStyleBackColor = true;
             this.button_register_site.Click += new System.EventHandler(this.button_register_site_Click);
             // 
@@ -208,18 +208,17 @@
             this.listView_site_login_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView_site_login_password.Location = new System.Drawing.Point(12, 12);
             this.listView_site_login_password.Name = "listView_site_login_password";
-            this.listView_site_login_password.Size = new System.Drawing.Size(645, 413);
+            this.listView_site_login_password.Size = new System.Drawing.Size(757, 435);
             this.listView_site_login_password.TabIndex = 13;
             this.listView_site_login_password.UseCompatibleStateImageBehavior = false;
             this.listView_site_login_password.View = System.Windows.Forms.View.Details;
             this.listView_site_login_password.SelectedIndexChanged += new System.EventHandler(this.listView_site_login_password_SelectedIndexChanged);
-            this.listView_site_login_password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListView_MouseClick);
             // 
             // groupBox_info_user_name
             // 
             this.groupBox_info_user_name.Controls.Add(this.textBox_user_login_now);
             this.groupBox_info_user_name.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox_info_user_name.Location = new System.Drawing.Point(663, 12);
+            this.groupBox_info_user_name.Location = new System.Drawing.Point(775, 12);
             this.groupBox_info_user_name.Name = "groupBox_info_user_name";
             this.groupBox_info_user_name.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox_info_user_name.Size = new System.Drawing.Size(212, 54);
@@ -233,7 +232,7 @@
             this.checkBox_show_password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox_show_password.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.checkBox_show_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_show_password.Location = new System.Drawing.Point(669, 72);
+            this.checkBox_show_password.Location = new System.Drawing.Point(781, 72);
             this.checkBox_show_password.Name = "checkBox_show_password";
             this.checkBox_show_password.Size = new System.Drawing.Size(112, 17);
             this.checkBox_show_password.TabIndex = 16;
@@ -241,13 +240,23 @@
             this.checkBox_show_password.UseVisualStyleBackColor = true;
             this.checkBox_show_password.CheckedChanged += new System.EventHandler(this.checkBox_show_password_CheckedChanged);
             // 
+            // label_status
+            // 
+            this.label_status.AutoSize = true;
+            this.label_status.Location = new System.Drawing.Point(9, 463);
+            this.label_status.Name = "label_status";
+            this.label_status.Size = new System.Drawing.Size(35, 13);
+            this.label_status.TabIndex = 17;
+            this.label_status.Text = "label1";
+            // 
             // DB_password_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(886, 467);
+            this.ClientSize = new System.Drawing.Size(997, 485);
+            this.Controls.Add(this.label_status);
             this.Controls.Add(this.checkBox_show_password);
             this.Controls.Add(label_info_app);
             this.Controls.Add(this.groupBox_info_user_name);
@@ -291,5 +300,6 @@
         public System.Windows.Forms.TextBox textBox_password_site;
         private System.Windows.Forms.Button button_register_site;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label_status;
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
@@ -41,7 +35,7 @@ namespace WindowsFormsApplication1
                 string sql_query_email_change = string.Format(@"update introduce set user_e_mail = '" + textBox_new_email.Text.ToString() + "' where user_login = '" + string_user_login + "'");
                 SqlCommand cmd = new SqlCommand(sql_query_email_change, connectDB);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Ваш email успешно изменен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ваш e-mail успешно изменен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
             }
