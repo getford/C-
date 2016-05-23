@@ -53,7 +53,6 @@ namespace WindowsFormsApplication1
                 while (dr_f_q.Read())
                 {
                     first_question += dr_f_q["user_first_question"];
-
                 }
                 dr_f_q.Close();
                 textBox_first_q.Text = (string)first_question.ToString();

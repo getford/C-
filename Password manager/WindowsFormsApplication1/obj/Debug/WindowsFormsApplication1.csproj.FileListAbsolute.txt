@@ -102,3 +102,4 @@ C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsAppli
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\ThoughtWorks.Selenium.Core.xml
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\Selenium.WebDriverBackedSelenium.dll
 C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\getford\Source\Repos\C-Sharp-Private\Password manager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
