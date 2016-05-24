@@ -43,6 +43,7 @@
             this.textBox_last_name = new System.Windows.Forms.TextBox();
             this.groupBox_info_account = new System.Windows.Forms.GroupBox();
             this.linkLabel_delete_account = new System.Windows.Forms.LinkLabel();
+            this.label_count_passwords = new System.Windows.Forms.Label();
             this.group_box_setup_acc.SuspendLayout();
             this.groupBox_info_account.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +83,7 @@
             this.group_box_setup_acc.Controls.Add(this.label_change_e_mail);
             this.group_box_setup_acc.Controls.Add(this.label_change_password);
             this.group_box_setup_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.group_box_setup_acc.Location = new System.Drawing.Point(12, 152);
+            this.group_box_setup_acc.Location = new System.Drawing.Point(15, 181);
             this.group_box_setup_acc.Name = "group_box_setup_acc";
             this.group_box_setup_acc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.group_box_setup_acc.Size = new System.Drawing.Size(258, 61);
@@ -116,7 +117,7 @@
             this.label_more_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))));
             this.label_more_info.ForeColor = System.Drawing.Color.Teal;
-            this.label_more_info.Location = new System.Drawing.Point(29, 216);
+            this.label_more_info.Location = new System.Drawing.Point(29, 256);
             this.label_more_info.Name = "label_more_info";
             this.label_more_info.Size = new System.Drawing.Size(226, 13);
             this.label_more_info.TabIndex = 2;
@@ -175,6 +176,7 @@
             // 
             // groupBox_info_account
             // 
+            this.groupBox_info_account.Controls.Add(this.label_count_passwords);
             this.groupBox_info_account.Controls.Add(this.label_name);
             this.groupBox_info_account.Controls.Add(this.label_email);
             this.groupBox_info_account.Controls.Add(this.label_family);
@@ -185,7 +187,7 @@
             this.groupBox_info_account.Controls.Add(this.textBox_last_name);
             this.groupBox_info_account.Location = new System.Drawing.Point(12, 12);
             this.groupBox_info_account.Name = "groupBox_info_account";
-            this.groupBox_info_account.Size = new System.Drawing.Size(258, 134);
+            this.groupBox_info_account.Size = new System.Drawing.Size(258, 163);
             this.groupBox_info_account.TabIndex = 24;
             this.groupBox_info_account.TabStop = false;
             // 
@@ -194,7 +196,7 @@
             this.linkLabel_delete_account.AutoSize = true;
             this.linkLabel_delete_account.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel_delete_account.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_delete_account.Location = new System.Drawing.Point(50, 247);
+            this.linkLabel_delete_account.Location = new System.Drawing.Point(50, 287);
             this.linkLabel_delete_account.Name = "linkLabel_delete_account";
             this.linkLabel_delete_account.Size = new System.Drawing.Size(175, 22);
             this.linkLabel_delete_account.TabIndex = 25;
@@ -202,12 +204,22 @@
             this.linkLabel_delete_account.Text = "Удалить аккаунт";
             this.linkLabel_delete_account.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_delete_account_LinkClicked);
             // 
+            // label_count_passwords
+            // 
+            this.label_count_passwords.AutoSize = true;
+            this.label_count_passwords.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label_count_passwords.Location = new System.Drawing.Point(6, 137);
+            this.label_count_passwords.Name = "label_count_passwords";
+            this.label_count_passwords.Size = new System.Drawing.Size(46, 18);
+            this.label_count_passwords.TabIndex = 26;
+            this.label_count_passwords.Text = "label1";
+            // 
             // account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(285, 284);
+            this.ClientSize = new System.Drawing.Size(285, 330);
             this.Controls.Add(this.label_more_info);
             this.Controls.Add(this.linkLabel_delete_account);
             this.Controls.Add(this.groupBox_info_account);
@@ -249,5 +261,6 @@
         private System.Windows.Forms.LinkLabel linkLabel_delete_account;
         public System.Windows.Forms.TextBox textBox_login;
         private System.Windows.Forms.Label label_more_info;
+        private System.Windows.Forms.Label label_count_passwords;
     }
 }

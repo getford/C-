@@ -1,1 +1,5 @@
-﻿INSERT INTO introduce (user_login) values ('123');
+﻿-- вставить открытие ключа перед insert, select ...
+open symmetric key SYMMETRIC_KEY decryption by asymmetric key ASYMMETRIC_KEY with password = '%(wbwgoo$'
+
+-- проверяем, открыт ли ключ
+select * from [sys].[openkeys]

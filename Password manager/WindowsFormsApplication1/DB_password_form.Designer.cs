@@ -212,7 +212,7 @@
             this.listView_site_login_password.TabIndex = 13;
             this.listView_site_login_password.UseCompatibleStateImageBehavior = false;
             this.listView_site_login_password.View = System.Windows.Forms.View.Details;
-            this.listView_site_login_password.SelectedIndexChanged += new System.EventHandler(this.listView_site_login_password_SelectedIndexChanged);
+            this.listView_site_login_password.Click += new System.EventHandler(this.listView_site_login_password_SelectedIndexChanged);
             // 
             // groupBox_info_user_name
             // 

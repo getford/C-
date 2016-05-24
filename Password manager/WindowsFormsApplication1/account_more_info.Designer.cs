@@ -51,11 +51,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.progressBar_timer = new System.Windows.Forms.ProgressBar();
+            this.label_count_passwords = new System.Windows.Forms.Label();
             this.groupBox_info_account.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_info_account
             // 
+            this.groupBox_info_account.Controls.Add(this.label_count_passwords);
             this.groupBox_info_account.Controls.Add(this.textBox_secound_answer);
             this.groupBox_info_account.Controls.Add(this.label_secound_answer);
             this.groupBox_info_account.Controls.Add(this.textBox_secound_question);
@@ -74,7 +76,7 @@
             this.groupBox_info_account.Controls.Add(this.label_login);
             this.groupBox_info_account.Location = new System.Drawing.Point(13, 14);
             this.groupBox_info_account.Name = "groupBox_info_account";
-            this.groupBox_info_account.Size = new System.Drawing.Size(617, 136);
+            this.groupBox_info_account.Size = new System.Drawing.Size(617, 167);
             this.groupBox_info_account.TabIndex = 27;
             this.groupBox_info_account.TabStop = false;
             // 
@@ -243,7 +245,7 @@
             this.linkLabel_delete_account.AutoSize = true;
             this.linkLabel_delete_account.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.linkLabel_delete_account.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_delete_account.Location = new System.Drawing.Point(228, 153);
+            this.linkLabel_delete_account.Location = new System.Drawing.Point(231, 192);
             this.linkLabel_delete_account.Name = "linkLabel_delete_account";
             this.linkLabel_delete_account.Size = new System.Drawing.Size(175, 22);
             this.linkLabel_delete_account.TabIndex = 28;
@@ -256,7 +258,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(12, 188);
+            this.label1.Location = new System.Drawing.Point(15, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 13);
             this.label1.TabIndex = 29;
@@ -268,16 +270,26 @@
             // 
             // progressBar_timer
             // 
-            this.progressBar_timer.Location = new System.Drawing.Point(186, 186);
+            this.progressBar_timer.Location = new System.Drawing.Point(189, 225);
             this.progressBar_timer.Name = "progressBar_timer";
             this.progressBar_timer.Size = new System.Drawing.Size(444, 23);
             this.progressBar_timer.TabIndex = 31;
+            // 
+            // label_count_passwords
+            // 
+            this.label_count_passwords.AutoSize = true;
+            this.label_count_passwords.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label_count_passwords.Location = new System.Drawing.Point(6, 140);
+            this.label_count_passwords.Name = "label_count_passwords";
+            this.label_count_passwords.Size = new System.Drawing.Size(60, 24);
+            this.label_count_passwords.TabIndex = 32;
+            this.label_count_passwords.Text = "label2";
             // 
             // account_more_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 221);
+            this.ClientSize = new System.Drawing.Size(644, 253);
             this.Controls.Add(this.progressBar_timer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox_info_account);
@@ -322,5 +334,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ProgressBar progressBar_timer;
+        private System.Windows.Forms.Label label_count_passwords;
     }
 }

@@ -54,7 +54,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -220,7 +219,7 @@
             this.button1.Location = new System.Drawing.Point(87, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 23);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Generate";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -319,40 +318,25 @@
             this.textBox2.Size = new System.Drawing.Size(388, 178);
             this.textBox2.TabIndex = 11;
             // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(168, 203);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Save";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button5
             // 
             this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(87, 204);
+            this.button5.Location = new System.Drawing.Point(6, 203);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(184, 23);
             this.button5.TabIndex = 13;
             this.button5.Text = "Clear";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(249, 203);
+            this.button6.Location = new System.Drawing.Point(199, 204);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(195, 23);
             this.button6.TabIndex = 14;
             this.button6.Text = "Save as ";
             this.button6.UseVisualStyleBackColor = true;
@@ -386,13 +370,12 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.Location = new System.Drawing.Point(306, 210);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(400, 233);
-            this.groupBox4.TabIndex = 19;
+            this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Здесь будут созданные вами пароли";
             // 
@@ -466,7 +449,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PassWord Manager - v1.0.0 © Vladimir Zhigalo BSTU Minsk 2016";
+            this.Text = "PassWord Manager - BSTU Minsk 2016";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -511,7 +494,6 @@
         private System.Windows.Forms.CheckBox checkBox4;
         public System.Windows.Forms.NotifyIcon notifyIcon_totray;
         public System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.Button button5;
         public System.Windows.Forms.SaveFileDialog saveFileDialog1;

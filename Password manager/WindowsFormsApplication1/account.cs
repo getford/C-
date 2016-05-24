@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-
+using System.Drawing;
 using System.Data.SqlClient;
 namespace WindowsFormsApplication1
 {
@@ -21,6 +21,7 @@ namespace WindowsFormsApplication1
             }
 
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
+            SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
 
             try
             {
@@ -28,7 +29,7 @@ namespace WindowsFormsApplication1
                 string sql_query_f_n = @"select user_first_name from introduce where user_login = '" + f1.textBox_user_login_under_avatar.Text.ToString() + "'";
                 SqlCommand cmd_f_n = new SqlCommand(sql_query_f_n, connectDB);
                 SqlDataReader dr = cmd_f_n.ExecuteReader();
-                while(dr.Read())
+                while (dr.Read())
                 {
                     textBox_first_name.Text += dr["user_first_name"];
                 }
@@ -43,7 +44,7 @@ namespace WindowsFormsApplication1
                 string sql_query_l_n = @"select user_last_name from introduce where user_login = '" + f1.textBox_user_login_under_avatar.Text.ToString() + "'";
                 SqlCommand cmd_l_n = new SqlCommand(sql_query_l_n, connectDB);
                 SqlDataReader dr = cmd_l_n.ExecuteReader();
-                while(dr.Read())
+                while (dr.Read())
                 {
                     textBox_last_name.Text += dr["user_last_name"];
                 }
@@ -58,7 +59,7 @@ namespace WindowsFormsApplication1
                 string sql_query_email = @"select user_e_mail from introduce where user_login = '" + f1.textBox_user_login_under_avatar.Text.ToString() + "'";
                 SqlCommand cmd_u_email = new SqlCommand(sql_query_email, connectDB);
                 SqlDataReader dr = cmd_u_email.ExecuteReader();
-                while(dr.Read())
+                while (dr.Read())
                 {
                     textBox_email.Text += dr["user_e_mail"];
                 }
@@ -66,7 +67,27 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
-        }
+
+            /*Показываем пользователю количество паролей в его базе данных*/
+            try
+            {
+                connect.Open();
+                string count_passwords = string.Empty;
+                string sql_query_count = $"select count(*) Password_site from {f1.textBox_user_login_under_avatar.Text.ToString()}";
+                SqlCommand cmd_count = new SqlCommand(sql_query_count, connect);
+                SqlDataReader dr = cmd_count.ExecuteReader();
+                while (dr.Read())
+                {
+                    count_passwords = string.Empty;
+                    count_passwords += dr["Password_site"];
+                }
+                label_count_passwords.ForeColor = Color.Green;
+                label_count_passwords.Text = "Количество паролей в базе: " + count_passwords.ToString();
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connect.Close(); }
+            }
 
         private void OnClick(object sender, EventArgs e)    // смена пароля
         {
@@ -128,7 +149,7 @@ namespace WindowsFormsApplication1
                 catch (SqlException ex) { MessageBox.Show(ex.Message); }
                 finally { connectDB.Close(); }
             }
-            else { /*Тут что-то должно быть, а может и не должно :)*/}          
+            else { /*Тут что-то должно быть, а может и не должно :)*/}
         }
 
         private void OnClick_help_button(object sender, CancelEventArgs e)
@@ -153,7 +174,7 @@ namespace WindowsFormsApplication1
 
         private void account_HelpButtonClicked(object sender, CancelEventArgs e)
         {
-            MessageBox.Show("Информация о пользователе, который авторизовался в проложении", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            MessageBox.Show("Информация о пользователе, который авторизовался в приложении", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }       // кнопка хелп
     }
 }

@@ -17,7 +17,6 @@ namespace WindowsFormsApplication1
 
             toolTip1.SetToolTip(button1, "Нажмите для генерации пароля");       // Всплывающая подсказка
             toolTip2.ToolTipTitle = ("Путь к файлу C:\\ ... .txt");
-            toolTip2.SetToolTip(button4, "Нажмите для сохранения в файл!");
 
             textBox3.Text = track_bar_password_lengh.Value.ToString();                  // показываем дефолтное значение длины пароля
 
@@ -86,30 +85,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)      // сохранение паролей в файл, файл по умолчанию(диск c:\\)
-        {
-
-            System.IO.StreamWriter wr = new System.IO.StreamWriter(@"C:\" + Environment.UserName + "_password.txt");
-
-            if (button4.Enabled == true)
-            {
-                wr.Write("Data & Time:  " + System.DateTimeOffset.Now + " UTC" + Environment.NewLine + Environment.NewLine);
-                wr.Write("User:         " + Environment.UserName + Environment.NewLine);
-                wr.Write("PC Name:      " + Environment.MachineName + Environment.NewLine);
-                wr.Write("OS Version:   " + Environment.OSVersion + Environment.NewLine + Environment.NewLine + Environment.NewLine);
-                wr.Write("          *** Password's ***" + Environment.NewLine);
-                wr.Write(textBox2.Text);
-                wr.Close();
-                if (wr != null)
-                {
-                    wr.Close();
-                    MessageBox.Show("Данные успешно записаны!\nФайл находиться на диске C:\\username_password.txt");
-                }
-                else { }
-            }
-            else { }
-        }
-
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Версия приложения: " + Application.ProductVersion.ToString(), "Версия", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -152,7 +127,6 @@ namespace WindowsFormsApplication1
 
                 int N;
                 N = (int)track_bar_password_lengh.Value;
-
 
                 if (checkBox2.Checked == true && checkBox1.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false)     // маленькие
                 {
@@ -355,11 +329,6 @@ namespace WindowsFormsApplication1
                 textBox2.Clear();
         }           // очиста текстбокса со всеми паролями
 
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-            button4.Enabled = true;
-        }
-
         private void выходToolStripMenuItem1_Click(object sender, EventArgs e)      // файл -> выход
         {
             Application.Exit();
@@ -367,7 +336,7 @@ namespace WindowsFormsApplication1
 
         private void разработчикToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vladimir Zhigalo ©. BSTU 2016 FIT SIT(Software Information Technology)");
+            MessageBox.Show("Vladimir Zhigalo © BSTU 2016 FIT SIT(Software Information Technology)");
         }
 
         private void OnClick(object sender, EventArgs e)        // информация об аккаунте пользователя
@@ -411,9 +380,10 @@ namespace WindowsFormsApplication1
             else { }
         }
 
-        private void MoveToDBPasswords_Click(object sender, EventArgs e)        // окрывает форму с базой паролей пользователя. Проедоставляет возможность авторизации на ращличных ресурсах
+        private void MoveToDBPasswords_Click(object sender, EventArgs e)        // окрывает форму с базой паролей пользователя. 
+                                                                                // Предоставляем возможность хранить и просматривать пароли
         {
-            foreach (Form f in Application.OpenForms)            // не разрешаем открыть еще одну форму
+            foreach (Form f in Application.OpenForms)                           // не разрешаем открыть еще одну форму
             {
                 if (f.Name == "DB_password_form")
                 {

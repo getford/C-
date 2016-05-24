@@ -39,27 +39,27 @@ namespace WindowsFormsApplication1
         /* нажмите на фон окошка. Если логин существет, вам будет предложены секретные вопросы, если вопросы не появились проверьте логин*/
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
-
             ///////////////// Получаем первый серетный вопрос ////////////////////////////
+
+            SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
             try
             {
                 connectDB.Open();
-                /*Выводим секретные вопросы в текстбоксы по вводу логина*/
+                /*Выводим секретные вопросы в текстбоксы в зависимости от логина*/
                 string sql_query_first_question = @"select user_first_question from introduce where user_login = '" + textBox_login_email.Text.ToString() + "'";
                 SqlCommand cmd_f_q = new SqlCommand(sql_query_first_question, connectDB);
                 SqlDataReader dr_f_q = cmd_f_q.ExecuteReader();
-                string first_question = string.Empty;       // передаем пустую строку
+                string first_question = string.Empty;
                 while (dr_f_q.Read())
                 {
                     first_question += dr_f_q["user_first_question"];
                 }
                 dr_f_q.Close();
                 textBox_first_q.Text = (string)first_question.ToString();
-
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
+
 
             ///////////////////// Получаем второй секретный вопрос ////////////////////////////
 

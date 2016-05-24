@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-
+using System.Drawing;
 using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
@@ -28,7 +28,8 @@ namespace WindowsFormsApplication1
             else { MessageBox.Show("Неопределенная ошибка #4", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             SqlConnection connectDB = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database.mdf;Integrated Security=True");
-            
+            SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DB\Database_site.mdf;Integrated Security=True");
+
             /*Имя*/
             try
             {
@@ -136,6 +137,26 @@ namespace WindowsFormsApplication1
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             finally { connectDB.Close(); }
+
+            /*Показываем пользователю количество паролей в его базе данных*/
+            try
+            {
+                connect.Open();
+                string count_passwords = string.Empty;
+                string sql_query_count = $"select count(*) Password_site from {ctp.acc_login.ToString()}";
+                SqlCommand cmd_count = new SqlCommand(sql_query_count, connect);
+                SqlDataReader dr = cmd_count.ExecuteReader();
+                while (dr.Read())
+                {
+                    count_passwords = string.Empty;
+                    count_passwords += dr["Password_site"];
+                }
+                label_count_passwords.ForeColor = Color.Green;
+                label_count_passwords.Text = "Количество паролей в базе: " + count_passwords.ToString();
+                dr.Close();
+            }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            finally { connect.Close(); }
         }
 
         private void linkLabel_delete_account_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
